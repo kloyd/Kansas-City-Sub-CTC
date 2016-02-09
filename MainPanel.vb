@@ -1223,7 +1223,7 @@
             Case OCC
                 lineBlock10.BorderColor = Color.Red
         End Select
-        lblBroadway.Text = TrainID(15)
+        lblBroadway.Text = TrainID(15) + Chr(13) + LocoID(15)
         lblBlock10.Text = TrainID(10)
     End Sub
 

@@ -127,6 +127,7 @@ Partial Class MainPanel
         Me.picSig4RA = New System.Windows.Forms.PictureBox()
         Me.picSig8RB = New System.Windows.Forms.PictureBox()
         Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.lineCoburgEast = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.lineBroadway = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.lineCoburgWest = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.lineBlock10 = New Microsoft.VisualBasic.PowerPacks.LineShape()
@@ -143,8 +144,8 @@ Partial Class MainPanel
         Me.lblBlock10 = New System.Windows.Forms.Label()
         Me.lblBlock5A = New System.Windows.Forms.Label()
         Me.lblBlock5B = New System.Windows.Forms.Label()
-        Me.lineCoburgEast = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.lblCoburgEast = New System.Windows.Forms.Label()
+        Me.lblBlock7 = New System.Windows.Forms.Label()
         Me.menuMain.SuspendLayout()
         CType(Me.picTurnout3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picTurnout23Down, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1116,6 +1117,16 @@ Partial Class MainPanel
         Me.ShapeContainer2.TabIndex = 46
         Me.ShapeContainer2.TabStop = False
         '
+        'lineCoburgEast
+        '
+        Me.lineCoburgEast.BorderColor = System.Drawing.Color.White
+        Me.lineCoburgEast.BorderWidth = 7
+        Me.lineCoburgEast.Name = "lineCoburgEast"
+        Me.lineCoburgEast.X1 = 860
+        Me.lineCoburgEast.X2 = 918
+        Me.lineCoburgEast.Y1 = 298
+        Me.lineCoburgEast.Y2 = 298
+        '
         'lineBroadway
         '
         Me.lineBroadway.BorderColor = System.Drawing.Color.White
@@ -1245,7 +1256,7 @@ Partial Class MainPanel
         Me.lblBroadway.AutoSize = True
         Me.lblBroadway.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBroadway.ForeColor = System.Drawing.Color.White
-        Me.lblBroadway.Location = New System.Drawing.Point(762, 106)
+        Me.lblBroadway.Location = New System.Drawing.Point(762, 80)
         Me.lblBroadway.Name = "lblBroadway"
         Me.lblBroadway.Size = New System.Drawing.Size(48, 18)
         Me.lblBroadway.TabIndex = 54
@@ -1256,7 +1267,7 @@ Partial Class MainPanel
         Me.lblBlock10.AutoSize = True
         Me.lblBlock10.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock10.ForeColor = System.Drawing.Color.White
-        Me.lblBlock10.Location = New System.Drawing.Point(701, 106)
+        Me.lblBlock10.Location = New System.Drawing.Point(693, 80)
         Me.lblBlock10.Name = "lblBlock10"
         Me.lblBlock10.Size = New System.Drawing.Size(48, 18)
         Me.lblBlock10.TabIndex = 55
@@ -1284,16 +1295,6 @@ Partial Class MainPanel
         Me.lblBlock5B.TabIndex = 57
         Me.lblBlock5B.Text = "XXXX"
         '
-        'lineCoburgEast
-        '
-        Me.lineCoburgEast.BorderColor = System.Drawing.Color.White
-        Me.lineCoburgEast.BorderWidth = 7
-        Me.lineCoburgEast.Name = "lineCoburgEast"
-        Me.lineCoburgEast.X1 = 860
-        Me.lineCoburgEast.X2 = 918
-        Me.lineCoburgEast.Y1 = 298
-        Me.lineCoburgEast.Y2 = 298
-        '
         'lblCoburgEast
         '
         Me.lblCoburgEast.AutoSize = True
@@ -1305,12 +1306,24 @@ Partial Class MainPanel
         Me.lblCoburgEast.TabIndex = 58
         Me.lblCoburgEast.Text = "XXXX"
         '
+        'lblBlock7
+        '
+        Me.lblBlock7.AutoSize = True
+        Me.lblBlock7.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock7.ForeColor = System.Drawing.Color.White
+        Me.lblBlock7.Location = New System.Drawing.Point(408, 151)
+        Me.lblBlock7.Name = "lblBlock7"
+        Me.lblBlock7.Size = New System.Drawing.Size(48, 18)
+        Me.lblBlock7.TabIndex = 59
+        Me.lblBlock7.Text = "XXXX"
+        '
         'MainPanel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1008, 661)
+        Me.Controls.Add(Me.lblBlock7)
         Me.Controls.Add(Me.lblCoburgEast)
         Me.Controls.Add(Me.lblBlock5B)
         Me.Controls.Add(Me.lblBlock5A)
@@ -1538,4 +1551,5 @@ Partial Class MainPanel
     Friend WithEvents lblBlock5B As Label
     Friend WithEvents lineCoburgEast As PowerPacks.LineShape
     Friend WithEvents lblCoburgEast As Label
+    Friend WithEvents lblBlock7 As Label
 End Class

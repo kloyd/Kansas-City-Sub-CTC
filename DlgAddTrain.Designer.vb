@@ -45,10 +45,11 @@ Partial Class DlgAddTrain
         '
         'txtLoco
         '
+        Me.txtLoco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtLoco.Location = New System.Drawing.Point(195, 62)
         Me.txtLoco.Name = "txtLoco"
         Me.txtLoco.Size = New System.Drawing.Size(89, 20)
-        Me.txtLoco.TabIndex = 14
+        Me.txtLoco.TabIndex = 1
         '
         'Label2
         '
@@ -72,10 +73,11 @@ Partial Class DlgAddTrain
         '
         'txtTrainID
         '
+        Me.txtTrainID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txtTrainID.Location = New System.Drawing.Point(195, 31)
         Me.txtTrainID.Name = "txtTrainID"
         Me.txtTrainID.Size = New System.Drawing.Size(89, 20)
-        Me.txtTrainID.TabIndex = 11
+        Me.txtTrainID.TabIndex = 0
         '
         'TableLayoutPanel1
         '
@@ -85,7 +87,7 @@ Partial Class DlgAddTrain
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(250, 117)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(157, 117)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -99,7 +101,7 @@ Partial Class DlgAddTrain
         Me.OK_Button.Location = New System.Drawing.Point(3, 3)
         Me.OK_Button.Name = "OK_Button"
         Me.OK_Button.Size = New System.Drawing.Size(67, 23)
-        Me.OK_Button.TabIndex = 0
+        Me.OK_Button.TabIndex = 2
         Me.OK_Button.Text = "OK"
         '
         'Cancel_Button
@@ -110,14 +112,14 @@ Partial Class DlgAddTrain
         Me.Cancel_Button.Location = New System.Drawing.Point(76, 3)
         Me.Cancel_Button.Name = "Cancel_Button"
         Me.Cancel_Button.Size = New System.Drawing.Size(67, 23)
-        Me.Cancel_Button.TabIndex = 1
+        Me.Cancel_Button.TabIndex = 3
         Me.Cancel_Button.Text = "Cancel"
         '
         'DlgAddTrain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(408, 158)
+        Me.ClientSize = New System.Drawing.Size(315, 158)
         Me.Controls.Add(Me.lblExplain)
         Me.Controls.Add(Me.txtLoco)
         Me.Controls.Add(Me.Label2)
