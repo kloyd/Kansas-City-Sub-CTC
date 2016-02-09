@@ -696,11 +696,11 @@
 
 
 
-    Private Sub lblCoburgWest_Click(sender As Object, e As EventArgs) Handles lblCoburgWest.Click
+    Private Sub lblCoburgWest_Click(sender As Object, e As EventArgs) Handles lblBlock11.Click
         Dim trainID As String
         trainID = InputBox("Enter the Train ID", "Assign departing train to block.", "None")
         If trainID <> "None" Then
-            lblCoburgWest.Text = trainID
+            lblBlock11.Text = trainID
             LogTrain(trainID + " called, on duty.")
         End If
     End Sub
@@ -886,6 +886,11 @@
             End If
         End If
     End Sub
+
+    Private Sub lblBlock14_Click(sender As Object, e As EventArgs) Handles lblBlock14.Click
+
+    End Sub
+
     Sub UpdateBlockOccupancyLines()
         If CDEIND = 1 Then
             Exit Sub
@@ -1223,20 +1228,20 @@
             Case OCC
                 lineBlock10.BorderColor = Color.Red
         End Select
-        lblBroadway.Text = TrainID(15) + Chr(13) + LocoID(15)
+        lblBlock15.Text = TrainID(15) + Chr(13) + LocoID(15)
         lblBlock10.Text = TrainID(10)
     End Sub
 
-    Private Sub lineBroadway_Click(sender As Object, e As EventArgs) Handles lineBroadway.Click
+    Private Sub lineBroadway_Click(sender As Object, e As EventArgs) Handles lineBroadway.Click, LineShape2.Click, LineShape1.Click
         SelectedBlock = 15
         If InputTrainID(SelectedBlock) Then
-            lblBroadway.Text = TrainID(SelectedBlock)
+            lblBlock15.Text = TrainID(SelectedBlock)
             LogTrain(TrainID(SelectedBlock) + " called, on duty.")
         End If
 
     End Sub
 
-    Private Sub lblCoburgEast_Click(sender As Object, e As EventArgs) Handles lblCoburgEast.Click
+    Private Sub lblCoburgEast_Click(sender As Object, e As EventArgs) Handles lblBlock12.Click
 
     End Sub
 
