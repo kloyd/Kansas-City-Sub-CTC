@@ -1,0 +1,10 @@
+Version 3 of the CTC system software.
+
+This version will be written using the .NET CMRI routines and the Test routines.
+
+It will follow the general outline of Chapter 25 in the applications handbook, vol 2.
+
+The panel will need to be altered to have code buttons... and room made on the inputs for said buttons. 
+
+Check capacity of the system as it stands. Re-check all of the inputs and outputs and make sure they are labeled correctly.
+

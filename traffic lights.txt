@@ -1,0 +1,49 @@
+Declarations   
+
+
+   ' ** I LIKE TRAFFIC LIGHTS, I LIKE TRAFFIC LIGHTS
+    Public TrafficYellow, TrafficRed, TrafficGreen As Short
+    Public DelayMedium, DelayLong, DelayShort As Short
+    Public TrafficTimer As Integer
+    Public TrafficLightState(5) As Short
+    Public TrafficDelay(5) As Short
+    Public TrafficCurrentState As Short
+	
+	    Sub InitializeTrafficLights()
+        TrafficGreen = 4
+        TrafficYellow = 2
+        TrafficRed = 1
+        DelayLong = 10
+        DelayMedium = 5
+        DelayShort = 1
+
+        TrafficLightState(0) = TrafficGreen Or TrafficRed * 8
+        TrafficLightState(1) = TrafficYellow Or TrafficRed * 8
+        TrafficLightState(2) = TrafficRed Or TrafficRed * 8
+        TrafficLightState(3) = TrafficRed Or TrafficGreen * 8
+        TrafficLightState(4) = TrafficRed Or TrafficYellow * 8
+        TrafficLightState(5) = TrafficRed Or TrafficRed * 8
+        TrafficCurrentState = 0
+
+        TrafficDelay(0) = DelayLong
+        TrafficDelay(1) = DelayMedium
+        TrafficDelay(2) = DelayShort
+        TrafficDelay(3) = DelayLong
+        TrafficDelay(4) = DelayMedium
+        TrafficDelay(5) = DelayShort
+
+        TrafficTimer = VB.Timer()
+
+    End Sub
+	
+	Sub AdvanceTraffic()
+        ' has the required time elapsed?
+        If System.Math.Abs(TrafficTimer - VB.Timer()) > TrafficDelay(TrafficCurrentState) Then
+            TrafficCurrentState = TrafficCurrentState + 1
+            If TrafficCurrentState > 5 Then TrafficCurrentState = 0
+            TrafficTimer = VB.Timer()
+        End If
+
+    End Sub
+	
+	

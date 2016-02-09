@@ -1,0 +1,336 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+KCSubCTCV3
+</name>
+</assembly>
+<members>
+<member name="T:KCSubCTCV3.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.GreenLeft">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.GreenRight">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.KCSubCTC">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockLeftDownGreen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockLeftDownLocked">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockLeftDownOccupied">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockLeftDownUnlocked">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockLeftUpGreen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockLeftUpLocked">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockLeftUpOccupied">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockLeftUpUnlocked">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockRightDownGreen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockRightDownLocked">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockRightDownOccupied">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockRightDownUnlocked">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockRightUpGreen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockRightUpLocked">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockRightUpOccupied">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.LockRightUpUnlocked">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.RedLeft">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.RedRight">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TrafficClearedEast">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TrafficClearedEastEnd">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TrafficClearedWest">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TrafficClearedWestEnd">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TrafficNoneEast">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TrafficNoneWest">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TrafficOccupiedEast">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TrafficOccupiedEastEnd">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TrafficOccupiedWest">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TrafficOccupiedWestEnd">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutBlank">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutLeftDownBlank">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutLeftDownNormal">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutLeftDownNormalGreen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutLeftDownNormalRed">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutLeftDownReverse">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutLeftDownReverseGreen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutLeftDownReverseRed">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutLeftUpBlank">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutLeftUpNormal">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutLeftUpNormalGreen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutLeftUpNormalRed">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutLeftUpReverse">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutLeftUpReverseGreen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutLeftUpReverseRed">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutRightDownBlank">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutRightDownNormal">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutRightDownNormalGreen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutRightDownNormalRed">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutRightDownReverse">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutRightDownReverseGreen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutRightDownReverseRed">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutRightUpBlank">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutRightUpNormal">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutRightUpNormalGreen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutRightUpNormalRed">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutRightUpReverse">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutRightUpReverseGreen">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.TurnoutRightUpReverseRed">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.WhiteLeft">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:KCSubCTCV3.My.Resources.Resources.WhiteRight">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+</members>
+</doc>

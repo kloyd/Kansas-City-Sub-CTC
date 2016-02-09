@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="KCSubCTCV3">
+</Property><Property Name="Solution File" Value="C:\Users\Kelly\Documents\KCSubCTCV3\KCSubCTCV3.sln">
+</Property><Property Name="Date" Value="Friday, 29 October 2010">
+</Property><Property Name="Time" Value="23:36 PM">
+</Property></Properties><Event ErrorLevel="0" Project="KCSubCTCV3" Source="KCSubCTCV3.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="KCSubCTCV3" Source="KCSubCTCV3.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="KCSubCTCV3.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="KCSubCTCV3.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="KCSubCTCV3" Source="KCSubCTCV3.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

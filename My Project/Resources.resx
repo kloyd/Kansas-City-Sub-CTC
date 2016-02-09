@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GreenLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GreenRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GreenRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KCSubCTC" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KCSubCTC.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockLeftDownGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockLeftDownGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockLeftDownLocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockLeftDownLocked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockLeftDownOccupied" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockLeftDownOccupied.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockLeftDownUnlocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockLeftDownUnlocked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockLeftUpGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockLeftUpGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockLeftUpLocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockLeftUpLocked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockLeftUpOccupied" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockLeftUpOccupied.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockLeftUpUnlocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockLeftUpUnlocked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockRightDownGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockRightDownGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockRightDownLocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockRightDownLocked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockRightDownOccupied" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockRightDownOccupied.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockRightDownUnlocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockRightDownUnlocked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockRightUpGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockRightUpGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockRightUpLocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockRightUpLocked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockRightUpOccupied" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockRightUpOccupied.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockRightUpUnlocked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LockRightUpUnlocked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RedRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\RedRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrafficClearedEast" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrafficClearedEast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrafficClearedEastEnd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrafficClearedEastEnd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrafficClearedWest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrafficClearedWest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrafficClearedWestEnd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrafficClearedWestEnd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrafficNoneEast" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrafficNoneEast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrafficNoneWest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrafficNoneWest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrafficOccupiedEast" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrafficOccupiedEast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrafficOccupiedEastEnd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrafficOccupiedEastEnd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrafficOccupiedWest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrafficOccupiedWest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TrafficOccupiedWestEnd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TrafficOccupiedWestEnd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutBlank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutBlank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutLeftDownBlank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutLeftDownBlank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutLeftDownNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutLeftDownNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutLeftDownNormalGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutLeftDownNormalGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutLeftDownNormalRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutLeftDownNormalRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutLeftDownReverse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutLeftDownReverse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutLeftDownReverseGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutLeftDownReverseGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutLeftDownReverseRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutLeftDownReverseRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutLeftUpBlank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutLeftUpBlank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutLeftUpNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutLeftUpNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutLeftUpNormalGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutLeftUpNormalGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutLeftUpNormalRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutLeftUpNormalRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutLeftUpReverse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutLeftUpReverse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutLeftUpReverseGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutLeftUpReverseGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutLeftUpReverseRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutLeftUpReverseRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutRightDownBlank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutRightDownBlank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutRightDownNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutRightDownNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutRightDownNormalGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutRightDownNormalGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutRightDownNormalRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutRightDownNormalRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutRightDownReverse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutRightDownReverse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutRightDownReverseGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutRightDownReverseGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutRightDownReverseRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutRightDownReverseRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutRightUpBlank" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutRightUpBlank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutRightUpNormal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutRightUpNormal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutRightUpNormalGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutRightUpNormalGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutRightUpNormalRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutRightUpNormalRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutRightUpReverse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutRightUpReverse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutRightUpReverseGreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutRightUpReverseGreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TurnoutRightUpReverseRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TurnoutRightUpReverseRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhiteLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhiteLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhiteRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WhiteRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>
