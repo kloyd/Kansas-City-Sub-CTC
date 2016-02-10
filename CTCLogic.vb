@@ -113,7 +113,7 @@
 
     ' **GLOBALIZE TRAFFIC STICKS FOR INTERMEDIATE SIGNALS
     ' KC Sub has no intermediate, but uses Traffic Sticks for blocks 1,2,5,6 and 9
-    Public FS1, FS2, FS5, FS6, FS7, FS9 As Integer
+    Public FS1, FS2, FS3, FS4, FS5, FS6, FS7, FS8, FS9, FS10 As Integer
 
     ' **GLOBALIZE DIRECTIONS FOR TRAFFIC STICKS
     Public EAST, WEST, NDT As Integer
@@ -442,13 +442,13 @@
 
     End Sub
     Sub InitializeControls()
-        
+
         REM**INITIALIZE SWITCH LEVER INDICATION LIGHTS TO NORMAL
         'Prior to indication delay
         SWL1LT = NORLT : SWL3LT = NORLT : SWL7LT = NORLT
         SWL9LT = NORLT : SWL11LT = NORLT : SWL15LT = NORLT
         SWL23LT = NORLT : SWL25LT = NORLT
-        
+
         REM**INITIALIZE SWITCH LEVER INDICATION LIGHTS TO NORMAL
         'After indication delay
         SWL1LTK = NORLT : SWL3LTK = NORLT : SWL7LTK = NORLT
@@ -501,7 +501,7 @@
         'TF25 = TUN : TF29 = TUN
 
         REM**INITIALIZE TRAFFIC STICKS TO NO-DIRECTION-OF-TRAFFIC
-        FS1 = NDT : FS2 = NDT : FS5 = NDT : FS6 = NDT : FS7 = NDT : FS9 = NDT
+        FS1 = NDT : FS2 = NDT : FS3 = NDT : FS4 = NDT : FS5 = NDT : FS6 = NDT : FS7 = NDT : FS8 = NDT : FS9 = NDT : FS10 = NDT
 
         REM**INITIALIZE CALL-ON BUTTON LATCH TO NORMAL (Clear or No Value)
         'COB28L = NV
@@ -685,7 +685,7 @@
         ' === NODE 3 ===
 
         Call theCMRI.INPUTS(MainPanel.CommPort, iInputBuffer:=IB, iMaxTries:=2000, iMaxBuf:=128, iUA:=3, iNumInputs:=3)
-       
+
         ' card 2 port a Blocks on Node 3 Port A
         ' If Power is back on and Power On delay is expired, Read the blocks.
         If PWRIND = LTON And TD(19) = TMROFF Then
@@ -748,6 +748,30 @@
         If (FS2 = NDT And SIG12RA <> RED And SWL11LTK = LREV) Then FS2 = WEST
         If FS2 = NDT And TLV10 = RIGHT And SWL9LTK = LNOR Then FS2 = WEST
         If FS2 = NDT And TLV12 = RIGHT Then FS2 = WEST
+
+        ' *** FS3 ***
+        ' Eastward
+        If FS3 = NDT And SIG24LA <> RED And SWL23LTK = LNOR Then
+            FS3 = EAST
+            LogEvent("SetTrafficSticks: FS3 = East")
+        End If
+        If FS3 = NDT And SIG26LAB <> REDRED And SWL23LTK = LREV Then
+            FS3 = EAST
+            LogEvent("SetTrafficSticks: FS3 = East")
+        End If
+        ' Westward
+        If FS3 = NDT And SIG24RAB <> REDRED Then
+            FS3 = WEST
+            LogEvent("SetTrafficSticks: FS3 = West")
+        End If
+
+
+        ' *** FS4 ***
+        ' Eastward
+        If FS4 = NDT And SWL25LTK = LNOR And SIG26LAB <> REDRED Then FS4 = EAST
+        If FS4 = NDT And SWL25LTK = LREV And SIG26LC <> RED Then FS4 = EAST
+        ' Westward
+
         REM FS5 North Main between Sheffield and Freight Line
         ' Eastward
         If FS5 = NDT And SIG8LABC <> REDREDRED And SWL9LTK = LNOR And SWL15LTK = LNOR And SWL7LTK = LNOR Then
@@ -1673,7 +1697,7 @@ CLEND:
 
         REM**IF AUTOMATIC ELECTRIC LOCK OR UNLOCKED REQUEST SET TO...
         '...UNLOCKED, THEN SET TRACK LIGHT INDICATION OCCUPIED
-        
+
 
         REM****************************************************
         REM** CALCULATE SIGNAL LEVER INDICATION LIGHT STATUS **
@@ -1772,7 +1796,7 @@ CKICODE:
         If STK(3) = 1 Then SI = 3 : GoTo S8
         If TL7K <> TL7 Then SI = 3 : GoTo S8
         If TL1K <> TL1 Then
-            SI = 3 : GoTo s8
+            SI = 3 : GoTo S8
         End If
         'SI = 3 : GoTo S8
         If SWL7LTK <> SWL7LT Then SI = 3 : GoTo S8
@@ -2202,6 +2226,11 @@ ICEND:
         ' Westward - only via 10R.
         If FS2 = WEST And TLV10 <> RIGHT And TLV12 <> RIGHT And BK8 = CLR And BK2 = CLR Then FS2 = NDT
 
+        ' FS3 Eastward
+        If FS3 = EAST And TLV24 <> LEFT And SWL23LTK = LNOR And BK3 = CLR And BK5 = CLR Then
+            FS3 = NDT
+            LogEvent("TrafficStick FS3 cleared")
+        End If
         ' FS5 - Eastward
         If FS5 = EAST And TLV8 <> LEFT And BK7 = CLR And BK5 = CLR Then FS5 = NDT
         If FS5 = EAST And SWL7LTK = LREV And BK5 = CLR Then FS5 = NDT
@@ -2231,7 +2260,7 @@ ICEND:
         ' Turnout indicators, 1,3,7,9,11,15,17,19,23,25
         ' Normal / Reverse
         ' SWI9 THRU SWI1
-        
+
         ' -- Node 0, Card 0, Port A --
         OB(1) = 0 ' Always start clear!
         OB(1) = SWL1LTK ' SwitchPanelIndicator1
@@ -2334,7 +2363,7 @@ ICEND:
         OB(2) = ADCW * B5 Or OB(2)
         OB(2) = ADCE * B6 Or OB(2)
         OB(2) = ADBT * B7 Or OB(2)
-       
+
         ' -- Node 1, Card 0, Port C
 
         OB(3) = FK5 'TrafficStick5
