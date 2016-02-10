@@ -116,11 +116,23 @@
         UpdateTrafficSticks()
         UpdateFlash()
         UpdateClock()
+        UpdateTrainIDs()
     End Sub
 
     Private Sub UpdateClock()
         ' redraw clock
         lblClock.Text = FormatFastClock()
+    End Sub
+
+    Private Sub UpdateTrainIDs()
+        Dim labelRef As Label
+        For n = 1 To 15
+            labelRef = Me.Controls("lblBlock" & n)
+            labelRef.Text = TrainID(n) + Chr(13) + LocoID(n)
+        Next
+        lblBlock5A.Text = TrainID(5) + Chr(13) + LocoID(5)
+        lblBlock6A.Text = TrainID(6) + Chr(13) + LocoID(6)
+
     End Sub
 
     Sub UpdateFlash()
@@ -891,6 +903,8 @@
 
     End Sub
 
+
+
     Sub UpdateBlockOccupancyLines()
         If CDEIND = 1 Then
             Exit Sub
@@ -1228,8 +1242,7 @@
             Case OCC
                 lineBlock10.BorderColor = Color.Red
         End Select
-        lblBlock15.Text = TrainID(15) + Chr(13) + LocoID(15)
-        lblBlock10.Text = TrainID(10)
+
     End Sub
 
     Private Sub lineBroadway_Click(sender As Object, e As EventArgs) Handles lineBroadway.Click, LineShape2.Click, LineShape1.Click

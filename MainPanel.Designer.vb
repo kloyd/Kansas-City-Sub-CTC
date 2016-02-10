@@ -127,6 +127,9 @@ Partial Class MainPanel
         Me.picSig4RA = New System.Windows.Forms.PictureBox()
         Me.picSig8RB = New System.Windows.Forms.PictureBox()
         Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.lineCoburgEast = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.lineBroadway = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.lineCoburgWest = New Microsoft.VisualBasic.PowerPacks.LineShape()
@@ -143,13 +146,20 @@ Partial Class MainPanel
         Me.lblBlock15 = New System.Windows.Forms.Label()
         Me.lblBlock10 = New System.Windows.Forms.Label()
         Me.lblBlock5A = New System.Windows.Forms.Label()
-        Me.lblBlock5B = New System.Windows.Forms.Label()
+        Me.lblBlock5 = New System.Windows.Forms.Label()
         Me.lblBlock12 = New System.Windows.Forms.Label()
         Me.lblBlock7 = New System.Windows.Forms.Label()
-        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.lblBlock14 = New System.Windows.Forms.Label()
         Me.lblBlock13 = New System.Windows.Forms.Label()
+        Me.lblCoburgYard = New System.Windows.Forms.Label()
+        Me.lblBlock8 = New System.Windows.Forms.Label()
+        Me.lblBlock6A = New System.Windows.Forms.Label()
+        Me.lblBlock6 = New System.Windows.Forms.Label()
+        Me.lblBlock1 = New System.Windows.Forms.Label()
+        Me.lblBlock2 = New System.Windows.Forms.Label()
+        Me.lblBlock3 = New System.Windows.Forms.Label()
+        Me.lblBlock4 = New System.Windows.Forms.Label()
+        Me.lblBlock9 = New System.Windows.Forms.Label()
         Me.menuMain.SuspendLayout()
         CType(Me.picTurnout3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picTurnout23Down, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -826,7 +836,7 @@ Partial Class MainPanel
         Me.lblSouthwestJct.AutoSize = True
         Me.lblSouthwestJct.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSouthwestJct.ForeColor = System.Drawing.Color.White
-        Me.lblSouthwestJct.Location = New System.Drawing.Point(141, 39)
+        Me.lblSouthwestJct.Location = New System.Drawing.Point(210, 41)
         Me.lblSouthwestJct.Name = "lblSouthwestJct"
         Me.lblSouthwestJct.Size = New System.Drawing.Size(138, 18)
         Me.lblSouthwestJct.TabIndex = 15
@@ -848,7 +858,7 @@ Partial Class MainPanel
         Me.lblSheffield.AutoSize = True
         Me.lblSheffield.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblSheffield.ForeColor = System.Drawing.Color.White
-        Me.lblSheffield.Location = New System.Drawing.Point(201, 341)
+        Me.lblSheffield.Location = New System.Drawing.Point(197, 370)
         Me.lblSheffield.Name = "lblSheffield"
         Me.lblSheffield.Size = New System.Drawing.Size(138, 18)
         Me.lblSheffield.TabIndex = 17
@@ -859,7 +869,7 @@ Partial Class MainPanel
         Me.lblFreightLineJct.AutoSize = True
         Me.lblFreightLineJct.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblFreightLineJct.ForeColor = System.Drawing.Color.White
-        Me.lblFreightLineJct.Location = New System.Drawing.Point(732, 341)
+        Me.lblFreightLineJct.Location = New System.Drawing.Point(739, 370)
         Me.lblFreightLineJct.Name = "lblFreightLineJct"
         Me.lblFreightLineJct.Size = New System.Drawing.Size(168, 18)
         Me.lblFreightLineJct.TabIndex = 18
@@ -1116,10 +1126,41 @@ Partial Class MainPanel
         Me.ShapeContainer2.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
-        Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape2, Me.LineShape1, Me.lineCoburgEast, Me.lineBroadway, Me.lineCoburgWest, Me.lineBlock10, Me.lineIndicate, Me.lineControl, Me.lineBlock1A, Me.lineBlock2A, Me.lineBlock3A, Me.lineBlock3B, Me.lineBlock3R, Me.lineBlock4A, Me.lineBlock4B, Me.lineBlock4C, Me.lineBlock4D, Me.lineBlock4R, Me.lineBlock5A, Me.lineBlock5B, Me.lineBlock6A, Me.lineBlock6B, Me.lineBlock7A, Me.lineBlock7B, Me.lineBlock7C, Me.lineBlock7D, Me.lineBlock7E, Me.lineBlock7F, Me.lineBlock7G, Me.lineBlock7H, Me.lineBlock7R, Me.lineBlock8A, Me.lineBlock8B, Me.lineBlock8C, Me.lineBlock8D, Me.lineBlock8E, Me.lineBlock8R, Me.lineBlock9A, Me.lineBlock9B, Me.lineBlock9C, Me.lineBlock9D, Me.lineBlock9E, Me.lineBlock9F, Me.IndependenceA, Me.IndependenceB, Me.RockCreekA, Me.RockCreekB, Me.YardInterchange})
+        Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape3, Me.LineShape2, Me.LineShape1, Me.lineCoburgEast, Me.lineBroadway, Me.lineCoburgWest, Me.lineBlock10, Me.lineIndicate, Me.lineControl, Me.lineBlock1A, Me.lineBlock2A, Me.lineBlock3A, Me.lineBlock3B, Me.lineBlock3R, Me.lineBlock4A, Me.lineBlock4B, Me.lineBlock4C, Me.lineBlock4D, Me.lineBlock4R, Me.lineBlock5A, Me.lineBlock5B, Me.lineBlock6A, Me.lineBlock6B, Me.lineBlock7A, Me.lineBlock7B, Me.lineBlock7C, Me.lineBlock7D, Me.lineBlock7E, Me.lineBlock7F, Me.lineBlock7G, Me.lineBlock7H, Me.lineBlock7R, Me.lineBlock8A, Me.lineBlock8B, Me.lineBlock8C, Me.lineBlock8D, Me.lineBlock8E, Me.lineBlock8R, Me.lineBlock9A, Me.lineBlock9B, Me.lineBlock9C, Me.lineBlock9D, Me.lineBlock9E, Me.lineBlock9F, Me.IndependenceA, Me.IndependenceB, Me.RockCreekA, Me.RockCreekB, Me.YardInterchange})
         Me.ShapeContainer2.Size = New System.Drawing.Size(1008, 661)
         Me.ShapeContainer2.TabIndex = 46
         Me.ShapeContainer2.TabStop = False
+        '
+        'LineShape3
+        '
+        Me.LineShape3.BorderColor = System.Drawing.Color.White
+        Me.LineShape3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Dot
+        Me.LineShape3.BorderWidth = 7
+        Me.LineShape3.Name = "LineShape3"
+        Me.LineShape3.X1 = 765
+        Me.LineShape3.X2 = 816
+        Me.LineShape3.Y1 = 298
+        Me.LineShape3.Y2 = 298
+        '
+        'LineShape2
+        '
+        Me.LineShape2.BorderColor = System.Drawing.Color.White
+        Me.LineShape2.BorderWidth = 7
+        Me.LineShape2.Name = "LineShape2"
+        Me.LineShape2.X1 = 4
+        Me.LineShape2.X2 = 62
+        Me.LineShape2.Y1 = 130
+        Me.LineShape2.Y2 = 130
+        '
+        'LineShape1
+        '
+        Me.LineShape1.BorderColor = System.Drawing.Color.White
+        Me.LineShape1.BorderWidth = 7
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 3
+        Me.LineShape1.X2 = 61
+        Me.LineShape1.Y1 = 80
+        Me.LineShape1.Y2 = 80
         '
         'lineCoburgEast
         '
@@ -1251,9 +1292,9 @@ Partial Class MainPanel
         Me.lblBlock11.ForeColor = System.Drawing.Color.White
         Me.lblBlock11.Location = New System.Drawing.Point(256, 298)
         Me.lblBlock11.Name = "lblBlock11"
-        Me.lblBlock11.Size = New System.Drawing.Size(48, 18)
+        Me.lblBlock11.Size = New System.Drawing.Size(48, 36)
         Me.lblBlock11.TabIndex = 53
-        Me.lblBlock11.Text = "XXXX"
+        Me.lblBlock11.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock15
         '
@@ -1264,7 +1305,7 @@ Partial Class MainPanel
         Me.lblBlock15.Name = "lblBlock15"
         Me.lblBlock15.Size = New System.Drawing.Size(48, 36)
         Me.lblBlock15.TabIndex = 54
-        Me.lblBlock15.Text = "ID" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Loco"
+        Me.lblBlock15.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock10
         '
@@ -1273,73 +1314,53 @@ Partial Class MainPanel
         Me.lblBlock10.ForeColor = System.Drawing.Color.White
         Me.lblBlock10.Location = New System.Drawing.Point(732, 80)
         Me.lblBlock10.Name = "lblBlock10"
-        Me.lblBlock10.Size = New System.Drawing.Size(48, 18)
+        Me.lblBlock10.Size = New System.Drawing.Size(48, 36)
         Me.lblBlock10.TabIndex = 55
-        Me.lblBlock10.Text = "XXXX"
+        Me.lblBlock10.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock5A
         '
         Me.lblBlock5A.AutoSize = True
         Me.lblBlock5A.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock5A.ForeColor = System.Drawing.Color.White
-        Me.lblBlock5A.Location = New System.Drawing.Point(153, 151)
+        Me.lblBlock5A.Location = New System.Drawing.Point(154, 133)
         Me.lblBlock5A.Name = "lblBlock5A"
-        Me.lblBlock5A.Size = New System.Drawing.Size(48, 18)
+        Me.lblBlock5A.Size = New System.Drawing.Size(48, 36)
         Me.lblBlock5A.TabIndex = 56
-        Me.lblBlock5A.Text = "XXXX"
+        Me.lblBlock5A.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
-        'lblBlock5B
+        'lblBlock5
         '
-        Me.lblBlock5B.AutoSize = True
-        Me.lblBlock5B.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBlock5B.ForeColor = System.Drawing.Color.White
-        Me.lblBlock5B.Location = New System.Drawing.Point(926, 151)
-        Me.lblBlock5B.Name = "lblBlock5B"
-        Me.lblBlock5B.Size = New System.Drawing.Size(48, 18)
-        Me.lblBlock5B.TabIndex = 57
-        Me.lblBlock5B.Text = "XXXX"
+        Me.lblBlock5.AutoSize = True
+        Me.lblBlock5.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock5.ForeColor = System.Drawing.Color.White
+        Me.lblBlock5.Location = New System.Drawing.Point(924, 139)
+        Me.lblBlock5.Name = "lblBlock5"
+        Me.lblBlock5.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock5.TabIndex = 57
+        Me.lblBlock5.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock12
         '
         Me.lblBlock12.AutoSize = True
         Me.lblBlock12.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock12.ForeColor = System.Drawing.Color.White
-        Me.lblBlock12.Location = New System.Drawing.Point(864, 275)
+        Me.lblBlock12.Location = New System.Drawing.Point(865, 310)
         Me.lblBlock12.Name = "lblBlock12"
-        Me.lblBlock12.Size = New System.Drawing.Size(48, 18)
+        Me.lblBlock12.Size = New System.Drawing.Size(48, 36)
         Me.lblBlock12.TabIndex = 58
-        Me.lblBlock12.Text = "XXXX"
+        Me.lblBlock12.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock7
         '
         Me.lblBlock7.AutoSize = True
         Me.lblBlock7.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock7.ForeColor = System.Drawing.Color.White
-        Me.lblBlock7.Location = New System.Drawing.Point(408, 151)
+        Me.lblBlock7.Location = New System.Drawing.Point(446, 131)
         Me.lblBlock7.Name = "lblBlock7"
-        Me.lblBlock7.Size = New System.Drawing.Size(48, 18)
+        Me.lblBlock7.Size = New System.Drawing.Size(48, 36)
         Me.lblBlock7.TabIndex = 59
-        Me.lblBlock7.Text = "XXXX"
-        '
-        'LineShape1
-        '
-        Me.LineShape1.BorderColor = System.Drawing.Color.White
-        Me.LineShape1.BorderWidth = 7
-        Me.LineShape1.Name = "LineShape1"
-        Me.LineShape1.X1 = 3
-        Me.LineShape1.X2 = 61
-        Me.LineShape1.Y1 = 80
-        Me.LineShape1.Y2 = 80
-        '
-        'LineShape2
-        '
-        Me.LineShape2.BorderColor = System.Drawing.Color.White
-        Me.LineShape2.BorderWidth = 7
-        Me.LineShape2.Name = "LineShape2"
-        Me.LineShape2.X1 = 4
-        Me.LineShape2.X2 = 62
-        Me.LineShape2.Y1 = 130
-        Me.LineShape2.Y2 = 130
+        Me.lblBlock7.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock14
         '
@@ -1363,17 +1384,125 @@ Partial Class MainPanel
         Me.lblBlock13.TabIndex = 61
         Me.lblBlock13.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
+        'lblCoburgYard
+        '
+        Me.lblCoburgYard.AutoSize = True
+        Me.lblCoburgYard.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCoburgYard.ForeColor = System.Drawing.Color.White
+        Me.lblCoburgYard.Location = New System.Drawing.Point(697, 300)
+        Me.lblCoburgYard.Name = "lblCoburgYard"
+        Me.lblCoburgYard.Size = New System.Drawing.Size(118, 18)
+        Me.lblCoburgYard.TabIndex = 62
+        Me.lblCoburgYard.Text = "Coburg Yard"
+        '
+        'lblBlock8
+        '
+        Me.lblBlock8.AutoSize = True
+        Me.lblBlock8.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock8.ForeColor = System.Drawing.Color.White
+        Me.lblBlock8.Location = New System.Drawing.Point(446, 200)
+        Me.lblBlock8.Name = "lblBlock8"
+        Me.lblBlock8.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock8.TabIndex = 63
+        Me.lblBlock8.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
+        '
+        'lblBlock6A
+        '
+        Me.lblBlock6A.AutoSize = True
+        Me.lblBlock6A.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock6A.ForeColor = System.Drawing.Color.White
+        Me.lblBlock6A.Location = New System.Drawing.Point(153, 197)
+        Me.lblBlock6A.Name = "lblBlock6A"
+        Me.lblBlock6A.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock6A.TabIndex = 64
+        Me.lblBlock6A.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
+        '
+        'lblBlock6
+        '
+        Me.lblBlock6.AutoSize = True
+        Me.lblBlock6.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock6.ForeColor = System.Drawing.Color.White
+        Me.lblBlock6.Location = New System.Drawing.Point(924, 197)
+        Me.lblBlock6.Name = "lblBlock6"
+        Me.lblBlock6.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock6.TabIndex = 65
+        Me.lblBlock6.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
+        '
+        'lblBlock1
+        '
+        Me.lblBlock1.AutoSize = True
+        Me.lblBlock1.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock1.ForeColor = System.Drawing.Color.White
+        Me.lblBlock1.Location = New System.Drawing.Point(643, 139)
+        Me.lblBlock1.Name = "lblBlock1"
+        Me.lblBlock1.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock1.TabIndex = 66
+        Me.lblBlock1.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
+        '
+        'lblBlock2
+        '
+        Me.lblBlock2.AutoSize = True
+        Me.lblBlock2.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock2.ForeColor = System.Drawing.Color.White
+        Me.lblBlock2.Location = New System.Drawing.Point(643, 197)
+        Me.lblBlock2.Name = "lblBlock2"
+        Me.lblBlock2.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock2.TabIndex = 67
+        Me.lblBlock2.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
+        '
+        'lblBlock3
+        '
+        Me.lblBlock3.AutoSize = True
+        Me.lblBlock3.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock3.ForeColor = System.Drawing.Color.White
+        Me.lblBlock3.Location = New System.Drawing.Point(778, 139)
+        Me.lblBlock3.Name = "lblBlock3"
+        Me.lblBlock3.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock3.TabIndex = 68
+        Me.lblBlock3.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
+        '
+        'lblBlock4
+        '
+        Me.lblBlock4.AutoSize = True
+        Me.lblBlock4.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock4.ForeColor = System.Drawing.Color.White
+        Me.lblBlock4.Location = New System.Drawing.Point(848, 246)
+        Me.lblBlock4.Name = "lblBlock4"
+        Me.lblBlock4.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock4.TabIndex = 69
+        Me.lblBlock4.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
+        '
+        'lblBlock9
+        '
+        Me.lblBlock9.AutoSize = True
+        Me.lblBlock9.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock9.ForeColor = System.Drawing.Color.White
+        Me.lblBlock9.Location = New System.Drawing.Point(141, 35)
+        Me.lblBlock9.Name = "lblBlock9"
+        Me.lblBlock9.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock9.TabIndex = 70
+        Me.lblBlock9.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
+        '
         'MainPanel
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1008, 661)
+        Me.Controls.Add(Me.lblBlock9)
+        Me.Controls.Add(Me.lblBlock4)
+        Me.Controls.Add(Me.lblBlock3)
+        Me.Controls.Add(Me.lblBlock2)
+        Me.Controls.Add(Me.lblBlock1)
+        Me.Controls.Add(Me.lblBlock6)
+        Me.Controls.Add(Me.lblBlock6A)
+        Me.Controls.Add(Me.lblBlock8)
+        Me.Controls.Add(Me.lblCoburgYard)
         Me.Controls.Add(Me.lblBlock13)
         Me.Controls.Add(Me.lblBlock14)
         Me.Controls.Add(Me.lblBlock7)
         Me.Controls.Add(Me.lblBlock12)
-        Me.Controls.Add(Me.lblBlock5B)
+        Me.Controls.Add(Me.lblBlock5)
         Me.Controls.Add(Me.lblBlock5A)
         Me.Controls.Add(Me.lblBlock10)
         Me.Controls.Add(Me.lblBlock15)
@@ -1596,7 +1725,7 @@ Partial Class MainPanel
     Friend WithEvents lblBlock10 As Label
     Friend WithEvents lineBroadway As PowerPacks.LineShape
     Friend WithEvents lblBlock5A As Label
-    Friend WithEvents lblBlock5B As Label
+    Friend WithEvents lblBlock5 As Label
     Friend WithEvents lineCoburgEast As PowerPacks.LineShape
     Friend WithEvents lblBlock12 As Label
     Friend WithEvents lblBlock7 As Label
@@ -1604,4 +1733,14 @@ Partial Class MainPanel
     Friend WithEvents LineShape1 As PowerPacks.LineShape
     Friend WithEvents lblBlock14 As Label
     Friend WithEvents lblBlock13 As Label
+    Friend WithEvents LineShape3 As PowerPacks.LineShape
+    Friend WithEvents lblCoburgYard As Label
+    Friend WithEvents lblBlock8 As Label
+    Friend WithEvents lblBlock6A As Label
+    Friend WithEvents lblBlock6 As Label
+    Friend WithEvents lblBlock1 As Label
+    Friend WithEvents lblBlock2 As Label
+    Friend WithEvents lblBlock3 As Label
+    Friend WithEvents lblBlock4 As Label
+    Friend WithEvents lblBlock9 As Label
 End Class
