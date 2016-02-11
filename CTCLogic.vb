@@ -725,6 +725,10 @@
         REM******************************************************
         ' 
         Dim OldFS9 As Integer
+        Dim OldFS3, OldFS4 As Integer
+
+        OldFS3 = FS3
+        OldFS4 = FS4
 
         REM FS1 North Main between Rock Creek and Freight Line
         ' Check East first (Left)
@@ -753,16 +757,13 @@
         ' Eastward
         If FS3 = NDT And SIG24LA <> RED And SWL23LTK = LNOR Then
             FS3 = EAST
-            LogEvent("SetTrafficSticks: FS3 = East")
         End If
         If FS3 = NDT And SIG26LAB <> REDRED And SWL23LTK = LREV Then
             FS3 = EAST
-            LogEvent("SetTrafficSticks: FS3 = East")
         End If
         ' Westward
         If FS3 = NDT And SIG24RAB <> REDRED Then
             FS3 = WEST
-            LogEvent("SetTrafficSticks: FS3 = West")
         End If
 
 
@@ -804,8 +805,14 @@
         ' If FS9 = NDT And TLV8 = LEFT And SWL7LT = LREV And SWL9LT = LNOR Then FS9 = EAST
         If FS9 = NDT And TLV4 = LEFT Then FS9 = EAST
         If OldFS9 <> FS9 Then
-            If FS9 = WEST Then LogEvent("SetTrafficSticks: FS9 = West")
-            If FS9 = EAST Then LogEvent("SetTrafficSticks: FS9 = East")
+            If FS9 = WEST Then LogEvent("SetTrafficSticks: FS9 = West.")
+            If FS9 = EAST Then LogEvent("SetTrafficSticks: FS9 = East.")
+        End If
+
+
+        If OldFS3 <> FS3 Then
+            If FS3 = WEST Then LogEvent("SetTrafficSticks: FS3 = West.")
+            If FS3 = EAST Then LogEvent("SetTrafficSticks: FS3 = East.")
         End If
 
         ' new checks
@@ -2229,8 +2236,18 @@ ICEND:
         ' FS3 Eastward
         If FS3 = EAST And TLV24 <> LEFT And SWL23LTK = LNOR And BK3 = CLR And BK5 = CLR Then
             FS3 = NDT
-            LogEvent("TrafficStick FS3 cleared")
+            LogEvent("TrafficStick FS3 cleared.")
         End If
+        If FS3 = EAST And TLV26 <> LEFT And SWL23LTK = LREV And BK3 = CLR And BK6 = CLR Then
+            FS3 = NDT
+            LogEvent("TrafficStick FS3 cleared.")
+        End If
+        ' FS3 Westward
+        If FS3 = WEST And TLV24 <> RIGHT And BK3 = CLR And BK1 = CLR Then
+            FS3 = NDT
+            LogEvent("TrafficStick FS3 cleared.")
+        End If
+
         ' FS5 - Eastward
         If FS5 = EAST And TLV8 <> LEFT And BK7 = CLR And BK5 = CLR Then FS5 = NDT
         If FS5 = EAST And SWL7LTK = LREV And BK5 = CLR Then FS5 = NDT
