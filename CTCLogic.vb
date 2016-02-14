@@ -772,6 +772,7 @@
         If FS4 = NDT And SWL25LTK = LNOR And SIG26LAB <> REDRED Then FS4 = EAST
         If FS4 = NDT And SWL25LTK = LREV And SIG26LC <> RED Then FS4 = EAST
         ' Westward
+        If FS4 = NDT And SIG26RAB <> REDRED Then FS4 = WEST
 
         REM FS5 North Main between Sheffield and Freight Line
         ' Eastward
@@ -785,6 +786,7 @@
         If FS5 = NDT And SIG24RAB <> REDRED And SWL23LTK = LNOR Then
             FS5 = WEST
         End If
+
         REM FS6 South Main between Sheffield and Frieght Line
         ' Eastward
         If FS6 = NDT And SIG10LAB <> REDRED And SWL11LTK = LNOR Then FS6 = EAST
@@ -813,6 +815,11 @@
         If OldFS3 <> FS3 Then
             If FS3 = WEST Then LogEvent("SetTrafficSticks: FS3 = West.")
             If FS3 = EAST Then LogEvent("SetTrafficSticks: FS3 = East.")
+        End If
+
+        If OldFS4 <> FS4 Then
+            If FS4 = WEST Then LogEvent("SetTrafficSticks: FS4 = West.")
+            If FS4 = EAST Then LogEvent("SetTrafficSticks: FS4 = East.")
         End If
 
         ' new checks
@@ -2247,6 +2254,14 @@ ICEND:
             FS3 = NDT
             LogEvent("TrafficStick FS3 cleared.")
         End If
+
+        ' FS4 Eastward
+        If FS4 = EAST And TLV26 <> RIGHT And SWL23LTK = LNOR And SWL25LTK = LNOR And BK4 = CLR And BK2 = CLR Then
+            FS4 = NDT
+            LogEvent("TrafficStick FS4 cleared.")
+        End If
+
+        ' FS4 Westward
 
         ' FS5 - Eastward
         If FS5 = EAST And TLV8 <> LEFT And BK7 = CLR And BK5 = CLR Then FS5 = NDT
