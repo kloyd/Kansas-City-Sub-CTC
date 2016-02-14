@@ -125,13 +125,77 @@
     End Sub
 
     Private Sub UpdateTrainIDs()
-        Dim labelRef As Label
-        For n = 1 To 15
-            labelRef = Me.Controls("lblBlock" & n)
-            labelRef.Text = TrainID(n) + Chr(13) + LocoID(n)
-        Next
-        lblBlock5A.Text = TrainID(5) + Chr(13) + LocoID(5)
-        lblBlock6A.Text = TrainID(6) + Chr(13) + LocoID(6)
+        Dim scratch As String
+        scratch = TrainID(1) + Chr(13) + LocoID(1)
+        If FS1 = EAST Then scratch = "<E" + TrainID(1) + Chr(13) + LocoID(1)
+        If FS1 = WEST Then scratch = TrainID(1) + "W>" + Chr(13) + LocoID(1)
+        lblBlock1.Text = scratch
+
+        scratch = TrainID(2) + Chr(13) + LocoID(2)
+        If FS2 = EAST Then scratch = "<E" + TrainID(2) + Chr(13) + LocoID(2)
+        If FS2 = WEST Then scratch = TrainID(2) + "W>" + Chr(13) + LocoID(2)
+        lblBlock2.Text = scratch
+
+        scratch = TrainID(3) + Chr(13) + LocoID(3)
+        If FS3 = EAST Then scratch = "<E" + TrainID(3) + Chr(13) + LocoID(3)
+        If FS3 = WEST Then scratch = TrainID(3) + "W>" + Chr(13) + LocoID(3)
+        lblBlock3.Text = scratch
+
+        scratch = TrainID(4) + Chr(13) + LocoID(4)
+        If FS4 = EAST Then scratch = "<E" + TrainID(4) + Chr(13) + LocoID(4)
+        If FS4 = WEST Then scratch = TrainID(4) + "W>" + Chr(13) + LocoID(4)
+        lblBlock4.Text = scratch
+
+        scratch = TrainID(5) + Chr(13) + LocoID(5)
+        If FS5 = EAST Then scratch = "<E" + TrainID(5) + Chr(13) + LocoID(5)
+        If FS5 = WEST Then scratch = TrainID(5) + "W>" + Chr(13) + LocoID(5)
+        lblBlock5.Text = scratch
+        lblBlock5A.Text = scratch
+
+        scratch = TrainID(6) + Chr(13) + LocoID(6)
+        If FS6 = EAST Then scratch = "<E" + TrainID(6) + Chr(13) + LocoID(6)
+        If FS6 = WEST Then scratch = TrainID(6) + "W>" + Chr(13) + LocoID(6)
+        lblBlock6.Text = scratch
+        lblBlock6A.Text = scratch
+
+        scratch = TrainID(7) + Chr(13) + LocoID(7)
+        If FS7 = EAST Then scratch = "<E" + TrainID(7) + Chr(13) + LocoID(7)
+        If FS7 = WEST Then scratch = TrainID(7) + "W>" + Chr(13) + LocoID(7)
+        lblBlock7.Text = scratch
+
+        scratch = TrainID(8) + Chr(13) + LocoID(8)
+        If FS8 = EAST Then scratch = "<E" + TrainID(8) + Chr(13) + LocoID(8)
+        If FS8 = WEST Then scratch = TrainID(8) + "W>" + Chr(13) + LocoID(8)
+        lblBlock8.Text = scratch
+
+        scratch = TrainID(9) + Chr(13) + LocoID(9)
+        If FS9 = EAST Then scratch = "<E" + TrainID(9) + Chr(13) + LocoID(9)
+        If FS9 = WEST Then scratch = TrainID(9) + "W>" + Chr(13) + LocoID(9)
+        lblBlock9.Text = scratch
+
+        scratch = TrainID(10) + Chr(13) + LocoID(10)
+        lblBlock10.Text = scratch
+
+        scratch = TrainID(11) + Chr(13) + LocoID(11)
+        lblBlock11.Text = scratch
+
+        scratch = TrainID(12) + Chr(13) + LocoID(12)
+        lblBlock12.Text = scratch
+
+        scratch = TrainID(13) + Chr(13) + LocoID(13)
+        lblBlock13.Text = scratch
+
+        scratch = TrainID(14) + Chr(13) + LocoID(14)
+        lblBlock14.Text = scratch
+
+        scratch = TrainID(15) + Chr(13) + LocoID(15)
+        lblBlock15.Text = scratch
+
+        'Dim labelRef As Label
+        'For n = 1 To 15
+        'labelRef = Me.Controls("lblBlock" & n)
+        'labelRef.Text = TrainID(n) + Chr(13) + LocoID(n)
+        'Next
 
     End Sub
 
@@ -899,11 +963,33 @@
         End If
     End Sub
 
-    Private Sub lblBlock14_Click(sender As Object, e As EventArgs) Handles lblBlock14.Click
-
+    Private Sub lineCentropolis_Click(sender As Object, e As EventArgs) Handles lineCentropolis.Click
+        SelectedBlock = 13
+        If InputTrainID(SelectedBlock) Then
+            LogTrain(TrainID(SelectedBlock) + " called, on duty.")
+        End If
     End Sub
 
+    Private Sub lineCoburgWest_Click(sender As Object, e As EventArgs) Handles lineCoburgWest.Click
+        SelectedBlock = 11
+        If InputTrainID(SelectedBlock) Then
+            LogTrain(TrainID(SelectedBlock) + " called, on duty.")
+        End If
+    End Sub
 
+    Private Sub lineCoburgEast_Click(sender As Object, e As EventArgs) Handles lineCoburgEast.Click
+        SelectedBlock = 12
+        If InputTrainID(SelectedBlock) Then
+            LogTrain(TrainID(SelectedBlock) + " called, on duty.")
+        End If
+    End Sub
+
+    Private Sub lineOttumwa_Click(sender As Object, e As EventArgs) Handles lineOttumwa.Click
+        SelectedBlock = 14
+        If InputTrainID(SelectedBlock) Then
+            LogTrain(TrainID(SelectedBlock) + " called, on duty.")
+        End If
+    End Sub
 
     Sub UpdateBlockOccupancyLines()
         If CDEIND = 1 Then
@@ -1244,25 +1330,19 @@
         End Select
 
     End Sub
-
-    Private Sub lineBroadway_Click(sender As Object, e As EventArgs) Handles lineBroadway.Click, LineShape2.Click, LineShape1.Click
+    Private Sub lineBroadway_Click(sender As Object, e As EventArgs) Handles lineBroadway.Click
         SelectedBlock = 15
         If InputTrainID(SelectedBlock) Then
-            lblBlock15.Text = TrainID(SelectedBlock)
             LogTrain(TrainID(SelectedBlock) + " called, on duty.")
         End If
-
     End Sub
-
-    Private Sub lblCoburgEast_Click(sender As Object, e As EventArgs) Handles lblBlock12.Click
-
-    End Sub
-
     Function InputTrainID(BlockNumber) As Boolean
         If DlgAddTrain.ShowDialog() = Windows.Forms.DialogResult.OK Then
             TrainID(BlockNumber) = DlgAddTrain.txtTrainID.Text
             LocoID(BlockNumber) = DlgAddTrain.txtLoco.Text
-
+            Return True
+        Else
+            Return False
         End If
     End Function
 End Class
