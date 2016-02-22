@@ -795,8 +795,17 @@
         ' Westward
         If FS6 = NDT And SIG26RAB <> REDRED And SWL25LTK = LNOR Then FS6 = WEST
         If FS6 = NDT And SIG24RAB <> REDRED And SWL23LTK = LREV Then FS6 = WEST
+
         ' FS7 for block 7. 
         If FS7 = NDT And TLV8 = EAST Then FS7 = EAST
+        ' FS7 - Eastward
+
+        ' FS7 - Westward
+
+        ' FS8 - Eastward
+
+        ' FS8 - Westward
+
 
         REM FS9 - Southwest Jct
         OldFS9 = FS9
@@ -2256,12 +2265,26 @@ ICEND:
         End If
 
         ' FS4 Eastward
-        If FS4 = EAST And TLV26 <> RIGHT And SWL23LTK = LNOR And SWL25LTK = LNOR And BK4 = CLR And BK2 = CLR Then
+        If FS4 = EAST And TLV26 <> LEFT And BK4 = CLR And SWL25LTK = LNOR And BK6 = CLR Then
+            FS4 = NDT
+            LogEvent("TrafficStick FS4 cleared.")
+        End If
+
+        If FS4 = EAST And TLV26 <> LEFT And SWL25LTK = LREV And BK4 = CLR Then
             FS4 = NDT
             LogEvent("TrafficStick FS4 cleared.")
         End If
 
         ' FS4 Westward
+        If FS4 = WEST And TLV26 <> RIGHT And SWL23LTK = LNOR And SWL25LTK = LNOR And BK4 = CLR And BK2 = CLR Then
+            FS4 = NDT
+            LogEvent("TrafficStick FS4 cleared.")
+        End If
+
+        If FS4 = WEST And TLV26 <> RIGHT And SWL23LTK = LNOR And SWL25LTK = LREV And BK4 = CLR Then
+            FS4 = NDT
+            LogEvent("TrafficStick FS4 cleared.")
+        End If
 
         ' FS5 - Eastward
         If FS5 = EAST And TLV8 <> LEFT And BK7 = CLR And BK5 = CLR Then FS5 = NDT
@@ -2275,6 +2298,14 @@ ICEND:
         ' Westward
         If FS6 = WEST And TLV26 <> RIGHT And SWL23LT = LNOR And BK4 = CLR And BK6 = CLR Then FS6 = NDT
         If FS6 = WEST And TLV24 <> RIGHT And SWL23LT = LREV And BK3 = CLR And BK4 = CLR And BK6 = CLR Then FS6 = NDT
+
+        ' FS7 - Eastward
+
+        ' FS7 - Westward
+
+        ' FS8 - Eastward
+
+        ' FS8 - Westward
 
         ' FS9
         OldFS9 = FS9
