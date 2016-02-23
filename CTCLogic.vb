@@ -796,11 +796,12 @@
         If FS6 = NDT And SIG26RAB <> REDRED And SWL25LTK = LNOR Then FS6 = WEST
         If FS6 = NDT And SIG24RAB <> REDRED And SWL23LTK = LREV Then FS6 = WEST
 
-        ' FS7 for block 7. 
-        If FS7 = NDT And TLV8 = EAST Then FS7 = EAST
         ' FS7 - Eastward
+        If FS7 = NDT And TLV8 = EAST Then FS7 = EAST
 
         ' FS7 - Westward
+        If FS7 = NDT And TLV8 = WEST Then FS7 = WEST
+        If FS7 = NDT And TLV10 = WEST And SWL9LTK = LREV Then FS7 = WEST
 
         ' FS8 - Eastward
 
