@@ -328,7 +328,7 @@ Partial Class MainPanel
         Me.lineBlock7A.BorderWidth = 7
         Me.lineBlock7A.Name = "lineBlock7A"
         Me.lineBlock7A.X1 = 225
-        Me.lineBlock7A.X2 = 360
+        Me.lineBlock7A.X2 = 370
         Me.lineBlock7A.Y1 = 180
         Me.lineBlock7A.Y2 = 180
         '
@@ -347,8 +347,8 @@ Partial Class MainPanel
         Me.lineBlock7E.BorderColor = System.Drawing.Color.White
         Me.lineBlock7E.BorderWidth = 7
         Me.lineBlock7E.Name = "lineBlock7E"
-        Me.lineBlock7E.X1 = 331
-        Me.lineBlock7E.X2 = 369
+        Me.lineBlock7E.X1 = 342
+        Me.lineBlock7E.X2 = 380
         Me.lineBlock7E.Y1 = 129
         Me.lineBlock7E.Y2 = 167
         '
@@ -447,8 +447,8 @@ Partial Class MainPanel
         Me.lineBlock7D.BorderColor = System.Drawing.Color.White
         Me.lineBlock7D.BorderWidth = 7
         Me.lineBlock7D.Name = "lineBlock7D"
-        Me.lineBlock7D.X1 = 294
-        Me.lineBlock7D.X2 = 334
+        Me.lineBlock7D.X1 = 304
+        Me.lineBlock7D.X2 = 344
         Me.lineBlock7D.Y1 = 130
         Me.lineBlock7D.Y2 = 130
         '
@@ -467,8 +467,8 @@ Partial Class MainPanel
         Me.lineBlock9A.BorderColor = System.Drawing.Color.White
         Me.lineBlock9A.BorderWidth = 7
         Me.lineBlock9A.Name = "lineBlock9A"
-        Me.lineBlock9A.X1 = 65
-        Me.lineBlock9A.X2 = 145
+        Me.lineBlock9A.X1 = 74
+        Me.lineBlock9A.X2 = 154
         Me.lineBlock9A.Y1 = 80
         Me.lineBlock9A.Y2 = 80
         '
@@ -477,8 +477,8 @@ Partial Class MainPanel
         Me.lineBlock9B.BorderColor = System.Drawing.Color.White
         Me.lineBlock9B.BorderWidth = 7
         Me.lineBlock9B.Name = "lineBlock9B"
-        Me.lineBlock9B.X1 = 67
-        Me.lineBlock9B.X2 = 118
+        Me.lineBlock9B.X1 = 76
+        Me.lineBlock9B.X2 = 127
         Me.lineBlock9B.Y1 = 130
         Me.lineBlock9B.Y2 = 130
         '
@@ -488,8 +488,8 @@ Partial Class MainPanel
         Me.lineBlock9F.BorderWidth = 7
         Me.lineBlock9F.Name = "lineBlock9F"
         Me.lineBlock9F.SelectionColor = System.Drawing.Color.White
-        Me.lineBlock9F.X1 = 248
-        Me.lineBlock9F.X2 = 288
+        Me.lineBlock9F.X1 = 259
+        Me.lineBlock9F.X2 = 299
         Me.lineBlock9F.Y1 = 130
         Me.lineBlock9F.Y2 = 130
         '
@@ -498,8 +498,8 @@ Partial Class MainPanel
         Me.lineBlock9E.BorderColor = System.Drawing.Color.White
         Me.lineBlock9E.BorderWidth = 7
         Me.lineBlock9E.Name = "lineBlock9E"
-        Me.lineBlock9E.X1 = 199
-        Me.lineBlock9E.X2 = 250
+        Me.lineBlock9E.X1 = 210
+        Me.lineBlock9E.X2 = 261
         Me.lineBlock9E.Y1 = 79
         Me.lineBlock9E.Y2 = 130
         '
@@ -508,8 +508,8 @@ Partial Class MainPanel
         Me.lineBlock9D.BorderColor = System.Drawing.Color.White
         Me.lineBlock9D.BorderWidth = 7
         Me.lineBlock9D.Name = "lineBlock9D"
-        Me.lineBlock9D.X1 = 176
-        Me.lineBlock9D.X2 = 201
+        Me.lineBlock9D.X1 = 187
+        Me.lineBlock9D.X2 = 212
         Me.lineBlock9D.Y1 = 80
         Me.lineBlock9D.Y2 = 80
         '
@@ -518,8 +518,8 @@ Partial Class MainPanel
         Me.lineBlock9C.BorderColor = System.Drawing.Color.White
         Me.lineBlock9C.BorderWidth = 7
         Me.lineBlock9C.Name = "lineBlock9C"
-        Me.lineBlock9C.X1 = 116
-        Me.lineBlock9C.X2 = 157
+        Me.lineBlock9C.X1 = 125
+        Me.lineBlock9C.X2 = 166
         Me.lineBlock9C.Y1 = 131
         Me.lineBlock9C.Y2 = 90
         '
@@ -692,7 +692,7 @@ Partial Class MainPanel
         Me.lineBlock7B.BorderColor = System.Drawing.Color.White
         Me.lineBlock7B.BorderWidth = 7
         Me.lineBlock7B.Name = "lineBlock7B"
-        Me.lineBlock7B.X1 = 391
+        Me.lineBlock7B.X1 = 435
         Me.lineBlock7B.X2 = 508
         Me.lineBlock7B.Y1 = 180
         Me.lineBlock7B.Y2 = 180
@@ -720,7 +720,7 @@ Partial Class MainPanel
         'picTurnout3
         '
         Me.picTurnout3.Image = Global.KCSubCTCV3.My.Resources.Resources.TurnoutLeftDownNormal
-        Me.picTurnout3.Location = New System.Drawing.Point(144, 77)
+        Me.picTurnout3.Location = New System.Drawing.Point(153, 77)
         Me.picTurnout3.Name = "picTurnout3"
         Me.picTurnout3.Size = New System.Drawing.Size(35, 20)
         Me.picTurnout3.TabIndex = 3
@@ -753,7 +753,7 @@ Partial Class MainPanel
         'picTurnout7
         '
         Me.picTurnout7.Image = Global.KCSubCTCV3.My.Resources.Resources.TurnoutRightUpNormal
-        Me.picTurnout7.Location = New System.Drawing.Point(358, 164)
+        Me.picTurnout7.Location = New System.Drawing.Point(369, 164)
         Me.picTurnout7.Name = "picTurnout7"
         Me.picTurnout7.Size = New System.Drawing.Size(35, 30)
         Me.picTurnout7.TabIndex = 6
@@ -789,7 +789,7 @@ Partial Class MainPanel
         'picTurnout15
         '
         Me.picTurnout15.Image = Global.KCSubCTCV3.My.Resources.Resources.TurnoutLeftUpNormal
-        Me.picTurnout15.Location = New System.Drawing.Point(508, 164)
+        Me.picTurnout15.Location = New System.Drawing.Point(509, 164)
         Me.picTurnout15.Name = "picTurnout15"
         Me.picTurnout15.Size = New System.Drawing.Size(35, 30)
         Me.picTurnout15.TabIndex = 10
@@ -1034,7 +1034,7 @@ Partial Class MainPanel
         'picSig4L
         '
         Me.picSig4L.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteLeft
-        Me.picSig4L.Location = New System.Drawing.Point(252, 100)
+        Me.picSig4L.Location = New System.Drawing.Point(267, 102)
         Me.picSig4L.Name = "picSig4L"
         Me.picSig4L.Size = New System.Drawing.Size(38, 20)
         Me.picSig4L.TabIndex = 36
@@ -1097,7 +1097,7 @@ Partial Class MainPanel
         'picSig4RB
         '
         Me.picSig4RB.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteRight
-        Me.picSig4RB.Location = New System.Drawing.Point(65, 136)
+        Me.picSig4RB.Location = New System.Drawing.Point(77, 136)
         Me.picSig4RB.Name = "picSig4RB"
         Me.picSig4RB.Size = New System.Drawing.Size(38, 20)
         Me.picSig4RB.TabIndex = 43
@@ -1106,7 +1106,7 @@ Partial Class MainPanel
         'picSig4RA
         '
         Me.picSig4RA.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteRight
-        Me.picSig4RA.Location = New System.Drawing.Point(65, 90)
+        Me.picSig4RA.Location = New System.Drawing.Point(77, 88)
         Me.picSig4RA.Name = "picSig4RA"
         Me.picSig4RA.Size = New System.Drawing.Size(38, 20)
         Me.picSig4RA.TabIndex = 44
@@ -1115,7 +1115,7 @@ Partial Class MainPanel
         'picSig8RB
         '
         Me.picSig8RB.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteRight
-        Me.picSig8RB.Location = New System.Drawing.Point(294, 136)
+        Me.picSig8RB.Location = New System.Drawing.Point(304, 136)
         Me.picSig8RB.Name = "picSig8RB"
         Me.picSig8RB.Size = New System.Drawing.Size(38, 20)
         Me.picSig8RB.TabIndex = 45
@@ -1147,8 +1147,8 @@ Partial Class MainPanel
         Me.lineCentropolis.BorderColor = System.Drawing.Color.White
         Me.lineCentropolis.BorderWidth = 7
         Me.lineCentropolis.Name = "lineCentropolis"
-        Me.lineCentropolis.X1 = 4
-        Me.lineCentropolis.X2 = 62
+        Me.lineCentropolis.X1 = 13
+        Me.lineCentropolis.X2 = 71
         Me.lineCentropolis.Y1 = 130
         Me.lineCentropolis.Y2 = 130
         '
@@ -1157,8 +1157,8 @@ Partial Class MainPanel
         Me.lineOttumwa.BorderColor = System.Drawing.Color.White
         Me.lineOttumwa.BorderWidth = 7
         Me.lineOttumwa.Name = "lineOttumwa"
-        Me.lineOttumwa.X1 = 3
-        Me.lineOttumwa.X2 = 61
+        Me.lineOttumwa.X1 = 11
+        Me.lineOttumwa.X2 = 69
         Me.lineOttumwa.Y1 = 80
         Me.lineOttumwa.Y2 = 80
         '
@@ -1356,7 +1356,7 @@ Partial Class MainPanel
         Me.lblBlock7.AutoSize = True
         Me.lblBlock7.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock7.ForeColor = System.Drawing.Color.White
-        Me.lblBlock7.Location = New System.Drawing.Point(446, 131)
+        Me.lblBlock7.Location = New System.Drawing.Point(443, 137)
         Me.lblBlock7.Name = "lblBlock7"
         Me.lblBlock7.Size = New System.Drawing.Size(48, 36)
         Me.lblBlock7.TabIndex = 59
@@ -1367,7 +1367,7 @@ Partial Class MainPanel
         Me.lblBlock14.AutoSize = True
         Me.lblBlock14.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock14.ForeColor = System.Drawing.Color.White
-        Me.lblBlock14.Location = New System.Drawing.Point(11, 35)
+        Me.lblBlock14.Location = New System.Drawing.Point(16, 35)
         Me.lblBlock14.Name = "lblBlock14"
         Me.lblBlock14.Size = New System.Drawing.Size(48, 36)
         Me.lblBlock14.TabIndex = 60
@@ -1378,7 +1378,7 @@ Partial Class MainPanel
         Me.lblBlock13.AutoSize = True
         Me.lblBlock13.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock13.ForeColor = System.Drawing.Color.White
-        Me.lblBlock13.Location = New System.Drawing.Point(10, 139)
+        Me.lblBlock13.Location = New System.Drawing.Point(16, 139)
         Me.lblBlock13.Name = "lblBlock13"
         Me.lblBlock13.Size = New System.Drawing.Size(48, 36)
         Me.lblBlock13.TabIndex = 61
@@ -1400,7 +1400,7 @@ Partial Class MainPanel
         Me.lblBlock8.AutoSize = True
         Me.lblBlock8.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock8.ForeColor = System.Drawing.Color.White
-        Me.lblBlock8.Location = New System.Drawing.Point(446, 200)
+        Me.lblBlock8.Location = New System.Drawing.Point(442, 197)
         Me.lblBlock8.Name = "lblBlock8"
         Me.lblBlock8.Size = New System.Drawing.Size(48, 36)
         Me.lblBlock8.TabIndex = 63
