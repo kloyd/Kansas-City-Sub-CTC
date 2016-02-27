@@ -239,7 +239,7 @@
             Call TimeLocking()
 
             REM**CLEAR TRAFFIC STICKS FOR INTERMEDIATE SIGNALS
-            Call ClearSticks()
+            Call ClearTrafficSticks()
 
             REM**PERFORM INDICATION CODE FUNCTIONS
             Call Indications()
@@ -2220,7 +2220,7 @@ ICEND:
         WriteNode2()
         WriteNode3()
     End Sub
-    Sub ClearSticks()
+    Sub ClearTrafficSticks()
         REM***********************SUBROUTINE TRAFFICCLEASTICKSR*****
         REM** CLEAR TRAFFIC STICK AFTER FOLLOWING SIGNAL UPGRADES **
         REM*********************************************************
@@ -2299,6 +2299,16 @@ ICEND:
         ' Westward
         If FS6 = WEST And TLV26 <> RIGHT And SWL23LT = LNOR And BK4 = CLR And BK6 = CLR Then FS6 = NDT
         If FS6 = WEST And TLV24 <> RIGHT And SWL23LT = LREV And BK3 = CLR And BK4 = CLR And BK6 = CLR Then FS6 = NDT
+
+        ' FS7 - Eastward
+        'If FS7 = NDT And TLV8 = EAST Then FS7 = EAST
+        If FS7 = EAST And TLV8 = NDT And BK7 = CLR Then FS7 = NDT
+        ' FS7 - Westward
+        'If FS7 = NDT And TLV8 = WEST Then FS7 = WEST
+        If FS7 = WEST And TLV8 = NDT And BK7 = CLR And SWL9LTK = LNOR Then FS7 = NDT
+
+        'If FS7 = NDT And TLV10 = WEST And SWL9LTK = LREV Then FS7 = WEST
+        If FS7 = WEST And TLV10 = NDT And BK7 = CLR And SWL9LTK = LREV Then FS7 = NDT
 
         ' FS7 - Eastward
 
