@@ -2303,6 +2303,7 @@ ICEND:
         ' FS7 - Eastward
         'If FS7 = NDT And TLV8 = EAST Then FS7 = EAST
         If FS7 = EAST And TLV8 = NDT And BK7 = CLR Then FS7 = NDT
+
         ' FS7 - Westward
         'If FS7 = NDT And TLV8 = WEST Then FS7 = WEST
         If FS7 = WEST And TLV8 = NDT And BK7 = CLR And SWL9LTK = LNOR Then FS7 = NDT
@@ -2310,13 +2311,13 @@ ICEND:
         'If FS7 = NDT And TLV10 = WEST And SWL9LTK = LREV Then FS7 = WEST
         If FS7 = WEST And TLV10 = NDT And BK7 = CLR And SWL9LTK = LREV Then FS7 = NDT
 
-        ' FS7 - Eastward
-
-        ' FS7 - Westward
-
         ' FS8 - Eastward
+        If FS8 = EAST And TLV10 = NDT And BK8 = CLR Then FS8 = NDT
+        ' 9 Reverse - signal 8 cleared left.
+        If FS8 = EAST And TLV8 = NDT And BK8 = CLR And SWL9LTK = LNOR Then FS8 = NDT
 
         ' FS8 - Westward
+        If FS8 = WEST And TLV8 = NDT And BK8 = CLR Then FS8 = NDT
 
         ' FS9
         OldFS9 = FS9
