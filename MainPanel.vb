@@ -126,6 +126,11 @@
 
     Private Sub UpdateTrainIDs()
         Dim scratch As String
+
+        If CDEIND = 1 Then
+            Exit Sub
+        End If
+
         scratch = TrainID(1) + Chr(13) + LocoID(1)
         If FS1 = EAST Then scratch = "<E" + TrainID(1) + Chr(13) + LocoID(1)
         If FS1 = WEST Then scratch = TrainID(1) + "W>" + Chr(13) + LocoID(1)
@@ -1232,6 +1237,10 @@
         If TLV8 = NV Then
             If Block8 = RTD And SWL9LTK = REVLT And Block7 = CLR Then
                 Block8 = CLR
+            End If
+        Else
+            If Block8 = CLR And SWL9LTK = REVLT Then
+                Block8 = RTD
             End If
         End If
         If TLV10 <> CLR Then

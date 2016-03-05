@@ -804,9 +804,16 @@
         If FS7 = NDT And TLV10 = WEST And SWL9LTK = LREV Then FS7 = WEST
 
         ' FS8 - Eastward
-
+        If FS8 = NDT And TLV10 = EAST And SWL11LTK = LNOR Then
+            FS8 = EAST
+        End If
+        If FS8 = NDT And TLV8 = EAST And SWL9LTK = LREV Then
+            FS8 = EAST
+        End If
         ' FS8 - Westward
-
+        If FS8 = NDT And TLV26 = WEST And SWL25LTK = LNOR Then
+            FS8 = WEST
+        End If
 
         REM FS9 - Southwest Jct
         OldFS9 = FS9
@@ -2288,8 +2295,15 @@ ICEND:
         End If
 
         ' FS5 - Eastward
-        If FS5 = EAST And TLV8 <> LEFT And BK7 = CLR And BK5 = CLR Then FS5 = NDT
-        If FS5 = EAST And SWL7LTK = LREV And BK5 = CLR Then FS5 = NDT
+        If FS5 = EAST And TLV8 <> LEFT And BK7 = CLR And BK5 = CLR Then
+            FS5 = NDT
+        End If
+        If FS5 = EAST And SWL9LTK = LREV And BK5 = CLR Then
+            FS5 = NDT
+        End If
+        If FS5 = EAST And SWL7LTK = LREV And BK5 = CLR Then
+            FS5 = NDT
+        End If
         ' Westward
         If FS5 = WEST And TLV24 <> RIGHT And BK3 = CLR And BK5 = CLR Then FS5 = NDT
 
@@ -2312,12 +2326,18 @@ ICEND:
         If FS7 = WEST And TLV10 = NDT And BK7 = CLR And SWL9LTK = LREV Then FS7 = NDT
 
         ' FS8 - Eastward
-        If FS8 = EAST And TLV10 = NDT And BK8 = CLR Then FS8 = NDT
+        If FS8 = EAST And TLV10 = NDT And SWL9LTK = LNOR And BK8 = CLR Then
+            FS8 = NDT
+        End If
         ' 9 Reverse - signal 8 cleared left.
-        If FS8 = EAST And TLV8 = NDT And BK8 = CLR And SWL9LTK = LNOR Then FS8 = NDT
+        If FS8 = EAST And TLV8 = NDT And BK8 = CLR And SWL9LTK = LREV Then
+            FS8 = NDT
+        End If
 
         ' FS8 - Westward
-        If FS8 = WEST And TLV8 = NDT And BK8 = CLR Then FS8 = NDT
+        If FS8 = WEST And TLV8 = NDT And BK8 = CLR Then
+            FS8 = NDT
+        End If
 
         ' FS9
         OldFS9 = FS9
