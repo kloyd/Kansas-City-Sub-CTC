@@ -811,7 +811,11 @@
             FS8 = EAST
         End If
         ' FS8 - Westward
-        If FS8 = NDT And TLV26 = WEST And SWL25LTK = LNOR Then
+        If FS8 = NDT And TLV10 = WEST Then
+            FS8 = WEST
+        End If
+
+        If FS8 = NDT And TLV12 = WEST Then
             FS8 = WEST
         End If
 
@@ -2316,14 +2320,20 @@ ICEND:
 
         ' FS7 - Eastward
         'If FS7 = NDT And TLV8 = EAST Then FS7 = EAST
-        If FS7 = EAST And TLV8 = NDT And BK7 = CLR Then FS7 = NDT
+        If FS7 = EAST And TLV8 = NDT And BK7 = CLR Then
+            FS7 = NDT
+        End If
 
         ' FS7 - Westward
         'If FS7 = NDT And TLV8 = WEST Then FS7 = WEST
-        If FS7 = WEST And TLV8 = NDT And BK7 = CLR And SWL9LTK = LNOR Then FS7 = NDT
+        If FS7 = WEST And TLV8 = NDT And BK7 = CLR And SWL9LTK = LNOR Then
+            FS7 = NDT
+        End If
 
         'If FS7 = NDT And TLV10 = WEST And SWL9LTK = LREV Then FS7 = WEST
-        If FS7 = WEST And TLV10 = NDT And BK7 = CLR And SWL9LTK = LREV Then FS7 = NDT
+        If FS7 = WEST And TLV10 = NDT And BK8 = CLR And BK7 = CLR And SWL9LTK = LREV Then
+            FS7 = NDT
+        End If
 
         ' FS8 - Eastward
         If FS8 = EAST And TLV10 = NDT And SWL9LTK = LNOR And BK8 = CLR Then
@@ -2335,7 +2345,11 @@ ICEND:
         End If
 
         ' FS8 - Westward
-        If FS8 = WEST And TLV8 = NDT And BK8 = CLR Then
+        If FS8 = WEST And TLV10 = NDT And SWL11LTK = LNOR And BK8 = CLR Then
+            FS8 = NDT
+        End If
+
+        If FS8 = WEST And TLV12 = NDT And SWL11LTK = LREV And SWL9LTK = LNOR And BK8 = CLR Then
             FS8 = NDT
         End If
 
