@@ -178,7 +178,8 @@
         If FS9 = WEST Then scratch = TrainID(9) + "W>" + Chr(13) + LocoID(9)
         lblBlock9.Text = scratch
 
-        scratch = TrainID(10) + Chr(13) + LocoID(10)
+        If FS10 = EAST Then scratch = "<E" + TrainID(10) + Chr(13) + LocoID(10)
+        If FS10 = WEST Then scratch = TrainID(10) + "W>" + Chr(13) + LocoID(10)
         lblBlock10.Text = scratch
 
         scratch = TrainID(11) + Chr(13) + LocoID(11)

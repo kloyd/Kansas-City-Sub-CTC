@@ -620,8 +620,8 @@ Partial Class MainPanel
         Me.lineBlock7F.BorderColor = System.Drawing.Color.White
         Me.lineBlock7F.BorderWidth = 7
         Me.lineBlock7F.Name = "lineBlock7F"
-        Me.lineBlock7F.X1 = 528
-        Me.lineBlock7F.X2 = 569
+        Me.lineBlock7F.X1 = 527
+        Me.lineBlock7F.X2 = 568
         Me.lineBlock7F.Y1 = 171
         Me.lineBlock7F.Y2 = 130
         '
@@ -630,8 +630,8 @@ Partial Class MainPanel
         Me.lineBlock7H.BorderColor = System.Drawing.Color.White
         Me.lineBlock7H.BorderWidth = 7
         Me.lineBlock7H.Name = "lineBlock7H"
-        Me.lineBlock7H.X1 = 567
-        Me.lineBlock7H.X2 = 607
+        Me.lineBlock7H.X1 = 566
+        Me.lineBlock7H.X2 = 606
         Me.lineBlock7H.Y1 = 131
         Me.lineBlock7H.Y2 = 131
         '
@@ -789,7 +789,7 @@ Partial Class MainPanel
         'picTurnout15
         '
         Me.picTurnout15.Image = Global.KCSubCTCV3.My.Resources.Resources.TurnoutLeftUpNormal
-        Me.picTurnout15.Location = New System.Drawing.Point(509, 164)
+        Me.picTurnout15.Location = New System.Drawing.Point(508, 164)
         Me.picTurnout15.Name = "picTurnout15"
         Me.picTurnout15.Size = New System.Drawing.Size(35, 30)
         Me.picTurnout15.TabIndex = 10

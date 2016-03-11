@@ -827,6 +827,15 @@
         ' Not certain why tlv8 heading into the bridge should condition FS9 - turning it off now.
         ' If FS9 = NDT And TLV8 = LEFT And SWL7LT = LREV And SWL9LT = LNOR Then FS9 = EAST
         If FS9 = NDT And TLV4 = LEFT Then FS9 = EAST
+
+        ' Rem FS10... how does it work?
+        If FS10 = NDT And TLV8 = RIGHT And SWL15LTK = LREV Then
+            FS10 = WEST
+        End If
+        If FS10 = NDT And TLV8 <> RIGHT And TrainID(15) <> "" Then
+            FS10 = EAST
+        End If
+
         If OldFS9 <> FS9 Then
             If FS9 = WEST Then LogEvent("SetTrafficSticks: FS9 = West.")
             If FS9 = EAST Then LogEvent("SetTrafficSticks: FS9 = East.")
@@ -843,18 +852,6 @@
             If FS4 = EAST Then LogEvent("SetTrafficSticks: FS4 = East.")
         End If
 
-        ' new checks
-        If BK10 = OCC And TrainID(15) <> "" Then
-            TrainID(10) = TrainID(15)
-            TrainID(15) = ""
-        End If
-
-        If BK10 = OCC And BK7 = OCC And SIG8LD <> RED Then
-            TrainID(7) = TrainID(10)
-            LogTrain("OS Train " + TrainID(7) + " - Rock Creek Jct")
-        End If
-
-        If BK10 = CLR Then TrainID(10) = ""
 
     End Sub
     Sub DoControls()
@@ -2148,12 +2145,111 @@ ICEND:
         Call UpdateTrainIDs()
 
     End Sub
+    Sub UpdateTrainIDs()
+        'use table logic??
+        Select Case FS1
+            Case EAST
+                If BK1 = OCC And BK7 = OCC Then
+                    ' move train from 1 to 7
+                    MoveTrain(1, 7)
+                End If
+            Case WEST
+            Case Else
+                ' don't do nuffin.
+        End Select
 
-    Private Sub UpdateTrainIDs()
-        'use table logic
+        Select Case FS2
+            Case EAST
+            Case WEST
+            Case Else
+        End Select
+
+        Select Case FS3
+            Case EAST
+            Case WEST
+            Case Else
+        End Select
+
+        Select Case FS4
+            Case EAST
+            Case WEST
+            Case Else
+        End Select
+
+        Select Case FS5
+            Case EAST
+            Case WEST
+            Case Else
+        End Select
+
+        Select Case FS6
+            Case EAST
+            Case WEST
+            Case Else
+        End Select
+
+        Select Case FS7
+            Case EAST
+            Case WEST
+            Case Else
+        End Select
+
+        Select Case FS8
+            Case EAST
+            Case WEST
+            Case Else
+        End Select
+
+        Select Case FS9
+            Case EAST
+            Case WEST
+            Case Else
+        End Select
+
+        Select Case FS10
+            Case EAST
+                MoveTrain(15, 10)
+                If BK10 = OCC And BK7 = OCC Then
+                    MoveTrain(10, 7)
+                End If
+            Case WEST
+                MoveTrain(10, 15)
+            Case Else
+        End Select
+
+
+
+        ' After updating all the IDs, check to see if any need clearing.
+        CheckTrainClear()
+
 
     End Sub
-
+    Sub CheckTrainClear()
+        If BK1 = CLR Then ClearTrain(1)
+        If BK2 = CLR Then ClearTrain(2)
+        If BK3 = CLR Then ClearTrain(3)
+        If BK4 = CLR Then ClearTrain(4)
+        If BK5 = CLR Then ClearTrain(5)
+        If BK6 = CLR Then ClearTrain(6)
+        If BK7 = CLR Then ClearTrain(7)
+        If BK8 = CLR Then ClearTrain(8)
+        If BK9 = CLR Then ClearTrain(9)
+        If BK10 = CLR Then ClearTrain(10)
+    End Sub
+    Sub MoveTrain(fromBlock, toBlock)
+        If TrainID(fromBlock) <> "" And TrainID(toBlock) = "" Then
+            TrainID(toBlock) = TrainID(fromBlock)
+            LocoID(toBlock) = LocoID(fromBlock)
+            OSTrain(TrainID(toBlock), "see lookup table")
+        End If
+    End Sub
+    Sub OSTrain(trainID As String, location As String)
+        LogTrain("OS Train " + trainID + " - " + location)
+    End Sub
+    Sub ClearTrain(fromBlock)
+        TrainID(fromBlock) = ""
+        LocoID(fromBlock) = ""
+    End Sub
     Sub GraphicOfficeIndication()
         REM ********** Update the graphical Office display
         REM  not sure... testing with not using office code
@@ -2362,6 +2458,16 @@ ICEND:
         If FS9 = WEST And TLV4 <> RIGHT And BK9 = CLR Then FS9 = NDT
         If OldFS9 <> FS9 Then
             LogEvent("ClearSticks: FS9 = Clear")
+        End If
+
+        If FS10 = EAST Then
+            If BK10 = CLR Then FS10 = NDT
+        End If
+
+        If FS10 = WEST Then
+            If TLV8 <> RIGHT And BK7 = CLR And BK10 = CLR And SWL15LTK = LNOR Then
+                FS10 = NDT
+            End If
         End If
     End Sub
     Sub WriteNode0()
