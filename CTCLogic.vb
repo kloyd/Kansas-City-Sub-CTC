@@ -2353,9 +2353,16 @@ ICEND:
 
         ' FS2 - Eastward
         ' East - only via 26L.
-        If FS2 = EAST And TLV26 <> LEFT And BK4 = CLR And BK2 = CLR Then FS2 = NDT
+        If FS2 = EAST And BK4 = CLR And BK2 = CLR And SWL23LTK = LREV Then
+            FS2 = NDT
+        End If
+        If FS2 = EAST And TLV26 <> LEFT And SWL23LTK = LNOR And BK4 = CLR And BK2 = CLR Then
+            FS2 = NDT
+        End If
         ' Westward - only via 10R.
-        If FS2 = WEST And TLV10 <> RIGHT And TLV12 <> RIGHT And BK8 = CLR And BK2 = CLR Then FS2 = NDT
+        If FS2 = WEST And TLV10 <> RIGHT And TLV12 <> RIGHT And BK8 = CLR And BK2 = CLR Then
+            FS2 = NDT
+        End If
 
         ' FS3 Eastward
         If FS3 = EAST And TLV24 <> LEFT And SWL23LTK = LNOR And BK3 = CLR And BK5 = CLR Then
@@ -2436,7 +2443,7 @@ ICEND:
             FS8 = NDT
         End If
         ' 9 Reverse - signal 8 cleared left.
-        If FS8 = EAST And TLV8 = NDT And BK8 = CLR And SWL9LTK = LREV Then
+        If FS8 = EAST And TLV8 = NDT And BK8 = CLR And BK7 = CLR And SWL9LTK = LREV Then
             FS8 = NDT
         End If
 

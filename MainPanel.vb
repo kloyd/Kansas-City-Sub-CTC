@@ -1235,15 +1235,19 @@
         End Select
     End Sub
     Private Sub UpdateBlock8()
-        If TLV8 = NV Then
-            If Block8 = RTD And SWL9LTK = REVLT And Block7 = CLR Then
-                Block8 = CLR
-            End If
-        Else
-            If Block8 = CLR And SWL9LTK = REVLT Then
-                Block8 = RTD
-            End If
+        ' If TLV8 = NV Then
+        'If Block8 = RTD And SWL9LTK = REVLT And Block7 = CLR Then
+        'Block8 = CLR
+        'End If
+        'Else
+        'If Block8 = CLR And SWL9LTK = REVLT Then
+        'Block8 = RTD
+        'End If
+        'End If
+        If FS8 <> NDT And BK8 = CLR Then 'something is routed.
+            Block8 = RTD
         End If
+
         If TLV10 <> CLR Then
             If Block8 = CLR Then Block8 = RTD
         End If
