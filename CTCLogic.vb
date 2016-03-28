@@ -748,10 +748,18 @@
         If (FS2 = NDT And TLV26 = LEFT And SWL23LTK = LNOR And SWL25LTK = LNOR) Then FS2 = EAST
         If (FS2 = NDT And TLV26 = LEFT And SWL25LTK = LREV) Then FS2 = EAST
         ' Westward
-        If (FS2 = NDT And SIG10RABC <> REDREDRED And SWL9LTK = LNOR And SWL11LTK = LNOR) Then FS2 = WEST
-        If (FS2 = NDT And SIG12RA <> RED And SWL11LTK = LREV) Then FS2 = WEST
-        If FS2 = NDT And TLV10 = RIGHT And SWL9LTK = LNOR Then FS2 = WEST
-        If FS2 = NDT And TLV12 = RIGHT Then FS2 = WEST
+        If (FS2 = NDT And SIG10RABC <> REDREDRED And SWL9LTK = LNOR And SWL11LTK = LNOR) Then
+            FS2 = WEST
+        End If
+        If (FS2 = NDT And SIG12RA <> RED And SWL11LTK = LREV) Then
+            FS2 = WEST
+        End If
+        If FS2 = NDT And TLV10 = RIGHT And SWL9LTK = LNOR Then
+            FS2 = WEST
+        End If
+        If FS2 = NDT And TLV12 = RIGHT Then
+            FS2 = WEST
+        End If
 
         ' *** FS3 ***
         ' Eastward
@@ -773,6 +781,9 @@
         If FS4 = NDT And SWL25LTK = LREV And SIG26LC <> RED Then FS4 = EAST
         ' Westward
         If FS4 = NDT And SIG26RAB <> REDRED Then FS4 = WEST
+        If FS4 = NDT And SWL23LTK = LREV And SIG24RAB <> REDRED Then
+            FS4 = WEST
+        End If
 
         REM FS5 North Main between Sheffield and Freight Line
         ' Eastward
@@ -2360,7 +2371,11 @@ ICEND:
             FS2 = NDT
         End If
         ' Westward - only via 10R.
-        If FS2 = WEST And TLV10 <> RIGHT And TLV12 <> RIGHT And BK8 = CLR And BK2 = CLR Then
+        If FS2 = WEST And TLV10 <> RIGHT And TLV12 <> RIGHT And SWL9LTK <> LNOR And BK8 = CLR And BK2 = CLR Then
+            FS2 = NDT
+        End If
+
+        If FS2 = WEST And BK8 = CLR And BK2 = CLR And SWL9LTK = LREV Then
             FS2 = NDT
         End If
 
@@ -2399,6 +2414,10 @@ ICEND:
         If FS4 = WEST And TLV26 <> RIGHT And SWL23LTK = LNOR And SWL25LTK = LREV And BK4 = CLR Then
             FS4 = NDT
             LogEvent("TrafficStick FS4 cleared.")
+        End If
+
+        If FS4 = WEST And TLV24 <> RIGHT And SWL23LTK = LREV And BK4 = CLR And BK3 = CLR And BK1 = CLR Then
+            FS4 = NDT
         End If
 
         ' FS5 - Eastward
