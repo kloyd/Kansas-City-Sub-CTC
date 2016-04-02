@@ -50,7 +50,7 @@
         Me.StopRunToolStripMenuItem.Enabled = True
         Me.ResumeRunToolStripMenuItem.Enabled = False
         Call DoOneControlCycle()
-        timerMainLoop.Interval = 50
+        timerMainLoop.Interval = 25
         timerMainLoop.Enabled = True
     End Sub
 
@@ -1164,23 +1164,23 @@
         End Select
     End Sub
     Private Sub UpdateBlock7()
-        If TLV8 = NV Then
-            If Block7 = RTD And SWL9LTK = NORLT Then
-                Block7 = CLR
-            End If
-            If Block8 = RTD And SWL9LTK = REVLT And Block7 = CLR Then
-                Block8 = CLR
-            End If
-        End If
-        If TLV8 <> CLR Then
+        'If TLV8 = NV Then
+        'If Block7 = RTD And SWL9LTK = NORLT Then
+        'Block7 = CLR
+        'End If
+        'If Block8 = RTD And SWL9LTK = REVLT And Block7 = CLR Then
+        'Block7 = CLR
+        'End If
+        'End If
+        If FS7 <> NDT Then
             If Block7 = CLR Then Block7 = RTD
         End If
-        If TLV10 = WEST And SWL9LTK = LREV Then
-            If Block7 = CLR Then Block7 = RTD
-        End If
-        If Block8 = OCC And SWL9LTK = LREV And FS1 = WEST Then
-            If Block7 = CLR Then Block7 = RTD
-        End If
+        ' If FS7 = WEST And SWL9LTK = LREV Then
+        ' If Block7 = CLR Then Block7 = RTD
+        ' End If
+        ' If Block8 = OCC And SWL9LTK = LREV And FS7 = WEST Then
+        ' If Block7 = CLR Then Block7 = RTD
+        ' End If
         Select Case Block7
             Case OCC
                 If SWL7LTK = NORLT And SWL9LTK = NORLT Then
