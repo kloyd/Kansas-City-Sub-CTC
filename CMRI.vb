@@ -436,7 +436,7 @@ INLOOP:
             '    ...then abort reading inputs
             ABORTIN = 1
             INTRIES = 0
-            'logevent("INPUT TRIES EXCEEDED " & iMaxTries & " NODE = " & CStr(iUA) & " ABORTING INPUT")
+            LogEvent("INPUT TRIES EXCEEDED " & iMaxTries & " NODE = " & CStr(iUA) & " ABORTING INPUT")
             INBYTE = 0 'Aborted input so set input byte value to 0
             'CommObj.InBufferCount = 0 'Clear input buffer count and content...
             CommObj.DiscardInBuffer()

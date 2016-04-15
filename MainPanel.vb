@@ -40,7 +40,7 @@
         theCMRI = New TestCMRI()
         Call InitializeRailroad(theCMRI)
         Call DoOneControlCycle()
-        timerMainLoop.Interval = 250
+        timerMainLoop.Interval = 10
         timerMainLoop.Enabled = True
     End Sub
 
@@ -50,7 +50,7 @@
         Me.StopRunToolStripMenuItem.Enabled = True
         Me.ResumeRunToolStripMenuItem.Enabled = False
         Call DoOneControlCycle()
-        timerMainLoop.Interval = 25
+        timerMainLoop.Interval = 100
         timerMainLoop.Enabled = True
     End Sub
 

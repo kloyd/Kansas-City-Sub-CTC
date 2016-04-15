@@ -197,6 +197,10 @@
     Public BlockOccupied(15) As Boolean
     Public SelectedBlock As Integer
 
+    'rem debugging
+    Public OLDSWL15 As Integer
+
+
 
 
 
@@ -276,6 +280,9 @@
         OCC = 1 ' Occupied
         RTD = 2 ' Routed
         OBK1 = 0 : OBK2 = 0 : OBK3 = 0 : OBK4 = 0 : OBK5 = 0 : OBK6 = 0 : OBK7 = 0 : OBK8 = 0 : OBK9 = 0 : OBK10 = 0
+
+        ' debug 
+        OLDSWL15 = 0
 
         REM**DEFINE ASPECT CONSTANTS FOR WAYSIDE SEARCHLIGHT SIGNALS
         REM**Values assume Searchlight Signals using 3-lead LEDs with...
@@ -557,6 +564,7 @@
         Dim errorCode As Integer
 
         errorCode = theCMRI.InitializePort(MainPanel.CommPort, COMPORT:=4, BAUD100:=96, MAXBUF:=128)
+        CT(1) = 0 : CT(2) = 0 : CT(3) = 0 : CT(4) = 0 : CT(5) = 0 : CT(6) = 0
         '**INITIALIZE NODE 0 SMINI - CTC Panel Turnout Controller
         Call theCMRI.INIT(MainPanel.CommPort, UA:=0, DL:=0, strNDP:="M", iNumOutputBytes:=6, MAXTRIES:=2000, iNumInputBytes:=3, iNum2LeadSigs:=0, CT:=CT)
         '**INITIALIZE NODE 1 SMINI - CTC Panel Signal Controller
@@ -612,6 +620,7 @@
         End If
     End Sub
     Sub ReadRailroad()
+        Dim msg As String
         '**SUBROUTINE TO READ ALL NODE INPUTS AND PERFORM UNPACKING OPERATIONS
         ' == NODE 0 == READ AND UNPACK INPUTS FOR NODE 0 (SMINI)
         ' Switch Lever positions on Node 0
@@ -619,19 +628,28 @@
         ' Positive inputs. Normal = 1 and Reverse =2
         ' if input = 0 then switch is in illegal position.
         ' Node 0, Card 2 A0-A7
-        SWL1 = IB(1) \ B0 And W2
-        SWL3 = IB(1) \ B2 And W2
-        SWL7 = IB(1) \ B4 And W2
-        SWL9 = IB(1) \ B6 And W2
-        ' Node 0, Card 2, B0-B7
-        SWL11 = IB(2) \ B0 And W2
-        SWL15 = IB(2) \ B2 And W2
-        CLL17 = IB(2) \ B4 And W2
-        CLL19 = IB(2) \ B6 And W2
-        ' Node 0, Card 2, C0-C7
-        SWL23 = IB(3) \ B0 And W2
-        SWL25 = IB(3) \ B2 And W2
+        If IB(1) = 0 Then
+            'LogEvent("IB(1) on Node 1 bad read, skipping.")
+        Else
 
+            SWL1 = IB(1) \ B0 And W2
+            SWL3 = IB(1) \ B2 And W2
+            SWL7 = IB(1) \ B4 And W2
+            SWL9 = IB(1) \ B6 And W2
+            ' Node 0, Card 2, B0-B7
+            SWL11 = IB(2) \ B0 And W2
+            SWL15 = IB(2) \ B2 And W2
+            CLL17 = IB(2) \ B4 And W2
+            CLL19 = IB(2) \ B6 And W2
+            ' Node 0, Card 2, C0-C7
+            SWL23 = IB(3) \ B0 And W2
+            SWL25 = IB(3) \ B2 And W2
+        End If
+        If OLDSWL15 <> SWL15 Then
+            msg = "SWL15 changed from " + CStr(OLDSWL15) + " to " + CStr(SWL15)
+            LogEvent(msg)
+            OLDSWL15 = SWL15
+        End If
         ' === NODE 1 ===
         Call theCMRI.INPUTS(MainPanel.CommPort, iInputBuffer:=IB, iMaxTries:=2000, iMaxBuf:=128, iUA:=1, iNumInputs:=3)
 
@@ -1383,7 +1401,11 @@ ESIG26LC:
         If BK4 = OCC Then GoTo ESIGEND
         If TLV26 = RIGHT Then GoTo ESIGEND
         If SWL25LT <> REVLT Then GoTo ESIGEND
-        SIG26LC = GRN
+        If BK2 = OCC Then
+            SIG26LC = YEL
+        Else
+            SIG26LC = GRN
+        End If
         ANCE = 0 : ADCE = 0
 ESIGEND:
 
@@ -2744,13 +2766,20 @@ ICEND:
         OB(4) = SIG24RAB 'Signal24RightHead
         OB(4) = SIG26RAB * B4 Or OB(4) 'Signal26RightHead * B4 Or OB(4)
         ' -- Node 3 Card 1 Port B = Signal26LeftHead, Signal24LeftHead
+        OB(5) = 0
         OB(5) = SIG24LA 'Signal24LeftHead
         'xxCCAABB
         'CAB
         OB(5) = SIG26LAB * B2 Or OB(5) 'Signal26LeftHead * B2 Or OB(5)
-        OB(5) = SIG26LC * B6 Or OB(5)
+        If SIG26LC <> YEL Then
+            OB(5) = SIG26LC * B6 Or OB(5)
+        End If
+        If SIG26LC = YEL Then
+            OB(6) = 1
+        End If
+
         ' -- Node 3, Card 1, Port C = Traffic Lights
-        OB(6) = TrafficLightState(TrafficCurrentState)
+        'OB(6) = TrafficLightState(TrafficCurrentState)
         'OB(6) = TrafficLightsNS * B3 Or OB(6)
 
         Call theCMRI.OUTPUTS(MainPanel.CommPort, 3, 6, OB)
