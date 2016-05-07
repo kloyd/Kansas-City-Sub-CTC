@@ -2393,13 +2393,29 @@ ICEND:
             FS2 = NDT
         End If
         ' Westward - only via 10R.
-        If FS2 = WEST And TLV10 <> RIGHT And TLV12 <> RIGHT And SWL9LTK <> LNOR And BK8 = CLR And BK2 = CLR Then
-            FS2 = NDT
+        If FS2 = WEST And BK2 = CLR Then
+            ' Check if SWL9LTK = LNOR
+            If SWL9LTK = LNOR Then
+                If BK8 = CLR Then
+                    ' Check TLV10 and TLV12
+                    If TLV10 = RIGHT Or TLV12 = RIGHT Then
+                        ' keep set
+                    Else
+                        FS2 = NDT
+                    End If
+                End If
+            Else
+                    ' SWL9LTK = LREV - not routed through BK2, clear it.
+                    FS2 = NDT
+            End If
         End If
+        'If FS2 = WEST And TLV10 <> RIGHT And TLV12 <> RIGHT And SWL9LTK <> LNOR And BK8 = CLR And BK2 = CLR Then
+        'FS2 = NDT
+        'End If
 
-        If FS2 = WEST And BK8 = CLR And BK2 = CLR And SWL9LTK = LREV Then
-            FS2 = NDT
-        End If
+        'If FS2 = WEST And BK8 = CLR And BK2 = CLR And SWL9LTK = LREV Then
+        'FS2 = NDT
+        'End If
 
         ' FS3 Eastward
         If FS3 = EAST And TLV24 <> LEFT And SWL23LTK = LNOR And BK3 = CLR And BK5 = CLR Then
