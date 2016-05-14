@@ -195,6 +195,8 @@
     Public TrainID(15) As String
     Public LocoID(15) As String
     Public BlockOccupied(15) As Boolean
+    Public OSRequired(15) As Boolean ' Is this an OS Section?
+    Public OSSection(15) As String ' Names of OS Sections.
     Public SelectedBlock As Integer
 
     'rem debugging
@@ -445,9 +447,33 @@
         CLOCKMINUTES = 0
         CLOCKSECONDS = 0
 
+        For i = 1 To 15
+            TrainID(i) = ""
+            LocoID(i) = ""
+        Next
+
+        InitializeOSSections()
+
         Randomize()
 
     End Sub
+
+    Private Sub InitializeOSSections()
+        For i = 1 To 15
+            OSRequired(i) = False
+        Next i
+        OSRequired(3) = True
+        OSRequired(4) = True
+        OSRequired(7) = True
+        OSRequired(8) = True
+        OSRequired(9) = True
+        OSSection(3) = "Airline Jct"
+        OSSection(4) = "Freight Line Jct"
+        OSSection(7) = "Rock Creek Jct"
+        OSSection(8) = "Sheffield Jct"
+        OSSection(9) = "Southwest Jct"
+    End Sub
+
     Sub InitializeControls()
 
         REM**INITIALIZE SWITCH LEVER INDICATION LIGHTS TO NORMAL
@@ -822,7 +848,11 @@
         If FS6 = NDT And SIG8LABC <> REDREDRED And SWL9LTK = LREV Then FS6 = EAST
         If FS6 = NDT And SIG8LD <> RED And SWL9LTK = LREV And SWL15LTK = LREV Then FS6 = EAST
         ' Westward
-        If FS6 = NDT And SIG26RAB <> REDRED And SWL25LTK = LNOR Then FS6 = WEST
+        If FS6 = NDT Then
+            If SIG26RAB <> REDRED And SWL25LTK = LNOR Then
+                FS6 = WEST
+            End If
+        End If
         If FS6 = NDT And SIG24RAB <> REDRED And SWL23LTK = LREV Then FS6 = WEST
 
         ' FS7 - Eastward
@@ -2180,6 +2210,7 @@ ICEND:
     End Sub
     Sub UpdateTrainIDs()
         'use table logic??
+        ' Block 1
         Select Case FS1
             Case EAST
                 If BK1 = OCC And BK7 = OCC Then
@@ -2187,55 +2218,153 @@ ICEND:
                     MoveTrain(1, 7)
                 End If
             Case WEST
+                If BK1 = OCC And BK3 = OCC Then
+                    MoveTrain(1, 3)
+                End If
             Case Else
-                ' don't do nuffin.
+
         End Select
 
         Select Case FS2
             Case EAST
+                If BK2 = OCC And BK8 = OCC Then
+                    MoveTrain(2, 8)
+                End If
             Case WEST
+                If BK2 = OCC And BK4 = OCC Then
+                    MoveTrain(2, 4)
+                End If
             Case Else
         End Select
 
         Select Case FS3
             Case EAST
+                If BK3 = OCC And BK1 = OCC Then
+                    MoveTrain(3, 1)
+                End If
             Case WEST
+                If SWL23LTK = LNOR Then
+                    If BK3 = OCC And BK5 = OCC Then
+                        MoveTrain(3, 5)
+                    End If
+                End If
+                If SWL23LTK = LREV Then
+                    If BK3 = OCC And BK4 = OCC Then
+                        MoveTrain(3, 4)
+                    End If
+                End If
             Case Else
         End Select
 
         Select Case FS4
             Case EAST
+                If BK4 = OCC And BK2 = OCC Then
+                    MoveTrain(4, 2)
+                End If
             Case WEST
+                If SWL25LTK = LNOR Then
+                    If BK4 = OCC And BK6 = OCC Then
+                        MoveTrain(4, 6)
+                    End If
+                End If
+                If SWL25LTK = LREV Then
+                    If BK4 = OCC Then
+                        MoveTrain(4, 12)
+                    End If
+                End If
             Case Else
         End Select
 
         Select Case FS5
             Case EAST
+                If BK5 = OCC And BK3 = OCC Then
+                    MoveTrain(5, 3)
+                End If
             Case WEST
+                If BK5 = OCC And BK7 = OCC Then
+                    MoveTrain(5, 7)
+                End If
             Case Else
         End Select
 
         Select Case FS6
             Case EAST
+                If BK6 = OCC And BK4 = OCC Then
+                    MoveTrain(6, 4)
+                End If
             Case WEST
+                If BK6 = OCC And BK8 = OCC Then
+                    MoveTrain(6, 8)
+                End If
             Case Else
         End Select
 
         Select Case FS7
             Case EAST
+                If SWL7LTK = LNOR And SWL9LTK = LNOR Then
+                    If BK7 = OCC And BK5 = OCC Then
+                        MoveTrain(7, 5)
+                    End If
+                End If
+                If SWL9LTK = LREV Then
+                    If BK7 = OCC And BK8 = OCC Then
+                        MoveTrain(7, 8)
+                    End If
+                End If
+                If SWL9LTK = LNOR And SWL7LTK = LREV Then
+                    If BK7 = OCC And BK9 = OCC Then
+                        MoveTrain(7, 9)
+                    End If
+                End If
             Case WEST
+                If SWL15LTK = LNOR Then
+                    If BK7 = OCC And BK1 = OCC Then
+                        MoveTrain(7, 1)
+                    End If
+                End If
+                If SWL15LTK = LREV Then
+                    If BK7 = OCC And BK10 = OCC Then
+                        MoveTrain(7, 10)
+                    End If
+                End If
             Case Else
         End Select
 
         Select Case FS8
             Case EAST
+                If SWL11LTK = LNOR Then
+                    If BK8 = OCC And BK6 = OCC Then
+                        MoveTrain(8, 6)
+                    End If
+                End If
+                If SWL11LTK = LREV Then
+                    If BK8 = OCC Then
+                        MoveTrain(8, 11)
+                    End If
+                End If
             Case WEST
+                If BK8 = OCC And BK2 = OCC Then
+                    MoveTrain(8, 2)
+                End If
             Case Else
         End Select
 
         Select Case FS9
             Case EAST
+                If SWL3LTK = LNOR Then
+                    If BK9 = OCC Then
+                        MoveTrain(9, 14)
+                    End If
+                End If
+                If SWL3LTK = LREV Then
+                    If BK9 = OCC Then
+                        MoveTrain(9, 13)
+                    End If
+                End If
             Case WEST
+                If BK9 = OCC And BK7 = OCC Then
+                    MoveTrain(9, 7)
+                End If
             Case Else
         End Select
 
@@ -2250,8 +2379,29 @@ ICEND:
             Case Else
         End Select
 
+        ' Block 11 - psuedo block - Exit Coburg West
+        If SWL11LTK = LREV And FS8 = WEST And BK8 = OCC Then
+            MoveTrain(11, 8)
+        End If
 
+        ' Block 12 - pseudo block - Exit Coburg East
+        If SWL25LTK = LREV And FS4 = EAST And BK4 = OCC Then
+            MoveTrain(12, 4)
+        End If
 
+        ' Block 13 - pseudo block - Exit Centropolis.
+        If SWL3LTK = LREV And FS9 = WEST And BK9 = OCC Then
+            MoveTrain(13, 9)
+        End If
+
+        ' Block 14 - pseudo block - Exit Ottumwa.
+        If SWL3LTK = LNOR And FS9 = WEST And BK9 = OCC Then
+            MoveTrain(14, 9)
+        End If
+
+        If FS7 = EAST And BK10 = OCC Then
+            MoveTrain(15, 10)
+        End If
         ' After updating all the IDs, check to see if any need clearing.
         CheckTrainClear()
 
@@ -2268,12 +2418,19 @@ ICEND:
         If BK8 = CLR Then ClearTrain(8)
         If BK9 = CLR Then ClearTrain(9)
         If BK10 = CLR Then ClearTrain(10)
+        ' clearing 11,12,13,14,15 - no detection
+        If BK9 = CLR And FS9 = NDT Then
+            ClearTrain(13)
+            ClearTrain(14)
+        End If
     End Sub
     Sub MoveTrain(fromBlock, toBlock)
         If TrainID(fromBlock) <> "" And TrainID(toBlock) = "" Then
             TrainID(toBlock) = TrainID(fromBlock)
             LocoID(toBlock) = LocoID(fromBlock)
-            OSTrain(TrainID(toBlock), "see lookup table")
+            If (OSRequired(toBlock)) Then
+                OSTrain(TrainID(toBlock), OSSection(toBlock))
+            End If
         End If
     End Sub
     Sub OSTrain(trainID As String, location As String)
@@ -2468,9 +2625,18 @@ ICEND:
         If FS5 = EAST And SWL7LTK = LREV And BK5 = CLR Then
             FS5 = NDT
         End If
-        ' Westward
-        If FS5 = WEST And TLV24 <> RIGHT And BK3 = CLR And BK5 = CLR Then FS5 = NDT
-
+        ' Westward - check position of SWL23LTK is Normal/Reversed
+        If FS5 = WEST Then
+            If SWL23LTK = LNOR Then
+                If TLV24 <> RIGHT And BK3 = CLR And BK5 = CLR Then
+                    FS5 = NDT
+                End If
+            Else 'swl23ltk = lrev
+                If BK5 = CLR Then
+                    FS5 = NDT
+                End If
+            End If
+        End If
         ' FS6 Eastward
         If FS6 = EAST And TLV10 <> LEFT And SWL9LT = LNOR And BK8 = CLR And BK6 = CLR Then FS6 = NDT
         If FS6 = EAST And TLV8 <> LEFT And SWL9LT = LREV And BK8 = CLR And BK7 = CLR And BK6 = CLR Then FS6 = NDT

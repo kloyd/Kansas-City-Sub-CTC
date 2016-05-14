@@ -614,20 +614,33 @@
         picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownNormal
         Turnout25SavedPic.Image = KCSubCTCV3.My.Resources.TurnoutRightDownNormal
         picLock25Up.Image = KCSubCTCV3.My.Resources.LockRightUpLocked
-        'YardInterchange.BorderColor = Color.white
-        If Block4 = OCC And SWL23LTK = NORLT Then
-            picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownNormalRed
-        End If
-        If Block4 = RTD And SWL23LTK = NORLT Then
-            picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownNormalGreen
-        End If
-        If Block4 = OCC And SWL25LTK = REVLT Then
-            picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownReverseRed
-            picLock25Up.Image = KCSubCTCV3.My.Resources.LockRightUpOccupied
-        End If
-        If SWL25LTK = REVLT Then
-            Turnout25SavedPic.Image = KCSubCTCV3.My.Resources.TurnoutRightDownReverse
-            picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownReverse
+        Select Case Block4
+            Case CLR
+                If SWL25LTK = LNOR Then
+                    picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownNormal
+                End If
+                If SWL25LTK = LREV Then
+                    picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownReverse
+                End If
+            Case RTD
+                If SWL25LTK = LNOR Then
+                    picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownNormalGreen
+                End If
+                If SWL25LTK = LREV Then
+                    picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownReverseGreen
+                End If
+            Case OCC
+                If SWL25LTK = LNOR Then
+                    picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownNormalRed
+                End If
+                If SWL25LTK = LREV Then
+                    picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownReverseRed
+                End If
+        End Select
+
+        If SWL25LTK = LREV Then
+            'Turnout25SavedPic.Image = KCSubCTCV3.My.Resources.TurnoutRightDownReverse
+            'picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownReverse
             picLock25Up.Image = KCSubCTCV3.My.Resources.LockRightUpUnlocked
         End If
     End Sub
