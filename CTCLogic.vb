@@ -197,6 +197,7 @@
     Public BlockOccupied(15) As Boolean
     Public OSRequired(15) As Boolean ' Is this an OS Section?
     Public OSSection(15) As String ' Names of OS Sections.
+    Public OkToClearTrain(15) As Boolean
     Public SelectedBlock As Integer
 
     'rem debugging
@@ -450,6 +451,7 @@
         For i = 1 To 15
             TrainID(i) = ""
             LocoID(i) = ""
+            OkToClearTrain(i) = False
         Next
 
         InitializeOSSections()
@@ -2270,6 +2272,7 @@ ICEND:
                 If SWL25LTK = LREV Then
                     If BK4 = OCC Then
                         MoveTrain(4, 12)
+                        OkToClearTrain(12) = True
                     End If
                 End If
             Case Else
@@ -2340,6 +2343,7 @@ ICEND:
                 If SWL11LTK = LREV Then
                     If BK8 = OCC Then
                         MoveTrain(8, 11)
+                        OkToClearTrain(11) = True
                     End If
                 End If
             Case WEST
@@ -2354,11 +2358,13 @@ ICEND:
                 If SWL3LTK = LNOR Then
                     If BK9 = OCC Then
                         MoveTrain(9, 14)
+                        OkToClearTrain(14) = True
                     End If
                 End If
                 If SWL3LTK = LREV Then
                     If BK9 = OCC Then
                         MoveTrain(9, 13)
+                        OkToClearTrain(13) = True
                     End If
                 End If
             Case WEST
@@ -2376,31 +2382,37 @@ ICEND:
                 End If
             Case WEST
                 MoveTrain(10, 15)
+                OkToClearTrain(15) = True
             Case Else
         End Select
 
         ' Block 11 - psuedo block - Exit Coburg West
         If SWL11LTK = LREV And FS8 = WEST And BK8 = OCC Then
             MoveTrain(11, 8)
+            OkToClearTrain(11) = True
         End If
 
         ' Block 12 - pseudo block - Exit Coburg East
         If SWL25LTK = LREV And FS4 = EAST And BK4 = OCC Then
             MoveTrain(12, 4)
+            OkToClearTrain(12) = True
         End If
 
         ' Block 13 - pseudo block - Exit Centropolis.
         If SWL3LTK = LREV And FS9 = WEST And BK9 = OCC Then
             MoveTrain(13, 9)
+            OkToClearTrain(13) = True
         End If
 
         ' Block 14 - pseudo block - Exit Ottumwa.
         If SWL3LTK = LNOR And FS9 = WEST And BK9 = OCC Then
             MoveTrain(14, 9)
+            OkToClearTrain(14) = True
         End If
 
         If FS7 = EAST And BK10 = OCC Then
             MoveTrain(15, 10)
+            OkToClearTrain(15) = True
         End If
         ' After updating all the IDs, check to see if any need clearing.
         CheckTrainClear()
@@ -2419,9 +2431,25 @@ ICEND:
         If BK9 = CLR Then ClearTrain(9)
         If BK10 = CLR Then ClearTrain(10)
         ' clearing 11,12,13,14,15 - no detection
-        If BK9 = CLR And FS9 = NDT Then
+        If OkToClearTrain(11) And BK8 = CLR Then
+            ClearTrain(11)
+            OkToClearTrain(11) = False
+        End If
+        If OkToClearTrain(12) And BK4 = CLR Then
+            ClearTrain(12)
+            OkToClearTrain(12) = False
+        End If
+        If OkToClearTrain(13) And BK9 = CLR Then
             ClearTrain(13)
+            OkToClearTrain(13) = False
+        End If
+        If OkToClearTrain(14) And BK9 = CLR Then
             ClearTrain(14)
+            OkToClearTrain(14) = False
+        End If
+        If OkToClearTrain(15) And BK10 = CLR Then
+            ClearTrain(15)
+            OkToClearTrain(15) = False
         End If
     End Sub
     Sub MoveTrain(fromBlock, toBlock)
@@ -2431,7 +2459,24 @@ ICEND:
             If (OSRequired(toBlock)) Then
                 OSTrain(TrainID(toBlock), OSSection(toBlock))
             End If
+            ' blocks 11-15 are not detected, clear them as soon as the train moves into the next block.
+            Select Case fromBlock
+                Case 11
+                    ClearTrain(11)
+                Case 12
+                    ClearTrain(12)
+                Case 13
+                    ClearTrain(13)
+                Case 14
+                    ClearTrain(14)
+                Case 15
+                    ClearTrain(15)
+                Case Else
+                    ' no special handling.
+            End Select
+
         End If
+
     End Sub
     Sub OSTrain(trainID As String, location As String)
         LogTrain("OS Train " + trainID + " - " + location)

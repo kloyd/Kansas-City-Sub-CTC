@@ -132,54 +132,54 @@
         End If
 
         scratch = TrainID(1) + Chr(13) + LocoID(1)
-        If FS1 = EAST Then scratch = "<E" + TrainID(1) + Chr(13) + LocoID(1)
-        If FS1 = WEST Then scratch = TrainID(1) + "W>" + Chr(13) + LocoID(1)
+        If FS1 = EAST Then scratch = "< " + TrainID(1) + Chr(13) + LocoID(1)
+        If FS1 = WEST Then scratch = TrainID(1) + " >" + Chr(13) + LocoID(1)
         lblBlock1.Text = scratch
 
         scratch = TrainID(2) + Chr(13) + LocoID(2)
-        If FS2 = EAST Then scratch = "<E" + TrainID(2) + Chr(13) + LocoID(2)
-        If FS2 = WEST Then scratch = TrainID(2) + "W>" + Chr(13) + LocoID(2)
+        If FS2 = EAST Then scratch = "< " + TrainID(2) + Chr(13) + LocoID(2)
+        If FS2 = WEST Then scratch = TrainID(2) + " >" + Chr(13) + LocoID(2)
         lblBlock2.Text = scratch
 
         scratch = TrainID(3) + Chr(13) + LocoID(3)
-        If FS3 = EAST Then scratch = "<E" + TrainID(3) + Chr(13) + LocoID(3)
-        If FS3 = WEST Then scratch = TrainID(3) + "W>" + Chr(13) + LocoID(3)
+        If FS3 = EAST Then scratch = "< " + TrainID(3) + Chr(13) + LocoID(3)
+        If FS3 = WEST Then scratch = TrainID(3) + " >" + Chr(13) + LocoID(3)
         lblBlock3.Text = scratch
 
         scratch = TrainID(4) + Chr(13) + LocoID(4)
-        If FS4 = EAST Then scratch = "<E" + TrainID(4) + Chr(13) + LocoID(4)
-        If FS4 = WEST Then scratch = TrainID(4) + "W>" + Chr(13) + LocoID(4)
+        If FS4 = EAST Then scratch = "< " + TrainID(4) + Chr(13) + LocoID(4)
+        If FS4 = WEST Then scratch = TrainID(4) + " >" + Chr(13) + LocoID(4)
         lblBlock4.Text = scratch
 
         scratch = TrainID(5) + Chr(13) + LocoID(5)
-        If FS5 = EAST Then scratch = "<E" + TrainID(5) + Chr(13) + LocoID(5)
-        If FS5 = WEST Then scratch = TrainID(5) + "W>" + Chr(13) + LocoID(5)
+        If FS5 = EAST Then scratch = "< " + TrainID(5) + Chr(13) + LocoID(5)
+        If FS5 = WEST Then scratch = TrainID(5) + " >" + Chr(13) + LocoID(5)
         lblBlock5.Text = scratch
         lblBlock5A.Text = scratch
 
         scratch = TrainID(6) + Chr(13) + LocoID(6)
-        If FS6 = EAST Then scratch = "<E" + TrainID(6) + Chr(13) + LocoID(6)
-        If FS6 = WEST Then scratch = TrainID(6) + "W>" + Chr(13) + LocoID(6)
+        If FS6 = EAST Then scratch = "< " + TrainID(6) + Chr(13) + LocoID(6)
+        If FS6 = WEST Then scratch = TrainID(6) + " >" + Chr(13) + LocoID(6)
         lblBlock6.Text = scratch
         lblBlock6A.Text = scratch
 
         scratch = TrainID(7) + Chr(13) + LocoID(7)
-        If FS7 = EAST Then scratch = "<E" + TrainID(7) + Chr(13) + LocoID(7)
-        If FS7 = WEST Then scratch = TrainID(7) + "W>" + Chr(13) + LocoID(7)
+        If FS7 = EAST Then scratch = "< " + TrainID(7) + Chr(13) + LocoID(7)
+        If FS7 = WEST Then scratch = TrainID(7) + " >" + Chr(13) + LocoID(7)
         lblBlock7.Text = scratch
 
         scratch = TrainID(8) + Chr(13) + LocoID(8)
-        If FS8 = EAST Then scratch = "<E" + TrainID(8) + Chr(13) + LocoID(8)
-        If FS8 = WEST Then scratch = TrainID(8) + "W>" + Chr(13) + LocoID(8)
+        If FS8 = EAST Then scratch = "< " + TrainID(8) + Chr(13) + LocoID(8)
+        If FS8 = WEST Then scratch = TrainID(8) + " >" + Chr(13) + LocoID(8)
         lblBlock8.Text = scratch
 
         scratch = TrainID(9) + Chr(13) + LocoID(9)
-        If FS9 = EAST Then scratch = "<E" + TrainID(9) + Chr(13) + LocoID(9)
-        If FS9 = WEST Then scratch = TrainID(9) + "W>" + Chr(13) + LocoID(9)
+        If FS9 = EAST Then scratch = "< " + TrainID(9) + Chr(13) + LocoID(9)
+        If FS9 = WEST Then scratch = TrainID(9) + " >" + Chr(13) + LocoID(9)
         lblBlock9.Text = scratch
 
-        If FS10 = EAST Then scratch = "<E" + TrainID(10) + Chr(13) + LocoID(10)
-        If FS10 = WEST Then scratch = TrainID(10) + "W>" + Chr(13) + LocoID(10)
+        If FS10 = EAST Then scratch = "< " + TrainID(10) + Chr(13) + LocoID(10)
+        If FS10 = WEST Then scratch = TrainID(10) + " >" + Chr(13) + LocoID(10)
         lblBlock10.Text = scratch
 
         scratch = TrainID(11) + Chr(13) + LocoID(11)
