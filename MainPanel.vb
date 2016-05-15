@@ -132,54 +132,55 @@
         End If
 
         scratch = TrainID(1) + Chr(13) + LocoID(1)
-        If FS1 = EAST Then scratch = "< " + TrainID(1) + Chr(13) + LocoID(1)
-        If FS1 = WEST Then scratch = TrainID(1) + " >" + Chr(13) + LocoID(1)
+        'If FS1 = EAST Then scratch = "< " + TrainID(1) + Chr(13) + LocoID(1)
+        'If FS1 = WEST Then scratch = TrainID(1) + " >" + Chr(13) + LocoID(1)
         lblBlock1.Text = scratch
 
         scratch = TrainID(2) + Chr(13) + LocoID(2)
-        If FS2 = EAST Then scratch = "< " + TrainID(2) + Chr(13) + LocoID(2)
-        If FS2 = WEST Then scratch = TrainID(2) + " >" + Chr(13) + LocoID(2)
+        'If FS2 = EAST Then scratch = "< " + TrainID(2) + Chr(13) + LocoID(2)
+        'If FS2 = WEST Then scratch = TrainID(2) + " >" + Chr(13) + LocoID(2)
         lblBlock2.Text = scratch
 
         scratch = TrainID(3) + Chr(13) + LocoID(3)
-        If FS3 = EAST Then scratch = "< " + TrainID(3) + Chr(13) + LocoID(3)
-        If FS3 = WEST Then scratch = TrainID(3) + " >" + Chr(13) + LocoID(3)
+        'If FS3 = EAST Then scratch = "< " + TrainID(3) + Chr(13) + LocoID(3)
+        'If FS3 = WEST Then scratch = TrainID(3) + " >" + Chr(13) + LocoID(3)
         lblBlock3.Text = scratch
 
         scratch = TrainID(4) + Chr(13) + LocoID(4)
-        If FS4 = EAST Then scratch = "< " + TrainID(4) + Chr(13) + LocoID(4)
-        If FS4 = WEST Then scratch = TrainID(4) + " >" + Chr(13) + LocoID(4)
+        'If FS4 = EAST Then scratch = "< " + TrainID(4) + Chr(13) + LocoID(4)
+        'If FS4 = WEST Then scratch = TrainID(4) + " >" + Chr(13) + LocoID(4)
         lblBlock4.Text = scratch
 
         scratch = TrainID(5) + Chr(13) + LocoID(5)
-        If FS5 = EAST Then scratch = "< " + TrainID(5) + Chr(13) + LocoID(5)
-        If FS5 = WEST Then scratch = TrainID(5) + " >" + Chr(13) + LocoID(5)
+        'If FS5 = EAST Then scratch = "< " + TrainID(5) + Chr(13) + LocoID(5)
+        'If FS5 = WEST Then scratch = TrainID(5) + " >" + Chr(13) + LocoID(5)
         lblBlock5.Text = scratch
         lblBlock5A.Text = scratch
 
         scratch = TrainID(6) + Chr(13) + LocoID(6)
-        If FS6 = EAST Then scratch = "< " + TrainID(6) + Chr(13) + LocoID(6)
-        If FS6 = WEST Then scratch = TrainID(6) + " >" + Chr(13) + LocoID(6)
+        'If FS6 = EAST Then scratch = "< " + TrainID(6) + Chr(13) + LocoID(6)
+        'If FS6 = WEST Then scratch = TrainID(6) + " >" + Chr(13) + LocoID(6)
         lblBlock6.Text = scratch
         lblBlock6A.Text = scratch
 
         scratch = TrainID(7) + Chr(13) + LocoID(7)
-        If FS7 = EAST Then scratch = "< " + TrainID(7) + Chr(13) + LocoID(7)
-        If FS7 = WEST Then scratch = TrainID(7) + " >" + Chr(13) + LocoID(7)
+        'If FS7 = EAST Then scratch = "< " + TrainID(7) + Chr(13) + LocoID(7)
+        'If FS7 = WEST Then scratch = TrainID(7) + " >" + Chr(13) + LocoID(7)
         lblBlock7.Text = scratch
 
         scratch = TrainID(8) + Chr(13) + LocoID(8)
-        If FS8 = EAST Then scratch = "< " + TrainID(8) + Chr(13) + LocoID(8)
-        If FS8 = WEST Then scratch = TrainID(8) + " >" + Chr(13) + LocoID(8)
+        'If FS8 = EAST Then scratch = "< " + TrainID(8) + Chr(13) + LocoID(8)
+        'If FS8 = WEST Then scratch = TrainID(8) + " >" + Chr(13) + LocoID(8)
         lblBlock8.Text = scratch
 
         scratch = TrainID(9) + Chr(13) + LocoID(9)
-        If FS9 = EAST Then scratch = "< " + TrainID(9) + Chr(13) + LocoID(9)
-        If FS9 = WEST Then scratch = TrainID(9) + " >" + Chr(13) + LocoID(9)
+        'If FS9 = EAST Then scratch = "< " + TrainID(9) + Chr(13) + LocoID(9)
+        'If FS9 = WEST Then scratch = TrainID(9) + " >" + Chr(13) + LocoID(9)
         lblBlock9.Text = scratch
 
-        If FS10 = EAST Then scratch = "< " + TrainID(10) + Chr(13) + LocoID(10)
-        If FS10 = WEST Then scratch = TrainID(10) + " >" + Chr(13) + LocoID(10)
+        scratch = TrainID(10) + Chr(13) + LocoID(10)
+        'If FS10 = EAST Then scratch = "< " + TrainID(10) + Chr(13) + LocoID(10)
+        'If FS10 = WEST Then scratch = TrainID(10) + " >" + Chr(13) + LocoID(10)
         lblBlock10.Text = scratch
 
         scratch = TrainID(11) + Chr(13) + LocoID(11)
@@ -622,7 +623,7 @@
                 If SWL25LTK = LREV Then
                     picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownReverse
                 End If
-            Case RTD
+            Case RTD And TLV26 <> NDT
                 If SWL25LTK = LNOR Then
                     picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownNormalGreen
                 End If
@@ -821,15 +822,21 @@
         Select Case SGL26LTK
             Case LEFTLT
                 Sig26Dir = LEFTLT
-                Signal26Selected = picSig26L
-                picSig26L.Image = KCSubCTCV3.My.Resources.GreenLeft
+                If SWL25LTK = LNOR Then
+                    Signal26Selected = picSig26LA
+                    picSig26LA.Image = KCSubCTCV3.My.Resources.GreenLeft
+                Else
+                    Signal26Selected = picSig26LB
+                    picSig26LB.Image = KCSubCTCV3.My.Resources.GreenLeft
+                End If
             Case RIGHTLT
                 Sig26Dir = RIGHTLT
                 Signal26Selected = picSig26R
                 picSig26R.Image = KCSubCTCV3.My.Resources.GreenRight
             Case STOPLT
                 Signal26Selected = Nothing
-                picSig26L.Image = KCSubCTCV3.My.Resources.RedLeft
+                picSig26LA.Image = KCSubCTCV3.My.Resources.RedLeft
+                picSig26LB.Image = KCSubCTCV3.My.Resources.RedLeft
                 picSig26R.Image = KCSubCTCV3.My.Resources.RedRight
         End Select
     End Sub
@@ -837,6 +844,7 @@
         If CDEIND = 1 Then
             Exit Sub
         End If
+
         If FS1 = NDT Then
             If Block1 = OCC Then
                 picTraffic1West.Image = My.Resources.TrafficOccupiedEastEnd
@@ -889,6 +897,62 @@
                 Else
                     picTraffic2West.Image = My.Resources.TrafficClearedWest
                     picTraffic2East.Image = My.Resources.TrafficClearedWestEnd
+                End If
+            End If
+        End If
+
+        If FS3 = NDT Then
+            If Block3 = OCC Then
+                picTraffic3West.Image = My.Resources.TrafficOccupiedEastEnd
+                picTraffic3East.Image = My.Resources.TrafficOccupiedWestEnd
+            Else
+                picTraffic3West.Image = My.Resources.TrafficNoneWest
+                picTraffic3East.Image = My.Resources.TrafficNoneEast
+            End If
+        Else
+            If FS3 = EAST Then
+                If Block3 = OCC Then
+                    picTraffic3West.Image = My.Resources.TrafficOccupiedEastEnd
+                    picTraffic3East.Image = My.Resources.TrafficOccupiedEast
+                Else
+                    picTraffic3West.Image = My.Resources.TrafficClearedEastEnd
+                    picTraffic3East.Image = My.Resources.TrafficClearedEast
+                End If
+            Else
+                If Block3 = OCC Then
+                    picTraffic3West.Image = My.Resources.TrafficOccupiedWest
+                    picTraffic3East.Image = My.Resources.TrafficOccupiedWestEnd
+                Else
+                    picTraffic3West.Image = My.Resources.TrafficClearedWest
+                    picTraffic3East.Image = My.Resources.TrafficClearedWestEnd
+                End If
+            End If
+        End If
+
+        If FS4 = NDT Then
+            If Block4 = OCC Then
+                picTraffic4West.Image = My.Resources.TrafficOccupiedEastEnd
+                picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
+            Else
+                picTraffic4West.Image = My.Resources.TrafficNoneWest
+                picTraffic4East.Image = My.Resources.TrafficNoneEast
+            End If
+        Else
+            If FS4 = EAST Then
+                If Block4 = OCC Then
+                    picTraffic4West.Image = My.Resources.TrafficOccupiedEastEnd
+                    picTraffic4East.Image = My.Resources.TrafficOccupiedEast
+                Else
+                    picTraffic4West.Image = My.Resources.TrafficClearedEastEnd
+                    picTraffic4East.Image = My.Resources.TrafficClearedEast
+                End If
+            Else
+                If Block4 = OCC Then
+                    picTraffic4West.Image = My.Resources.TrafficOccupiedWest
+                    picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
+                Else
+                    picTraffic4West.Image = My.Resources.TrafficClearedWest
+                    picTraffic4East.Image = My.Resources.TrafficClearedWestEnd
                 End If
             End If
         End If
@@ -980,6 +1044,35 @@
                 End If
             End If
         End If
+
+        If FS8 = NDT Then
+            If Block8 = OCC Then
+                picTraffic8West.Image = My.Resources.TrafficOccupiedEastEnd
+                picTraffic8East.Image = My.Resources.TrafficOccupiedWestEnd
+            Else
+                picTraffic8West.Image = My.Resources.TrafficNoneWest
+                picTraffic8East.Image = My.Resources.TrafficNoneEast
+            End If
+        Else
+            If FS8 = EAST Then
+                If Block8 = OCC Then
+                    picTraffic8West.Image = My.Resources.TrafficOccupiedEastEnd
+                    picTraffic8East.Image = My.Resources.TrafficOccupiedEast
+                Else
+                    picTraffic8West.Image = My.Resources.TrafficClearedEastEnd
+                    picTraffic8East.Image = My.Resources.TrafficClearedEast
+                End If
+            Else
+                If Block8 = OCC Then
+                    picTraffic8West.Image = My.Resources.TrafficOccupiedWest
+                    picTraffic8East.Image = My.Resources.TrafficOccupiedWestEnd
+                Else
+                    picTraffic8West.Image = My.Resources.TrafficClearedWest
+                    picTraffic8East.Image = My.Resources.TrafficClearedWestEnd
+                End If
+            End If
+        End If
+
     End Sub
 
     Private Sub lineCentropolis_Click(sender As Object, e As EventArgs) Handles lineCentropolis.Click

@@ -2347,8 +2347,14 @@ ICEND:
                     End If
                 End If
             Case WEST
-                If BK8 = OCC And BK2 = OCC Then
-                    MoveTrain(8, 2)
+                If SWL15LTK = LNOR Then
+                    If BK8 = OCC And BK2 = OCC Then
+                        MoveTrain(8, 2)
+                    End If
+                Else
+                    If BK8 = OCC And BK7 = OCC Then
+                        MoveTrain(8, 7)
+                    End If
                 End If
             Case Else
         End Select

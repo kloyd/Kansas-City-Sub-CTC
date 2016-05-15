@@ -112,7 +112,7 @@ Partial Class MainPanel
         Me.picTraffic5AEast = New System.Windows.Forms.PictureBox()
         Me.picTraffic6AWest = New System.Windows.Forms.PictureBox()
         Me.picTraffic6AEast = New System.Windows.Forms.PictureBox()
-        Me.picSig26L = New System.Windows.Forms.PictureBox()
+        Me.picSig26LA = New System.Windows.Forms.PictureBox()
         Me.picSig24L = New System.Windows.Forms.PictureBox()
         Me.picSig8LA = New System.Windows.Forms.PictureBox()
         Me.picSig10L = New System.Windows.Forms.PictureBox()
@@ -160,6 +160,20 @@ Partial Class MainPanel
         Me.lblBlock3 = New System.Windows.Forms.Label()
         Me.lblBlock4 = New System.Windows.Forms.Label()
         Me.lblBlock9 = New System.Windows.Forms.Label()
+        Me.picSig26LB = New System.Windows.Forms.PictureBox()
+        Me.picTraffic8West = New System.Windows.Forms.PictureBox()
+        Me.picTraffic7EastA = New System.Windows.Forms.PictureBox()
+        Me.picTraffic7EastB = New System.Windows.Forms.PictureBox()
+        Me.picTraffic3East = New System.Windows.Forms.PictureBox()
+        Me.picTraffic8East = New System.Windows.Forms.PictureBox()
+        Me.picTraffic4East = New System.Windows.Forms.PictureBox()
+        Me.picTraffic9EastA = New System.Windows.Forms.PictureBox()
+        Me.picTraffic9EastB = New System.Windows.Forms.PictureBox()
+        Me.picTraffic7WestA = New System.Windows.Forms.PictureBox()
+        Me.picTraffic4West = New System.Windows.Forms.PictureBox()
+        Me.picTraffic3West = New System.Windows.Forms.PictureBox()
+        Me.picTraffic7WestB = New System.Windows.Forms.PictureBox()
+        Me.picTraffic9West = New System.Windows.Forms.PictureBox()
         Me.menuMain.SuspendLayout()
         CType(Me.picTurnout3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picTurnout23Down, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -185,7 +199,7 @@ Partial Class MainPanel
         CType(Me.picTraffic5AEast, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picTraffic6AWest, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picTraffic6AEast, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.picSig26L, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picSig26LA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picSig24L, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picSig8LA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picSig10L, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -199,6 +213,20 @@ Partial Class MainPanel
         CType(Me.picSig4RB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picSig4RA, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.picSig8RB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picSig26LB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picTraffic8West, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picTraffic7EastA, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picTraffic7EastB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picTraffic3East, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picTraffic8East, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picTraffic4East, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picTraffic9EastA, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picTraffic9EastB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picTraffic7WestA, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picTraffic4West, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picTraffic3West, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picTraffic7WestB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.picTraffic9West, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'menuMain
@@ -995,14 +1023,14 @@ Partial Class MainPanel
         Me.picTraffic6AEast.TabIndex = 30
         Me.picTraffic6AEast.TabStop = False
         '
-        'picSig26L
+        'picSig26LA
         '
-        Me.picSig26L.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteLeft
-        Me.picSig26L.Location = New System.Drawing.Point(862, 215)
-        Me.picSig26L.Name = "picSig26L"
-        Me.picSig26L.Size = New System.Drawing.Size(38, 20)
-        Me.picSig26L.TabIndex = 32
-        Me.picSig26L.TabStop = False
+        Me.picSig26LA.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteLeft
+        Me.picSig26LA.Location = New System.Drawing.Point(862, 215)
+        Me.picSig26LA.Name = "picSig26LA"
+        Me.picSig26LA.Size = New System.Drawing.Size(38, 20)
+        Me.picSig26LA.TabIndex = 32
+        Me.picSig26LA.TabStop = False
         '
         'picSig24L
         '
@@ -1016,7 +1044,7 @@ Partial Class MainPanel
         'picSig8LA
         '
         Me.picSig8LA.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteLeft
-        Me.picSig8LA.Location = New System.Drawing.Point(575, 155)
+        Me.picSig8LA.Location = New System.Drawing.Point(575, 154)
         Me.picSig8LA.Name = "picSig8LA"
         Me.picSig8LA.Size = New System.Drawing.Size(38, 20)
         Me.picSig8LA.TabIndex = 34
@@ -1025,7 +1053,7 @@ Partial Class MainPanel
         'picSig10L
         '
         Me.picSig10L.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteLeft
-        Me.picSig10L.Location = New System.Drawing.Point(577, 216)
+        Me.picSig10L.Location = New System.Drawing.Point(577, 213)
         Me.picSig10L.Name = "picSig10L"
         Me.picSig10L.Size = New System.Drawing.Size(38, 20)
         Me.picSig10L.TabIndex = 35
@@ -1052,7 +1080,7 @@ Partial Class MainPanel
         'picSig26R
         '
         Me.picSig26R.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteRight
-        Me.picSig26R.Location = New System.Drawing.Point(735, 246)
+        Me.picSig26R.Location = New System.Drawing.Point(735, 251)
         Me.picSig26R.Name = "picSig26R"
         Me.picSig26R.Size = New System.Drawing.Size(38, 20)
         Me.picSig26R.TabIndex = 38
@@ -1061,7 +1089,7 @@ Partial Class MainPanel
         'picSig24R
         '
         Me.picSig24R.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteRight
-        Me.picSig24R.Location = New System.Drawing.Point(735, 188)
+        Me.picSig24R.Location = New System.Drawing.Point(735, 153)
         Me.picSig24R.Name = "picSig24R"
         Me.picSig24R.Size = New System.Drawing.Size(38, 20)
         Me.picSig24R.TabIndex = 39
@@ -1097,7 +1125,7 @@ Partial Class MainPanel
         'picSig4RB
         '
         Me.picSig4RB.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteRight
-        Me.picSig4RB.Location = New System.Drawing.Point(77, 136)
+        Me.picSig4RB.Location = New System.Drawing.Point(77, 139)
         Me.picSig4RB.Name = "picSig4RB"
         Me.picSig4RB.Size = New System.Drawing.Size(38, 20)
         Me.picSig4RB.TabIndex = 43
@@ -1106,7 +1134,7 @@ Partial Class MainPanel
         'picSig4RA
         '
         Me.picSig4RA.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteRight
-        Me.picSig4RA.Location = New System.Drawing.Point(77, 88)
+        Me.picSig4RA.Location = New System.Drawing.Point(77, 91)
         Me.picSig4RA.Name = "picSig4RA"
         Me.picSig4RA.Size = New System.Drawing.Size(38, 20)
         Me.picSig4RA.TabIndex = 44
@@ -1115,7 +1143,7 @@ Partial Class MainPanel
         'picSig8RB
         '
         Me.picSig8RB.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteRight
-        Me.picSig8RB.Location = New System.Drawing.Point(304, 136)
+        Me.picSig8RB.Location = New System.Drawing.Point(304, 141)
         Me.picSig8RB.Name = "picSig8RB"
         Me.picSig8RB.Size = New System.Drawing.Size(38, 20)
         Me.picSig8RB.TabIndex = 45
@@ -1288,99 +1316,99 @@ Partial Class MainPanel
         'lblBlock11
         '
         Me.lblBlock11.AutoSize = True
-        Me.lblBlock11.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock11.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock11.ForeColor = System.Drawing.Color.White
-        Me.lblBlock11.Location = New System.Drawing.Point(256, 298)
+        Me.lblBlock11.Location = New System.Drawing.Point(260, 298)
         Me.lblBlock11.Name = "lblBlock11"
-        Me.lblBlock11.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock11.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock11.TabIndex = 53
         Me.lblBlock11.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock15
         '
         Me.lblBlock15.AutoSize = True
-        Me.lblBlock15.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock15.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock15.ForeColor = System.Drawing.Color.White
-        Me.lblBlock15.Location = New System.Drawing.Point(795, 80)
+        Me.lblBlock15.Location = New System.Drawing.Point(798, 90)
         Me.lblBlock15.Name = "lblBlock15"
-        Me.lblBlock15.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock15.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock15.TabIndex = 54
         Me.lblBlock15.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock10
         '
         Me.lblBlock10.AutoSize = True
-        Me.lblBlock10.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock10.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock10.ForeColor = System.Drawing.Color.White
-        Me.lblBlock10.Location = New System.Drawing.Point(732, 80)
+        Me.lblBlock10.Location = New System.Drawing.Point(740, 90)
         Me.lblBlock10.Name = "lblBlock10"
-        Me.lblBlock10.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock10.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock10.TabIndex = 55
         Me.lblBlock10.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock5A
         '
         Me.lblBlock5A.AutoSize = True
-        Me.lblBlock5A.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock5A.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock5A.ForeColor = System.Drawing.Color.White
-        Me.lblBlock5A.Location = New System.Drawing.Point(154, 133)
+        Me.lblBlock5A.Location = New System.Drawing.Point(153, 139)
         Me.lblBlock5A.Name = "lblBlock5A"
-        Me.lblBlock5A.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock5A.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock5A.TabIndex = 56
         Me.lblBlock5A.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock5
         '
         Me.lblBlock5.AutoSize = True
-        Me.lblBlock5.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock5.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock5.ForeColor = System.Drawing.Color.White
-        Me.lblBlock5.Location = New System.Drawing.Point(924, 139)
+        Me.lblBlock5.Location = New System.Drawing.Point(924, 141)
         Me.lblBlock5.Name = "lblBlock5"
-        Me.lblBlock5.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock5.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock5.TabIndex = 57
         Me.lblBlock5.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock12
         '
         Me.lblBlock12.AutoSize = True
-        Me.lblBlock12.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock12.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock12.ForeColor = System.Drawing.Color.White
-        Me.lblBlock12.Location = New System.Drawing.Point(865, 310)
+        Me.lblBlock12.Location = New System.Drawing.Point(866, 309)
         Me.lblBlock12.Name = "lblBlock12"
-        Me.lblBlock12.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock12.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock12.TabIndex = 58
         Me.lblBlock12.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock7
         '
         Me.lblBlock7.AutoSize = True
-        Me.lblBlock7.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock7.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock7.ForeColor = System.Drawing.Color.White
-        Me.lblBlock7.Location = New System.Drawing.Point(443, 137)
+        Me.lblBlock7.Location = New System.Drawing.Point(444, 140)
         Me.lblBlock7.Name = "lblBlock7"
-        Me.lblBlock7.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock7.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock7.TabIndex = 59
         Me.lblBlock7.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock14
         '
         Me.lblBlock14.AutoSize = True
-        Me.lblBlock14.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock14.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock14.ForeColor = System.Drawing.Color.White
-        Me.lblBlock14.Location = New System.Drawing.Point(16, 35)
+        Me.lblBlock14.Location = New System.Drawing.Point(16, 39)
         Me.lblBlock14.Name = "lblBlock14"
-        Me.lblBlock14.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock14.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock14.TabIndex = 60
         Me.lblBlock14.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock13
         '
         Me.lblBlock13.AutoSize = True
-        Me.lblBlock13.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock13.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock13.ForeColor = System.Drawing.Color.White
-        Me.lblBlock13.Location = New System.Drawing.Point(16, 139)
+        Me.lblBlock13.Location = New System.Drawing.Point(16, 136)
         Me.lblBlock13.Name = "lblBlock13"
-        Me.lblBlock13.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock13.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock13.TabIndex = 61
         Me.lblBlock13.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
@@ -1398,90 +1426,229 @@ Partial Class MainPanel
         'lblBlock8
         '
         Me.lblBlock8.AutoSize = True
-        Me.lblBlock8.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock8.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock8.ForeColor = System.Drawing.Color.White
-        Me.lblBlock8.Location = New System.Drawing.Point(442, 197)
+        Me.lblBlock8.Location = New System.Drawing.Point(444, 201)
         Me.lblBlock8.Name = "lblBlock8"
-        Me.lblBlock8.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock8.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock8.TabIndex = 63
         Me.lblBlock8.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock6A
         '
         Me.lblBlock6A.AutoSize = True
-        Me.lblBlock6A.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock6A.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock6A.ForeColor = System.Drawing.Color.White
-        Me.lblBlock6A.Location = New System.Drawing.Point(153, 197)
+        Me.lblBlock6A.Location = New System.Drawing.Point(153, 201)
         Me.lblBlock6A.Name = "lblBlock6A"
-        Me.lblBlock6A.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock6A.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock6A.TabIndex = 64
         Me.lblBlock6A.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock6
         '
         Me.lblBlock6.AutoSize = True
-        Me.lblBlock6.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock6.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock6.ForeColor = System.Drawing.Color.White
-        Me.lblBlock6.Location = New System.Drawing.Point(924, 197)
+        Me.lblBlock6.Location = New System.Drawing.Point(924, 201)
         Me.lblBlock6.Name = "lblBlock6"
-        Me.lblBlock6.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock6.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock6.TabIndex = 65
         Me.lblBlock6.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock1
         '
         Me.lblBlock1.AutoSize = True
-        Me.lblBlock1.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock1.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock1.ForeColor = System.Drawing.Color.White
-        Me.lblBlock1.Location = New System.Drawing.Point(643, 139)
+        Me.lblBlock1.Location = New System.Drawing.Point(643, 141)
         Me.lblBlock1.Name = "lblBlock1"
-        Me.lblBlock1.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock1.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock1.TabIndex = 66
         Me.lblBlock1.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock2
         '
         Me.lblBlock2.AutoSize = True
-        Me.lblBlock2.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock2.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock2.ForeColor = System.Drawing.Color.White
-        Me.lblBlock2.Location = New System.Drawing.Point(643, 197)
+        Me.lblBlock2.Location = New System.Drawing.Point(643, 203)
         Me.lblBlock2.Name = "lblBlock2"
-        Me.lblBlock2.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock2.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock2.TabIndex = 67
         Me.lblBlock2.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock3
         '
         Me.lblBlock3.AutoSize = True
-        Me.lblBlock3.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock3.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock3.ForeColor = System.Drawing.Color.White
-        Me.lblBlock3.Location = New System.Drawing.Point(778, 139)
+        Me.lblBlock3.Location = New System.Drawing.Point(778, 140)
         Me.lblBlock3.Name = "lblBlock3"
-        Me.lblBlock3.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock3.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock3.TabIndex = 68
         Me.lblBlock3.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock4
         '
         Me.lblBlock4.AutoSize = True
-        Me.lblBlock4.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock4.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock4.ForeColor = System.Drawing.Color.White
-        Me.lblBlock4.Location = New System.Drawing.Point(848, 246)
+        Me.lblBlock4.Location = New System.Drawing.Point(740, 202)
         Me.lblBlock4.Name = "lblBlock4"
-        Me.lblBlock4.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock4.Size = New System.Drawing.Size(56, 32)
         Me.lblBlock4.TabIndex = 69
-        Me.lblBlock4.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
+        Me.lblBlock4.Text = "XXXX >" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
         'lblBlock9
         '
         Me.lblBlock9.AutoSize = True
-        Me.lblBlock9.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBlock9.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock9.ForeColor = System.Drawing.Color.White
-        Me.lblBlock9.Location = New System.Drawing.Point(141, 35)
+        Me.lblBlock9.Location = New System.Drawing.Point(127, 41)
         Me.lblBlock9.Name = "lblBlock9"
-        Me.lblBlock9.Size = New System.Drawing.Size(48, 36)
+        Me.lblBlock9.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock9.TabIndex = 70
         Me.lblBlock9.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
+        '
+        'picSig26LB
+        '
+        Me.picSig26LB.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteLeft
+        Me.picSig26LB.Location = New System.Drawing.Point(858, 271)
+        Me.picSig26LB.Name = "picSig26LB"
+        Me.picSig26LB.Size = New System.Drawing.Size(38, 20)
+        Me.picSig26LB.TabIndex = 71
+        Me.picSig26LB.TabStop = False
+        '
+        'picTraffic8West
+        '
+        Me.picTraffic8West.BackColor = System.Drawing.Color.Transparent
+        Me.picTraffic8West.Image = Global.KCSubCTCV3.My.Resources.Resources.TrafficNoneWest
+        Me.picTraffic8West.Location = New System.Drawing.Point(602, 230)
+        Me.picTraffic8West.Name = "picTraffic8West"
+        Me.picTraffic8West.Size = New System.Drawing.Size(11, 20)
+        Me.picTraffic8West.TabIndex = 73
+        Me.picTraffic8West.TabStop = False
+        '
+        'picTraffic7EastA
+        '
+        Me.picTraffic7EastA.BackColor = System.Drawing.Color.Transparent
+        Me.picTraffic7EastA.Image = Global.KCSubCTCV3.My.Resources.Resources.TrafficNoneEast
+        Me.picTraffic7EastA.Location = New System.Drawing.Point(223, 170)
+        Me.picTraffic7EastA.Name = "picTraffic7EastA"
+        Me.picTraffic7EastA.Size = New System.Drawing.Size(11, 20)
+        Me.picTraffic7EastA.TabIndex = 74
+        Me.picTraffic7EastA.TabStop = False
+        '
+        'picTraffic7EastB
+        '
+        Me.picTraffic7EastB.BackColor = System.Drawing.Color.Transparent
+        Me.picTraffic7EastB.Image = Global.KCSubCTCV3.My.Resources.Resources.TrafficNoneEast
+        Me.picTraffic7EastB.Location = New System.Drawing.Point(300, 120)
+        Me.picTraffic7EastB.Name = "picTraffic7EastB"
+        Me.picTraffic7EastB.Size = New System.Drawing.Size(11, 20)
+        Me.picTraffic7EastB.TabIndex = 75
+        Me.picTraffic7EastB.TabStop = False
+        '
+        'picTraffic3East
+        '
+        Me.picTraffic3East.BackColor = System.Drawing.Color.Transparent
+        Me.picTraffic3East.Image = Global.KCSubCTCV3.My.Resources.Resources.TrafficNoneEast
+        Me.picTraffic3East.Location = New System.Drawing.Point(732, 170)
+        Me.picTraffic3East.Name = "picTraffic3East"
+        Me.picTraffic3East.Size = New System.Drawing.Size(11, 20)
+        Me.picTraffic3East.TabIndex = 76
+        Me.picTraffic3East.TabStop = False
+        '
+        'picTraffic8East
+        '
+        Me.picTraffic8East.BackColor = System.Drawing.Color.Transparent
+        Me.picTraffic8East.Image = Global.KCSubCTCV3.My.Resources.Resources.TrafficNoneEast
+        Me.picTraffic8East.Location = New System.Drawing.Point(222, 230)
+        Me.picTraffic8East.Name = "picTraffic8East"
+        Me.picTraffic8East.Size = New System.Drawing.Size(11, 20)
+        Me.picTraffic8East.TabIndex = 72
+        Me.picTraffic8East.TabStop = False
+        '
+        'picTraffic4East
+        '
+        Me.picTraffic4East.BackColor = System.Drawing.Color.Transparent
+        Me.picTraffic4East.Image = Global.KCSubCTCV3.My.Resources.Resources.TrafficNoneEast
+        Me.picTraffic4East.Location = New System.Drawing.Point(731, 230)
+        Me.picTraffic4East.Name = "picTraffic4East"
+        Me.picTraffic4East.Size = New System.Drawing.Size(11, 20)
+        Me.picTraffic4East.TabIndex = 77
+        Me.picTraffic4East.TabStop = False
+        '
+        'picTraffic9EastA
+        '
+        Me.picTraffic9EastA.BackColor = System.Drawing.Color.Transparent
+        Me.picTraffic9EastA.Image = Global.KCSubCTCV3.My.Resources.Resources.TrafficNoneEast
+        Me.picTraffic9EastA.Location = New System.Drawing.Point(72, 70)
+        Me.picTraffic9EastA.Name = "picTraffic9EastA"
+        Me.picTraffic9EastA.Size = New System.Drawing.Size(11, 20)
+        Me.picTraffic9EastA.TabIndex = 78
+        Me.picTraffic9EastA.TabStop = False
+        '
+        'picTraffic9EastB
+        '
+        Me.picTraffic9EastB.BackColor = System.Drawing.Color.Transparent
+        Me.picTraffic9EastB.Image = Global.KCSubCTCV3.My.Resources.Resources.TrafficNoneEast
+        Me.picTraffic9EastB.Location = New System.Drawing.Point(74, 120)
+        Me.picTraffic9EastB.Name = "picTraffic9EastB"
+        Me.picTraffic9EastB.Size = New System.Drawing.Size(11, 20)
+        Me.picTraffic9EastB.TabIndex = 79
+        Me.picTraffic9EastB.TabStop = False
+        '
+        'picTraffic7WestA
+        '
+        Me.picTraffic7WestA.BackColor = System.Drawing.Color.Transparent
+        Me.picTraffic7WestA.Image = Global.KCSubCTCV3.My.Resources.Resources.TrafficNoneWest
+        Me.picTraffic7WestA.Location = New System.Drawing.Point(602, 170)
+        Me.picTraffic7WestA.Name = "picTraffic7WestA"
+        Me.picTraffic7WestA.Size = New System.Drawing.Size(11, 20)
+        Me.picTraffic7WestA.TabIndex = 80
+        Me.picTraffic7WestA.TabStop = False
+        '
+        'picTraffic4West
+        '
+        Me.picTraffic4West.BackColor = System.Drawing.Color.Transparent
+        Me.picTraffic4West.Image = Global.KCSubCTCV3.My.Resources.Resources.TrafficNoneWest
+        Me.picTraffic4West.Location = New System.Drawing.Point(887, 230)
+        Me.picTraffic4West.Name = "picTraffic4West"
+        Me.picTraffic4West.Size = New System.Drawing.Size(11, 20)
+        Me.picTraffic4West.TabIndex = 81
+        Me.picTraffic4West.TabStop = False
+        '
+        'picTraffic3West
+        '
+        Me.picTraffic3West.BackColor = System.Drawing.Color.Transparent
+        Me.picTraffic3West.Image = Global.KCSubCTCV3.My.Resources.Resources.TrafficNoneWest
+        Me.picTraffic3West.Location = New System.Drawing.Point(887, 170)
+        Me.picTraffic3West.Name = "picTraffic3West"
+        Me.picTraffic3West.Size = New System.Drawing.Size(11, 20)
+        Me.picTraffic3West.TabIndex = 82
+        Me.picTraffic3West.TabStop = False
+        '
+        'picTraffic7WestB
+        '
+        Me.picTraffic7WestB.BackColor = System.Drawing.Color.Transparent
+        Me.picTraffic7WestB.Image = Global.KCSubCTCV3.My.Resources.Resources.TrafficNoneWest
+        Me.picTraffic7WestB.Location = New System.Drawing.Point(717, 121)
+        Me.picTraffic7WestB.Name = "picTraffic7WestB"
+        Me.picTraffic7WestB.Size = New System.Drawing.Size(11, 20)
+        Me.picTraffic7WestB.TabIndex = 83
+        Me.picTraffic7WestB.TabStop = False
+        '
+        'picTraffic9West
+        '
+        Me.picTraffic9West.BackColor = System.Drawing.Color.Transparent
+        Me.picTraffic9West.Image = Global.KCSubCTCV3.My.Resources.Resources.TrafficNoneWest
+        Me.picTraffic9West.Location = New System.Drawing.Point(291, 120)
+        Me.picTraffic9West.Name = "picTraffic9West"
+        Me.picTraffic9West.Size = New System.Drawing.Size(11, 20)
+        Me.picTraffic9West.TabIndex = 84
+        Me.picTraffic9West.TabStop = False
         '
         'MainPanel
         '
@@ -1489,6 +1656,20 @@ Partial Class MainPanel
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Black
         Me.ClientSize = New System.Drawing.Size(1008, 661)
+        Me.Controls.Add(Me.picTraffic9West)
+        Me.Controls.Add(Me.picTraffic7WestB)
+        Me.Controls.Add(Me.picTraffic3West)
+        Me.Controls.Add(Me.picTraffic4West)
+        Me.Controls.Add(Me.picTraffic7WestA)
+        Me.Controls.Add(Me.picTraffic9EastB)
+        Me.Controls.Add(Me.picTraffic9EastA)
+        Me.Controls.Add(Me.picTraffic4East)
+        Me.Controls.Add(Me.picTraffic3East)
+        Me.Controls.Add(Me.picTraffic7EastB)
+        Me.Controls.Add(Me.picTraffic7EastA)
+        Me.Controls.Add(Me.picTraffic8West)
+        Me.Controls.Add(Me.picTraffic8East)
+        Me.Controls.Add(Me.picSig26LB)
         Me.Controls.Add(Me.lblBlock9)
         Me.Controls.Add(Me.lblBlock4)
         Me.Controls.Add(Me.lblBlock3)
@@ -1526,7 +1707,7 @@ Partial Class MainPanel
         Me.Controls.Add(Me.picSig10L)
         Me.Controls.Add(Me.picSig8LA)
         Me.Controls.Add(Me.picSig24L)
-        Me.Controls.Add(Me.picSig26L)
+        Me.Controls.Add(Me.picSig26LA)
         Me.Controls.Add(Me.picTraffic6AWest)
         Me.Controls.Add(Me.picTraffic6AEast)
         Me.Controls.Add(Me.picTraffic5AWest)
@@ -1588,7 +1769,7 @@ Partial Class MainPanel
         CType(Me.picTraffic5AEast, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picTraffic6AWest, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picTraffic6AEast, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.picSig26L, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picSig26LA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picSig24L, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picSig8LA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picSig10L, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1602,6 +1783,20 @@ Partial Class MainPanel
         CType(Me.picSig4RB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picSig4RA, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.picSig8RB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picSig26LB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picTraffic8West, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picTraffic7EastA, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picTraffic7EastB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picTraffic3East, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picTraffic8East, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picTraffic4East, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picTraffic9EastA, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picTraffic9EastB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picTraffic7WestA, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picTraffic4West, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picTraffic3West, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picTraffic7WestB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.picTraffic9West, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1695,7 +1890,7 @@ Partial Class MainPanel
     Friend WithEvents picTraffic5AEast As PictureBox
     Friend WithEvents picTraffic6AWest As PictureBox
     Friend WithEvents picTraffic6AEast As PictureBox
-    Friend WithEvents picSig26L As PictureBox
+    Friend WithEvents picSig26LA As PictureBox
     Friend WithEvents picSig24L As PictureBox
     Friend WithEvents picSig8LA As PictureBox
     Friend WithEvents picSig10L As PictureBox
@@ -1743,4 +1938,18 @@ Partial Class MainPanel
     Friend WithEvents lblBlock3 As Label
     Friend WithEvents lblBlock4 As Label
     Friend WithEvents lblBlock9 As Label
+    Friend WithEvents picSig26LB As PictureBox
+    Friend WithEvents picTraffic8West As PictureBox
+    Friend WithEvents picTraffic7EastA As PictureBox
+    Friend WithEvents picTraffic7EastB As PictureBox
+    Friend WithEvents picTraffic3East As PictureBox
+    Friend WithEvents picTraffic8East As PictureBox
+    Friend WithEvents picTraffic4East As PictureBox
+    Friend WithEvents picTraffic9EastA As PictureBox
+    Friend WithEvents picTraffic9EastB As PictureBox
+    Friend WithEvents picTraffic7WestA As PictureBox
+    Friend WithEvents picTraffic4West As PictureBox
+    Friend WithEvents picTraffic3West As PictureBox
+    Friend WithEvents picTraffic7WestB As PictureBox
+    Friend WithEvents picTraffic9West As PictureBox
 End Class
