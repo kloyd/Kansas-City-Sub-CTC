@@ -943,7 +943,9 @@
                     picTraffic4West.Image = My.Resources.TrafficOccupiedEastEnd
                     picTraffic4East.Image = My.Resources.TrafficOccupiedEast
                 Else
-                    picTraffic4West.Image = My.Resources.TrafficClearedEastEnd
+                    If SWL25LTK = LNOR Then
+                        picTraffic4West.Image = My.Resources.TrafficClearedEastEnd
+                    End If
                     picTraffic4East.Image = My.Resources.TrafficClearedEast
                 End If
             Else
@@ -1041,6 +1043,80 @@
                     picTraffic6AEast.Image = My.Resources.TrafficClearedWestEnd
                     picTraffic6BWest.Image = My.Resources.TrafficClearedWest
                     picTraffic6BEast.Image = My.Resources.TrafficClearedWestEnd
+                End If
+            End If
+        End If
+        ' Block 7
+        If FS7 = NDT Then
+            If Block7 = OCC Then
+                If SWL15LTK = LNOR Then
+                    picTraffic7WestA.Image = My.Resources.TrafficOccupiedWestEnd
+
+                Else
+                    picTraffic7WestB.Image = My.Resources.TrafficOccupiedWestEnd
+                End If
+                If SWL7LTK = LNOR Then
+                    If SWL9LTK = LNOR Then
+                        picTraffic7EastA.Image = My.Resources.TrafficOccupiedEastEnd
+                    End If
+                Else
+                    picTraffic7EastB.Image = My.Resources.TrafficOccupiedEastEnd
+                End If
+            Else
+                picTraffic7WestA.Image = My.Resources.TrafficNoneWest
+                picTraffic7EastA.Image = My.Resources.TrafficNoneEast
+                picTraffic7WestB.Image = My.Resources.TrafficNoneWest
+                picTraffic7EastB.Image = My.Resources.TrafficNoneEast
+            End If
+        Else
+            If FS7 = EAST Then
+                If Block7 = OCC Then
+                    If SWL15LTK = LNOR Then
+                        picTraffic7WestA.Image = My.Resources.TrafficOccupiedWestEnd
+                    Else
+                        picTraffic7WestB.Image = My.Resources.TrafficOccupiedWestEnd
+                    End If
+
+                    picTraffic7EastA.Image = My.Resources.TrafficOccupiedEast
+                Else
+                    ' block routed and east
+                    If SWL7LTK = LNOR Then
+                        If SWL9LTK = LNOR Then
+                            picTraffic7EastA.Image = My.Resources.TrafficClearedEast
+                        End If
+                    Else
+                        picTraffic7EastB.Image = My.Resources.TrafficClearedEast
+                    End If
+                    If SWL15LTK = LNOR Then
+                        picTraffic7WestA.Image = My.Resources.TrafficClearedEastEnd
+                    Else
+                        picTraffic7WestB.Image = My.Resources.TrafficClearedEastEnd
+                    End If
+                End If
+            Else
+                ' cleared west
+                If Block7 = OCC Then
+                    If SWL15LTK = LNOR Then
+                        picTraffic7WestA.Image = My.Resources.TrafficOccupiedWest
+                    Else
+                        picTraffic7WestB.Image = My.Resources.TrafficOccupiedWest
+                    End If
+
+                    picTraffic7EastA.Image = My.Resources.TrafficOccupiedEastEnd
+                Else
+                    'cleared not occupied
+                    If SWL7LTK = LNOR Then
+                        If SWL9LTK = LNOR Then
+                            picTraffic7EastA.Image = My.Resources.TrafficClearedWestEnd
+                        End If
+                    Else
+                        picTraffic7EastB.Image = My.Resources.TrafficClearedWestEnd
+                    End If
+                    If SWL15LTK = LNOR Then
+                        picTraffic7WestA.Image = My.Resources.TrafficClearedWest
+                    Else
+                        picTraffic7WestB.Image = My.Resources.TrafficClearedWest
+                    End If
                 End If
             End If
         End If

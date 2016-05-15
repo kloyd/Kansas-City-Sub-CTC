@@ -1071,7 +1071,7 @@ Partial Class MainPanel
         'picSig8LB
         '
         Me.picSig8LB.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteLeft
-        Me.picSig8LB.Location = New System.Drawing.Point(693, 106)
+        Me.picSig8LB.Location = New System.Drawing.Point(693, 104)
         Me.picSig8LB.Name = "picSig8LB"
         Me.picSig8LB.Size = New System.Drawing.Size(38, 20)
         Me.picSig8LB.TabIndex = 37
@@ -1116,7 +1116,7 @@ Partial Class MainPanel
         'picSig8RA
         '
         Me.picSig8RA.Image = Global.KCSubCTCV3.My.Resources.Resources.WhiteRight
-        Me.picSig8RA.Location = New System.Drawing.Point(226, 189)
+        Me.picSig8RA.Location = New System.Drawing.Point(226, 191)
         Me.picSig8RA.Name = "picSig8RA"
         Me.picSig8RA.Size = New System.Drawing.Size(38, 20)
         Me.picSig8RA.TabIndex = 42
