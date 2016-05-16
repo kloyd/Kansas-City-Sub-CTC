@@ -24,6 +24,7 @@
         anSMINI = New CMRISimulator(UA)
         SMINI_Nodes.Add(anSMINI, UA)
         anSMINI.Show()
+
     End Function
 
     Public Function InitializePort(ByRef CommObj As System.IO.Ports.SerialPort, _

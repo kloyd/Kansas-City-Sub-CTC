@@ -54,5 +54,13 @@ Partial Class CMRISimulator
         InputsArray = New CheckBoxArray(Me)
     End Sub
 
-    
+    Public Sub New(ByVal nodeNumber As Integer, parentForm As Form)
+        iNode = nodeNumber
+        InitializeComponent()
+        OutputStatesCard0 = New ButtonArray(Me)
+        OutputStatesCard1 = New ButtonArray(Me)
+        InputsArray = New CheckBoxArray(Me)
+        Parent = parentForm
+    End Sub
+
 End Class

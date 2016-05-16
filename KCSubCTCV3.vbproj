@@ -99,6 +99,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CTCLogic.vb" />
+    <Compile Include="CTCSimulator.Designer.vb">
+      <DependentUpon>CTCSimulator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CTCSimulator.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DlgAddTrain.Designer.vb">
       <DependentUpon>DlgAddTrain.vb</DependentUpon>
     </Compile>
@@ -149,6 +155,9 @@
     <Compile Include="TestCMRI.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CTCSimulator.resx">
+      <DependentUpon>CTCSimulator.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DlgAddTrain.resx">
       <DependentUpon>DlgAddTrain.vb</DependentUpon>
     </EmbeddedResource>
