@@ -1101,8 +1101,13 @@
                     Else
                         picTraffic7WestB.Image = My.Resources.TrafficOccupiedWest
                     End If
-
-                    picTraffic7EastA.Image = My.Resources.TrafficOccupiedEastEnd
+                    If SWL7LTK = LNOR Then
+                        If SWL9LTK = LNOR Then
+                            picTraffic7EastA.Image = My.Resources.TrafficOccupiedWestEnd
+                        End If
+                    Else
+                        picTraffic7EastB.Image = My.Resources.TrafficOccupiedWestEnd
+                    End If
                 Else
                     'cleared not occupied
                     If SWL7LTK = LNOR Then
@@ -1145,6 +1150,57 @@
                 Else
                     picTraffic8West.Image = My.Resources.TrafficClearedWest
                     picTraffic8East.Image = My.Resources.TrafficClearedWestEnd
+                End If
+            End If
+        End If
+
+        If FS9 = NDT Then
+            If Block9 = OCC Then
+                picTraffic9West.Image = My.Resources.TrafficOccupiedEastEnd
+                If SWL3LTK = LNOR Then
+                    picTraffic9EastA.Image = My.Resources.TrafficOccupiedWestEnd
+                Else
+                    picTraffic9EastB.Image = My.Resources.TrafficOccupiedWestEnd
+                End If
+            Else
+                picTraffic9West.Image = My.Resources.TrafficNoneWest
+                picTraffic9EastA.Image = My.Resources.TrafficNoneEast
+                picTraffic9EastB.Image = My.Resources.TrafficNoneEast
+            End If
+        Else
+            If FS9 = EAST Then
+                If Block9 = OCC Then
+                    picTraffic9West.Image = My.Resources.TrafficOccupiedEastEnd
+                    If SWL3LTK = LNOR Then
+                        picTraffic9EastA.Image = My.Resources.TrafficOccupiedEast
+                    Else
+                        picTraffic9EastB.Image = My.Resources.TrafficOccupiedEast
+                    End If
+                Else
+                    picTraffic9West.Image = My.Resources.TrafficClearedEastEnd
+                    If SWL3LTK = LNOR Then
+                        picTraffic9EastA.Image = My.Resources.TrafficClearedEast
+                    Else
+                        picTraffic9EastB.Image = My.Resources.TrafficClearedEast
+                    End If
+
+                End If
+            Else
+                If Block9 = OCC Then
+                    picTraffic9West.Image = My.Resources.TrafficOccupiedWest
+                    If SWL3LTK = LNOR Then
+                        picTraffic9EastA.Image = My.Resources.TrafficOccupiedWestEnd
+                    Else
+                        picTraffic9EastB.Image = My.Resources.TrafficOccupiedWestEnd
+                    End If
+                Else
+                    picTraffic9West.Image = My.Resources.TrafficClearedWest
+                    If SWL3LTK = LNOR Then
+                        picTraffic9EastA.Image = My.Resources.TrafficClearedWestEnd
+                    Else
+                        picTraffic9EastB.Image = My.Resources.TrafficClearedWestEnd
+                    End If
+
                 End If
             End If
         End If
