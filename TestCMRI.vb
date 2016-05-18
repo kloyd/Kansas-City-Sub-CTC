@@ -12,13 +12,13 @@
             ' don't allow set
         End Set
     End Property
-    Public Function INIT(ByRef CommObj As System.IO.Ports.SerialPort, _
-                         ByVal UA As Integer, ByVal DL As Integer, _
-                         ByVal strNDP As String, _
-                         ByVal iNumOutputBytes As Integer, _
-                         ByVal MAXTRIES As Integer, _
-                         ByVal iNumInputBytes As Integer, _
-                         ByVal iNum2LeadSigs As Integer, _
+    Public Function INIT(ByRef CommObj As System.IO.Ports.SerialPort,
+                         ByVal UA As Integer, ByVal DL As Integer,
+                         ByVal strNDP As String,
+                         ByVal iNumOutputBytes As Integer,
+                         ByVal MAXTRIES As Integer,
+                         ByVal iNumInputBytes As Integer,
+                         ByVal iNum2LeadSigs As Integer,
                          ByRef CT() As Integer) As Integer Implements InterfaceCMRI.INIT
         Dim anSMINI As CMRISimulator
         anSMINI = New CMRISimulator(UA)
@@ -27,9 +27,9 @@
 
     End Function
 
-    Public Function InitializePort(ByRef CommObj As System.IO.Ports.SerialPort, _
-                                   ByVal COMPORT As Integer, _
-                                   ByVal BAUD100 As Integer, _
+    Public Function InitializePort(ByRef CommObj As System.IO.Ports.SerialPort,
+                                   ByVal COMPORT As Integer,
+                                   ByVal BAUD100 As Integer,
                                    ByVal MAXBUF As Integer) As Integer Implements InterfaceCMRI.InitializePort
 
     End Function

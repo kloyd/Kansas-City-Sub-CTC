@@ -920,10 +920,14 @@
                 End If
             Else
                 If Block3 = OCC Then
-                    picTraffic3West.Image = My.Resources.TrafficOccupiedWest
+                    If SWL23LTK = LNOR Then
+                        picTraffic3West.Image = My.Resources.TrafficOccupiedWest
+                    End If
                     picTraffic3East.Image = My.Resources.TrafficOccupiedWestEnd
                 Else
-                    picTraffic3West.Image = My.Resources.TrafficClearedWest
+                    If SWL23LTK = LNOR Then
+                        picTraffic3West.Image = My.Resources.TrafficClearedWest
+                    End If
                     picTraffic3East.Image = My.Resources.TrafficClearedWestEnd
                 End If
             End If

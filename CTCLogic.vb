@@ -2635,11 +2635,16 @@ ICEND:
             LogEvent("TrafficStick FS3 cleared.")
         End If
         ' FS3 Westward
-        If FS3 = WEST And TLV24 <> RIGHT And BK3 = CLR And BK1 = CLR Then
-            FS3 = NDT
-            LogEvent("TrafficStick FS3 cleared.")
+        If FS3 = WEST Then
+            If TLV24 <> RIGHT And BK3 = CLR Then
+                FS3 = NDT
+                LogEvent("TrafficStick FS3 cleared.")
+            Else
+                If BK1 = CLR And SIG24RAB = REDRED Then
+                    FS3 = NDT
+                End If
+            End If
         End If
-
         ' FS4 Eastward
         If FS4 = EAST And TLV26 <> LEFT And BK4 = CLR And SWL25LTK = LNOR And BK6 = CLR Then
             FS4 = NDT
@@ -2663,6 +2668,10 @@ ICEND:
         End If
 
         If FS4 = WEST And TLV24 <> RIGHT And SWL23LTK = LREV And BK4 = CLR And BK3 = CLR And BK1 = CLR Then
+            FS4 = NDT
+        End If
+
+        If FS4 = WEST And SIG24RAB = REDRED And SWL23LTK = LREV And BK4 = CLR Then
             FS4 = NDT
         End If
 
@@ -3046,7 +3055,7 @@ ICEND:
     Sub SimSignalFailure()
         ' Simulate Failures on the system.
         Dim SigFail As Integer
-        If TD(20) < 0 Then
+        If TD(20) <0 Then
             ' simulate burned out lamps
             If SIGF4L = LTOFF Then
                 SigFail = CInt(Int((100 * Rnd()) + 1))
