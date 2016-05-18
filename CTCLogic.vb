@@ -2626,54 +2626,84 @@ ICEND:
         'End If
 
         ' FS3 Eastward
-        If FS3 = EAST And TLV24 <> LEFT And SWL23LTK = LNOR And BK3 = CLR And BK5 = CLR Then
-            FS3 = NDT
-            LogEvent("TrafficStick FS3 cleared.")
-        End If
-        If FS3 = EAST And TLV26 <> LEFT And SWL23LTK = LREV And BK3 = CLR And BK6 = CLR Then
-            FS3 = NDT
-            LogEvent("TrafficStick FS3 cleared.")
-        End If
-        ' FS3 Westward
-        If FS3 = WEST Then
-            If TLV24 <> RIGHT And BK3 = CLR Then
-                FS3 = NDT
-                LogEvent("TrafficStick FS3 cleared.")
-            Else
-                If BK1 = CLR And SIG24RAB = REDRED Then
+        Select Case FS3
+
+            Case EAST
+                If SWL23LTK = LNOR Then
+                    ' 23 normal
+                    If TLV24 <> LEFT And BK3 = CLR Then
+                        FS3 = NDT
+                    End If
+                Else
+                    ' 23 reverse
+                    If TLV26 <> LEFT And BK3 = CLR And BK4 = CLR Then
+                        FS3 = NDT
+                    End If
+
+                End If
+
+            Case WEST
+                If TLV24 <> RIGHT And BK3 = CLR Then
                     FS3 = NDT
                 End If
-            End If
-        End If
-        ' FS4 Eastward
-        If FS4 = EAST And TLV26 <> LEFT And BK4 = CLR And SWL25LTK = LNOR And BK6 = CLR Then
-            FS4 = NDT
-            LogEvent("TrafficStick FS4 cleared.")
-        End If
+            Case Else
+                ' NDT - nothing required.
+        End Select
 
-        If FS4 = EAST And TLV26 <> LEFT And SWL25LTK = LREV And BK4 = CLR Then
-            FS4 = NDT
-            LogEvent("TrafficStick FS4 cleared.")
-        End If
+        ' FS4 Eastward
+        Select Case FS4
+            Case EAST
+                If SWL23LTK = LNOR Then
+                    If TLV26 <> LEFT And BK4 = CLR Then
+                        FS4 = NDT
+                    End If
+                Else
+                    If TLV26 <> LEFT And BK4 = CLR And BK3 = CLR Then
+                        FS4 = NDT
+                    End If
+                End If
+
+            Case WEST
+                If SWL23LTK = LNOR Then
+                    If TLV26 <> RIGHT And BK4 = CLR Then
+                        FS4 = NDT
+                    End If
+                Else
+                    If TLV24 <> RIGHT And BK4 = CLR And BK3 = CLR Then
+                        FS4 = NDT
+                    End If
+                End If
+            Case Else
+                ' NDT - Do nothing.
+        End Select
+        'If FS4 = EAST And TLV26 <> LEFT And BK4 = CLR And SWL25LTK = LNOR And BK6 = CLR Then
+        'FS4 = NDT
+        'LogEvent("TrafficStick FS4 cleared.")
+        'End If
+
+        'If FS4 = EAST And TLV26 <> LEFT And SWL25LTK = LREV And BK4 = CLR Then
+        'FS4 = NDT
+        'LogEvent("TrafficStick FS4 cleared.")
+        'End If
 
         ' FS4 Westward
-        If FS4 = WEST And TLV26 <> RIGHT And SWL23LTK = LNOR And SWL25LTK = LNOR And BK4 = CLR And BK2 = CLR Then
-            FS4 = NDT
-            LogEvent("TrafficStick FS4 cleared.")
-        End If
+        'If FS4 = WEST And TLV26 <> RIGHT And SWL23LTK = LNOR And SWL25LTK = LNOR And BK4 = CLR And BK2 = CLR Then
+        'FS4 = NDT
+        'LogEvent("TrafficStick FS4 cleared.")
+        'End If
 
-        If FS4 = WEST And TLV26 <> RIGHT And SWL23LTK = LNOR And SWL25LTK = LREV And BK4 = CLR Then
-            FS4 = NDT
-            LogEvent("TrafficStick FS4 cleared.")
-        End If
+        'If FS4 = WEST And TLV26 <> RIGHT And SWL23LTK = LNOR And SWL25LTK = LREV And BK4 = CLR Then
+        'FS4 = NDT
+        'LogEvent("TrafficStick FS4 cleared.")
+        'End If
 
-        If FS4 = WEST And TLV24 <> RIGHT And SWL23LTK = LREV And BK4 = CLR And BK3 = CLR And BK1 = CLR Then
-            FS4 = NDT
-        End If
+        'If FS4 = WEST And TLV24 <> RIGHT And SWL23LTK = LREV And BK4 = CLR And BK3 = CLR And BK1 = CLR Then
+        'FS4 = NDT
+        'End If
 
-        If FS4 = WEST And SIG24RAB = REDRED And SWL23LTK = LREV And BK4 = CLR Then
-            FS4 = NDT
-        End If
+        'If FS4 = WEST And SIG24RAB = REDRED And SWL23LTK = LREV And BK4 = CLR Then
+        'FS4 = NDT
+        'End If
 
         ' FS5 - Eastward
         If FS5 = EAST And TLV8 <> LEFT And BK7 = CLR And BK5 = CLR Then
