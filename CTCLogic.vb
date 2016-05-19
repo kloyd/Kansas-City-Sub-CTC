@@ -2664,16 +2664,31 @@ ICEND:
                 End If
 
             Case WEST
-                If SWL23LTK = LNOR Then
+                If SWL23LTK = LNOR And SWL25LTK = LNOR Then
+                    ' simple case, check signal 26 and block 4
                     If TLV26 <> RIGHT And BK4 = CLR Then
                         FS4 = NDT
                     End If
-                Else
+                End If
+                If SWL23LTK = LREV And SWL25LTK = LNOR Then
+                    ' check signal 24 and blocks 3 and 4.
                     If TLV24 <> RIGHT And BK4 = CLR And BK3 = CLR Then
                         FS4 = NDT
                     End If
                 End If
-            Case Else
+                If SWL23LTK = LNOR And SWL25LTK = LREV Then
+                    ' check 26 right and block 4
+                    If TLV26 <> RIGHT And BK4 = CLR Then
+                        FS4 = NDT
+                    End If
+                End If
+                If SWL23LTK = LREV And SWL25LTK = LREV Then
+                    ' check both tlv24 and tlv26 and block 3 and block 4
+                    If TLV24 <> RIGHT And TLV26 <> RIGHT And BK3 = CLR And BK4 = CLR Then
+                        FS4 = NDT
+                    End If
+                End If
+                    Case Else
                 ' NDT - Do nothing.
         End Select
         'If FS4 = EAST And TLV26 <> LEFT And BK4 = CLR And SWL25LTK = LNOR And BK6 = CLR Then
@@ -3087,7 +3102,7 @@ ICEND:
         Dim SigFail As Integer
         If TD(20) <0 Then
             ' simulate burned out lamps
-            If SIGF4L = LTOFF Then
+                    If SIGF4L = LTOFF Then
                 SigFail = CInt(Int((100 * Rnd()) + 1))
                 'turn off for now.
                 If SigFail > 100 Then
