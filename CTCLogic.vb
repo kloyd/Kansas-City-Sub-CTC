@@ -1516,6 +1516,7 @@ WSIG24R:
             SIG24RAB = REDGRN
         End If
 
+
 WSIG26R:
         SIG26RAB = REDRED
         If SGL26R <> RIGHT Then GoTo WSIGEND
