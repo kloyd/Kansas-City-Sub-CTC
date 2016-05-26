@@ -624,7 +624,7 @@
                     picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownReverse
                 End If
             Case RTD And TLV26 <> NDT
-                If SWL25LTK = LNOR Then
+                If SWL25LTK = LNOR And SWL23LTK = LNOR Then
                     picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownNormalGreen
                 End If
                 If SWL25LTK = LREV Then
@@ -636,6 +636,9 @@
                 End If
                 If SWL25LTK = LREV Then
                     picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownReverseRed
+                End If
+                If SWL23LTK = LREV Then
+                    picTurnout23Up.Image = KCSubCTCV3.My.Resources.TurnoutRightUpReverseRed
                 End If
         End Select
 
@@ -1154,8 +1157,15 @@
                     picTraffic4West.Image = My.Resources.TrafficOccupiedWest
                     picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
                 Else
-                    picTraffic4West.Image = My.Resources.TrafficClearedWest
-                    picTraffic4East.Image = My.Resources.TrafficClearedWestEnd
+                    If SWL25LTK = LNOR And SWL23LTK = LNOR Then
+                        picTraffic4West.Image = My.Resources.TrafficClearedWest
+                    End If
+                    If SIG24RAB = REDGRN Then
+                        picTraffic4West.Image = My.Resources.TrafficClearedWest
+                    End If
+                    If SIG26RAB <> REDRED Then
+                        picTraffic4East.Image = My.Resources.TrafficClearedWestEnd
+                    End If
                 End If
             Case Else
                 ' nuffin
@@ -1389,6 +1399,7 @@
                     lineBlock4C.BorderColor = Color.Red
                 End If
                 If SWL25LTK = REVLT Then
+                    lineBlock4A.BorderColor = Color.Red
                     lineBlock4D.BorderColor = Color.Red
                     YardInterchange.BorderColor = Color.Red
                 End If
@@ -1411,7 +1422,7 @@
                     lineBlock4R.BorderColor = Color.Green
                     lineBlock4C.BorderColor = Color.Green
                 End If
-                If SWL25LTK = REVLT Then
+                If SWL25LTK = REVLT And SIG26RAB <> REDRED Then
                     lineBlock4D.BorderColor = Color.Green
                     YardInterchange.BorderColor = Color.Green
                 End If
