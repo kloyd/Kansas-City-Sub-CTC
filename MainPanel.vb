@@ -845,211 +845,102 @@
             Exit Sub
         End If
 
-        If FS1 = NDT Then
-            If Block1 = OCC Then
-                picTraffic1West.Image = My.Resources.TrafficOccupiedEastEnd
-                picTraffic1East.Image = My.Resources.TrafficOccupiedWestEnd
-            Else
-                picTraffic1West.Image = My.Resources.TrafficNoneWest
-                picTraffic1East.Image = My.Resources.TrafficNoneEast
-            End If
-        Else
-            If FS1 = EAST Then
-                If Block1 = OCC Then
-                    picTraffic1West.Image = My.Resources.TrafficOccupiedEastEnd
-                    picTraffic1East.Image = My.Resources.TrafficOccupiedEast
-                Else
-                    picTraffic1West.Image = My.Resources.TrafficClearedEastEnd
-                    picTraffic1East.Image = My.Resources.TrafficClearedEast
-                End If
-            Else
-                If Block1 = OCC Then
-                    picTraffic1West.Image = My.Resources.TrafficOccupiedWest
-                    picTraffic1East.Image = My.Resources.TrafficOccupiedWestEnd
-                Else
-                    picTraffic1West.Image = My.Resources.TrafficClearedWest
-                    picTraffic1East.Image = My.Resources.TrafficClearedWestEnd
-                End If
-            End If
-        End If
+        UpdateTrafficFS1()
+        UpdateTrafficFS2()
+        UpdateTrafficFS3()
+        UpdateTrafficFS4()
+        UpdateTrafficFS5()
+        UpdateTrafficFS6()
+        UpdateTrafficFS7()
+        UpdateTrafficFS8()
+        UpdateTrafficFS9()
 
-        If FS2 = NDT Then
-            If Block2 = OCC Then
-                picTraffic2West.Image = My.Resources.TrafficOccupiedEastEnd
-                picTraffic2East.Image = My.Resources.TrafficOccupiedWestEnd
-            Else
-                picTraffic2West.Image = My.Resources.TrafficNoneWest
-                picTraffic2East.Image = My.Resources.TrafficNoneEast
-            End If
-        Else
-            If FS2 = EAST Then
-                If Block2 = OCC Then
-                    picTraffic2West.Image = My.Resources.TrafficOccupiedEastEnd
-                    picTraffic2East.Image = My.Resources.TrafficOccupiedEast
-                Else
-                    picTraffic2West.Image = My.Resources.TrafficClearedEastEnd
-                    picTraffic2East.Image = My.Resources.TrafficClearedEast
-                End If
-            Else
-                If Block2 = OCC Then
-                    picTraffic2West.Image = My.Resources.TrafficOccupiedWest
-                    picTraffic2East.Image = My.Resources.TrafficOccupiedWestEnd
-                Else
-                    picTraffic2West.Image = My.Resources.TrafficClearedWest
-                    picTraffic2East.Image = My.Resources.TrafficClearedWestEnd
-                End If
-            End If
-        End If
+    End Sub
 
-        If FS3 = NDT Then
-            If Block3 = OCC Then
-                picTraffic3West.Image = My.Resources.TrafficOccupiedEastEnd
-                picTraffic3East.Image = My.Resources.TrafficOccupiedWestEnd
-            Else
-                picTraffic3West.Image = My.Resources.TrafficNoneWest
-                picTraffic3East.Image = My.Resources.TrafficNoneEast
-            End If
-        Else
-            If FS3 = EAST Then
-                If Block3 = OCC Then
-                    picTraffic3West.Image = My.Resources.TrafficOccupiedEastEnd
-                    picTraffic3East.Image = My.Resources.TrafficOccupiedEast
+    Private Sub UpdateTrafficFS9()
+        If FS9 = NDT Then
+            If Block9 = OCC Then
+                picTraffic9West.Image = My.Resources.TrafficOccupiedEastEnd
+                If SWL3LTK = LNOR Then
+                    picTraffic9EastA.Image = My.Resources.TrafficOccupiedWestEnd
                 Else
-                    picTraffic3West.Image = My.Resources.TrafficClearedEastEnd
-                    picTraffic3East.Image = My.Resources.TrafficClearedEast
+                    picTraffic9EastB.Image = My.Resources.TrafficOccupiedWestEnd
                 End If
             Else
-                If Block3 = OCC Then
-                    If SWL23LTK = LNOR Then
-                        picTraffic3West.Image = My.Resources.TrafficOccupiedWest
+                picTraffic9West.Image = My.Resources.TrafficNoneWest
+                picTraffic9EastA.Image = My.Resources.TrafficNoneEast
+                picTraffic9EastB.Image = My.Resources.TrafficNoneEast
+            End If
+        Else
+            If FS9 = EAST Then
+                If Block9 = OCC Then
+                    picTraffic9West.Image = My.Resources.TrafficOccupiedEastEnd
+                    If SWL3LTK = LNOR Then
+                        picTraffic9EastA.Image = My.Resources.TrafficOccupiedEast
+                    Else
+                        picTraffic9EastB.Image = My.Resources.TrafficOccupiedEast
                     End If
-                    picTraffic3East.Image = My.Resources.TrafficOccupiedWestEnd
                 Else
-                    If SWL23LTK = LNOR Then
-                        picTraffic3West.Image = My.Resources.TrafficClearedWest
+                    picTraffic9West.Image = My.Resources.TrafficClearedEastEnd
+                    If SWL3LTK = LNOR Then
+                        picTraffic9EastA.Image = My.Resources.TrafficClearedEast
+                    Else
+                        picTraffic9EastB.Image = My.Resources.TrafficClearedEast
                     End If
-                    picTraffic3East.Image = My.Resources.TrafficClearedWestEnd
-                End If
-            End If
-        End If
 
-        If FS4 = NDT Then
-            If Block4 = OCC Then
-                picTraffic4West.Image = My.Resources.TrafficOccupiedEastEnd
-                picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
+                End If
             Else
-                picTraffic4West.Image = My.Resources.TrafficNoneWest
-                picTraffic4East.Image = My.Resources.TrafficNoneEast
-            End If
-        Else
-            If FS4 = EAST Then
-                If Block4 = OCC Then
-                    picTraffic4West.Image = My.Resources.TrafficOccupiedEastEnd
-                    picTraffic4East.Image = My.Resources.TrafficOccupiedEast
-                Else
-                    If SWL25LTK = LNOR Then
-                        picTraffic4West.Image = My.Resources.TrafficClearedEastEnd
+                If Block9 = OCC Then
+                    picTraffic9West.Image = My.Resources.TrafficOccupiedWest
+                    If SWL3LTK = LNOR Then
+                        picTraffic9EastA.Image = My.Resources.TrafficOccupiedWestEnd
+                    Else
+                        picTraffic9EastB.Image = My.Resources.TrafficOccupiedWestEnd
                     End If
-                    picTraffic4East.Image = My.Resources.TrafficClearedEast
-                End If
-            Else
-                If Block4 = OCC Then
-                    picTraffic4West.Image = My.Resources.TrafficOccupiedWest
-                    picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
                 Else
-                    picTraffic4West.Image = My.Resources.TrafficClearedWest
-                    picTraffic4East.Image = My.Resources.TrafficClearedWestEnd
+                    picTraffic9West.Image = My.Resources.TrafficClearedWest
+                    If SWL3LTK = LNOR Then
+                        picTraffic9EastA.Image = My.Resources.TrafficClearedWestEnd
+                    Else
+                        picTraffic9EastB.Image = My.Resources.TrafficClearedWestEnd
+                    End If
+
                 End If
             End If
         End If
+    End Sub
 
-        If FS5 = NDT Then
-            If Block5 = OCC Then
-                picTraffic5AWest.Image = My.Resources.TrafficOccupiedEastEnd
-                picTraffic5AEast.Image = My.Resources.TrafficOccupiedWestEnd
-                picTraffic5BWest.Image = My.Resources.TrafficOccupiedEastEnd
-                picTraffic5BEast.Image = My.Resources.TrafficOccupiedWestEnd
+    Private Sub UpdateTrafficFS8()
+        If FS8 = NDT Then
+            If Block8 = OCC Then
+                picTraffic8West.Image = My.Resources.TrafficOccupiedEastEnd
+                picTraffic8East.Image = My.Resources.TrafficOccupiedWestEnd
             Else
-                picTraffic5AWest.Image = My.Resources.TrafficNoneWest
-                picTraffic5AEast.Image = My.Resources.TrafficNoneEast
-                picTraffic5BWest.Image = My.Resources.TrafficNoneWest
-                picTraffic5BEast.Image = My.Resources.TrafficNoneEast
+                picTraffic8West.Image = My.Resources.TrafficNoneWest
+                picTraffic8East.Image = My.Resources.TrafficNoneEast
             End If
-
         Else
-            If FS5 = EAST Then
-                ' "<< East"
-                If Block5 = OCC Then
-                    picTraffic5AWest.Image = My.Resources.TrafficOccupiedEastEnd
-                    picTraffic5AEast.Image = My.Resources.TrafficOccupiedEast
-                    picTraffic5BWest.Image = My.Resources.TrafficOccupiedEastEnd
-                    picTraffic5BEast.Image = My.Resources.TrafficOccupiedEast
+            If FS8 = EAST Then
+                If Block8 = OCC Then
+                    picTraffic8West.Image = My.Resources.TrafficOccupiedEastEnd
+                    picTraffic8East.Image = My.Resources.TrafficOccupiedEast
                 Else
-                    picTraffic5AWest.Image = My.Resources.TrafficClearedEastEnd
-                    picTraffic5AEast.Image = My.Resources.TrafficClearedEast
-                    picTraffic5BWest.Image = My.Resources.TrafficClearedEastEnd
-                    picTraffic5BEast.Image = My.Resources.TrafficClearedEast
+                    picTraffic8West.Image = My.Resources.TrafficClearedEastEnd
+                    picTraffic8East.Image = My.Resources.TrafficClearedEast
                 End If
-
             Else
-                ' "West >>"
-                If Block5 = OCC Then
-                    picTraffic5AWest.Image = My.Resources.TrafficOccupiedWest
-                    picTraffic5AEast.Image = My.Resources.TrafficOccupiedWestEnd
-                    picTraffic5BWest.Image = My.Resources.TrafficOccupiedWest
-                    picTraffic5BEast.Image = My.Resources.TrafficOccupiedWestEnd
+                If Block8 = OCC Then
+                    picTraffic8West.Image = My.Resources.TrafficOccupiedWest
+                    picTraffic8East.Image = My.Resources.TrafficOccupiedWestEnd
                 Else
-                    picTraffic5AWest.Image = My.Resources.TrafficClearedWest
-                    picTraffic5AEast.Image = My.Resources.TrafficClearedWestEnd
-                    picTraffic5BWest.Image = My.Resources.TrafficClearedWest
-                    picTraffic5BEast.Image = My.Resources.TrafficClearedWestEnd
+                    picTraffic8West.Image = My.Resources.TrafficClearedWest
+                    picTraffic8East.Image = My.Resources.TrafficClearedWestEnd
                 End If
             End If
         End If
+    End Sub
 
-        If FS6 = NDT Then
-            If Block6 = OCC Then
-                picTraffic6AWest.Image = My.Resources.TrafficOccupiedEastEnd
-                picTraffic6AEast.Image = My.Resources.TrafficOccupiedWestEnd
-                picTraffic6BWest.Image = My.Resources.TrafficOccupiedEastEnd
-                picTraffic6BEast.Image = My.Resources.TrafficOccupiedWestEnd
-            Else
-                picTraffic6AWest.Image = My.Resources.TrafficNoneWest
-                picTraffic6AEast.Image = My.Resources.TrafficNoneEast
-                picTraffic6BWest.Image = My.Resources.TrafficNoneWest
-                picTraffic6BEast.Image = My.Resources.TrafficNoneEast
-            End If
-
-        Else
-            If FS6 = EAST Then
-                ' "<< East"
-                If Block6 = OCC Then
-                    picTraffic6AWest.Image = My.Resources.TrafficOccupiedEastEnd
-                    picTraffic6AEast.Image = My.Resources.TrafficOccupiedEast
-                    picTraffic6BWest.Image = My.Resources.TrafficOccupiedEastEnd
-                    picTraffic6BEast.Image = My.Resources.TrafficOccupiedEast
-                Else
-                    picTraffic6AWest.Image = My.Resources.TrafficClearedEastEnd
-                    picTraffic6AEast.Image = My.Resources.TrafficClearedEast
-                    picTraffic6BWest.Image = My.Resources.TrafficClearedEastEnd
-                    picTraffic6BEast.Image = My.Resources.TrafficClearedEast
-                End If
-
-            Else
-                ' "West >>"
-                If Block6 = OCC Then
-                    picTraffic6AWest.Image = My.Resources.TrafficOccupiedWest
-                    picTraffic6AEast.Image = My.Resources.TrafficOccupiedWestEnd
-                    picTraffic6BWest.Image = My.Resources.TrafficOccupiedWest
-                    picTraffic6BEast.Image = My.Resources.TrafficOccupiedWestEnd
-                Else
-                    picTraffic6AWest.Image = My.Resources.TrafficClearedWest
-                    picTraffic6AEast.Image = My.Resources.TrafficClearedWestEnd
-                    picTraffic6BWest.Image = My.Resources.TrafficClearedWest
-                    picTraffic6BEast.Image = My.Resources.TrafficClearedWestEnd
-                End If
-            End If
-        End If
+    Private Sub UpdateTrafficFS7()
         ' Block 7
         If FS7 = NDT Then
             If Block7 = OCC Then
@@ -1129,82 +1020,238 @@
                 End If
             End If
         End If
+    End Sub
 
-        If FS8 = NDT Then
-            If Block8 = OCC Then
-                picTraffic8West.Image = My.Resources.TrafficOccupiedEastEnd
-                picTraffic8East.Image = My.Resources.TrafficOccupiedWestEnd
+    Private Sub UpdateTrafficFS6()
+        If FS6 = NDT Then
+            If Block6 = OCC Then
+                picTraffic6AWest.Image = My.Resources.TrafficOccupiedEastEnd
+                picTraffic6AEast.Image = My.Resources.TrafficOccupiedWestEnd
+                picTraffic6BWest.Image = My.Resources.TrafficOccupiedEastEnd
+                picTraffic6BEast.Image = My.Resources.TrafficOccupiedWestEnd
             Else
-                picTraffic8West.Image = My.Resources.TrafficNoneWest
-                picTraffic8East.Image = My.Resources.TrafficNoneEast
+                picTraffic6AWest.Image = My.Resources.TrafficNoneWest
+                picTraffic6AEast.Image = My.Resources.TrafficNoneEast
+                picTraffic6BWest.Image = My.Resources.TrafficNoneWest
+                picTraffic6BEast.Image = My.Resources.TrafficNoneEast
             End If
+
         Else
-            If FS8 = EAST Then
-                If Block8 = OCC Then
-                    picTraffic8West.Image = My.Resources.TrafficOccupiedEastEnd
-                    picTraffic8East.Image = My.Resources.TrafficOccupiedEast
+            If FS6 = EAST Then
+                ' "<< East"
+                If Block6 = OCC Then
+                    picTraffic6AWest.Image = My.Resources.TrafficOccupiedEastEnd
+                    picTraffic6AEast.Image = My.Resources.TrafficOccupiedEast
+                    picTraffic6BWest.Image = My.Resources.TrafficOccupiedEastEnd
+                    picTraffic6BEast.Image = My.Resources.TrafficOccupiedEast
                 Else
-                    picTraffic8West.Image = My.Resources.TrafficClearedEastEnd
-                    picTraffic8East.Image = My.Resources.TrafficClearedEast
+                    picTraffic6AWest.Image = My.Resources.TrafficClearedEastEnd
+                    picTraffic6AEast.Image = My.Resources.TrafficClearedEast
+                    picTraffic6BWest.Image = My.Resources.TrafficClearedEastEnd
+                    picTraffic6BEast.Image = My.Resources.TrafficClearedEast
                 End If
+
             Else
-                If Block8 = OCC Then
-                    picTraffic8West.Image = My.Resources.TrafficOccupiedWest
-                    picTraffic8East.Image = My.Resources.TrafficOccupiedWestEnd
+                ' "West >>"
+                If Block6 = OCC Then
+                    picTraffic6AWest.Image = My.Resources.TrafficOccupiedWest
+                    picTraffic6AEast.Image = My.Resources.TrafficOccupiedWestEnd
+                    picTraffic6BWest.Image = My.Resources.TrafficOccupiedWest
+                    picTraffic6BEast.Image = My.Resources.TrafficOccupiedWestEnd
                 Else
-                    picTraffic8West.Image = My.Resources.TrafficClearedWest
-                    picTraffic8East.Image = My.Resources.TrafficClearedWestEnd
+                    picTraffic6AWest.Image = My.Resources.TrafficClearedWest
+                    picTraffic6AEast.Image = My.Resources.TrafficClearedWestEnd
+                    picTraffic6BWest.Image = My.Resources.TrafficClearedWest
+                    picTraffic6BEast.Image = My.Resources.TrafficClearedWestEnd
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub UpdateTrafficFS5()
+        If FS5 = NDT Then
+            If Block5 = OCC Then
+                picTraffic5AWest.Image = My.Resources.TrafficOccupiedEastEnd
+                picTraffic5AEast.Image = My.Resources.TrafficOccupiedWestEnd
+                picTraffic5BWest.Image = My.Resources.TrafficOccupiedEastEnd
+                picTraffic5BEast.Image = My.Resources.TrafficOccupiedWestEnd
+            Else
+                picTraffic5AWest.Image = My.Resources.TrafficNoneWest
+                picTraffic5AEast.Image = My.Resources.TrafficNoneEast
+                picTraffic5BWest.Image = My.Resources.TrafficNoneWest
+                picTraffic5BEast.Image = My.Resources.TrafficNoneEast
+            End If
+
+        Else
+            If FS5 = EAST Then
+                ' "<< East"
+                If Block5 = OCC Then
+                    picTraffic5AWest.Image = My.Resources.TrafficOccupiedEastEnd
+                    picTraffic5AEast.Image = My.Resources.TrafficOccupiedEast
+                    picTraffic5BWest.Image = My.Resources.TrafficOccupiedEastEnd
+                    picTraffic5BEast.Image = My.Resources.TrafficOccupiedEast
+                Else
+                    picTraffic5AWest.Image = My.Resources.TrafficClearedEastEnd
+                    picTraffic5AEast.Image = My.Resources.TrafficClearedEast
+                    picTraffic5BWest.Image = My.Resources.TrafficClearedEastEnd
+                    picTraffic5BEast.Image = My.Resources.TrafficClearedEast
+                End If
+
+            Else
+                ' "West >>"
+                If Block5 = OCC Then
+                    picTraffic5AWest.Image = My.Resources.TrafficOccupiedWest
+                    picTraffic5AEast.Image = My.Resources.TrafficOccupiedWestEnd
+                    picTraffic5BWest.Image = My.Resources.TrafficOccupiedWest
+                    picTraffic5BEast.Image = My.Resources.TrafficOccupiedWestEnd
+                Else
+                    picTraffic5AWest.Image = My.Resources.TrafficClearedWest
+                    picTraffic5AEast.Image = My.Resources.TrafficClearedWestEnd
+                    picTraffic5BWest.Image = My.Resources.TrafficClearedWest
+                    picTraffic5BEast.Image = My.Resources.TrafficClearedWestEnd
                 End If
             End If
         End If
 
-        If FS9 = NDT Then
-            If Block9 = OCC Then
-                picTraffic9West.Image = My.Resources.TrafficOccupiedEastEnd
-                If SWL3LTK = LNOR Then
-                    picTraffic9EastA.Image = My.Resources.TrafficOccupiedWestEnd
+    End Sub
+    Private Sub UpdateTrafficFS4()
+        Select Case FS4
+            Case NDT
+                If Block4 = OCC Then
+                    If SWL23LTK = LNOR And SWL25LTK = LNOR Then
+                        picTraffic4West.Image = My.Resources.TrafficOccupiedEastEnd
+                        picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
+                    End If
+                    If SWL23LTK = LREV And SWL25LTK = LNOR Then
+                        picTraffic4West.Image = My.Resources.TrafficOccupiedEastEnd
+                        'picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
+                    End If
+                    If SWL23LTK = LNOR And SWL25LTK = LREV Then
+                        'picTraffic4West.Image = My.Resources.TrafficOccupiedEastEnd
+                        picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
+                    End If
+                    If SWL23LTK = LREV And SWL25LTK = LREV Then
+                        picTraffic4West.Image = My.Resources.TrafficOccupiedEastEnd
+                        picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
+                    End If
+
                 Else
-                    picTraffic9EastB.Image = My.Resources.TrafficOccupiedWestEnd
+                    picTraffic4West.Image = My.Resources.TrafficNoneWest
+                    picTraffic4East.Image = My.Resources.TrafficNoneEast
                 End If
+            Case EAST
+                If Block4 = OCC Then
+                    picTraffic4West.Image = My.Resources.TrafficOccupiedEastEnd
+                    picTraffic4East.Image = My.Resources.TrafficOccupiedEast
+                Else
+                    If SWL25LTK = LNOR Then
+                        picTraffic4West.Image = My.Resources.TrafficClearedEastEnd
+                    End If
+                    picTraffic4East.Image = My.Resources.TrafficClearedEast
+                End If
+            Case WEST
+                If Block4 = OCC Then
+                    picTraffic4West.Image = My.Resources.TrafficOccupiedWest
+                    picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
+                Else
+                    picTraffic4West.Image = My.Resources.TrafficClearedWest
+                    picTraffic4East.Image = My.Resources.TrafficClearedWestEnd
+                End If
+            Case Else
+                ' nuffin
+        End Select
+
+    End Sub
+
+    Private Sub UpdateTrafficFS3()
+        If FS3 = NDT Then
+            If Block3 = OCC Then
+                picTraffic3West.Image = My.Resources.TrafficOccupiedEastEnd
+                picTraffic3East.Image = My.Resources.TrafficOccupiedWestEnd
             Else
-                picTraffic9West.Image = My.Resources.TrafficNoneWest
-                picTraffic9EastA.Image = My.Resources.TrafficNoneEast
-                picTraffic9EastB.Image = My.Resources.TrafficNoneEast
+                picTraffic3West.Image = My.Resources.TrafficNoneWest
+                picTraffic3East.Image = My.Resources.TrafficNoneEast
             End If
         Else
-            If FS9 = EAST Then
-                If Block9 = OCC Then
-                    picTraffic9West.Image = My.Resources.TrafficOccupiedEastEnd
-                    If SWL3LTK = LNOR Then
-                        picTraffic9EastA.Image = My.Resources.TrafficOccupiedEast
-                    Else
-                        picTraffic9EastB.Image = My.Resources.TrafficOccupiedEast
-                    End If
+            If FS3 = EAST Then
+                If Block3 = OCC Then
+                    picTraffic3West.Image = My.Resources.TrafficOccupiedEastEnd
+                    picTraffic3East.Image = My.Resources.TrafficOccupiedEast
                 Else
-                    picTraffic9West.Image = My.Resources.TrafficClearedEastEnd
-                    If SWL3LTK = LNOR Then
-                        picTraffic9EastA.Image = My.Resources.TrafficClearedEast
-                    Else
-                        picTraffic9EastB.Image = My.Resources.TrafficClearedEast
-                    End If
-
+                    picTraffic3West.Image = My.Resources.TrafficClearedEastEnd
+                    picTraffic3East.Image = My.Resources.TrafficClearedEast
                 End If
             Else
-                If Block9 = OCC Then
-                    picTraffic9West.Image = My.Resources.TrafficOccupiedWest
-                    If SWL3LTK = LNOR Then
-                        picTraffic9EastA.Image = My.Resources.TrafficOccupiedWestEnd
-                    Else
-                        picTraffic9EastB.Image = My.Resources.TrafficOccupiedWestEnd
+                If Block3 = OCC Then
+                    If SWL23LTK = LNOR Then
+                        picTraffic3West.Image = My.Resources.TrafficOccupiedWest
                     End If
+                    picTraffic3East.Image = My.Resources.TrafficOccupiedWestEnd
                 Else
-                    picTraffic9West.Image = My.Resources.TrafficClearedWest
-                    If SWL3LTK = LNOR Then
-                        picTraffic9EastA.Image = My.Resources.TrafficClearedWestEnd
-                    Else
-                        picTraffic9EastB.Image = My.Resources.TrafficClearedWestEnd
+                    If SWL23LTK = LNOR Then
+                        picTraffic3West.Image = My.Resources.TrafficClearedWest
                     End If
+                    picTraffic3East.Image = My.Resources.TrafficClearedWestEnd
+                End If
+            End If
+        End If
+    End Sub
 
+    Private Sub UpdateTrafficFS2()
+        If FS2 = NDT Then
+            If Block2 = OCC Then
+                picTraffic2West.Image = My.Resources.TrafficOccupiedEastEnd
+                picTraffic2East.Image = My.Resources.TrafficOccupiedWestEnd
+            Else
+                picTraffic2West.Image = My.Resources.TrafficNoneWest
+                picTraffic2East.Image = My.Resources.TrafficNoneEast
+            End If
+        Else
+            If FS2 = EAST Then
+                If Block2 = OCC Then
+                    picTraffic2West.Image = My.Resources.TrafficOccupiedEastEnd
+                    picTraffic2East.Image = My.Resources.TrafficOccupiedEast
+                Else
+                    picTraffic2West.Image = My.Resources.TrafficClearedEastEnd
+                    picTraffic2East.Image = My.Resources.TrafficClearedEast
+                End If
+            Else
+                If Block2 = OCC Then
+                    picTraffic2West.Image = My.Resources.TrafficOccupiedWest
+                    picTraffic2East.Image = My.Resources.TrafficOccupiedWestEnd
+                Else
+                    picTraffic2West.Image = My.Resources.TrafficClearedWest
+                    picTraffic2East.Image = My.Resources.TrafficClearedWestEnd
+                End If
+            End If
+        End If
+    End Sub
+
+    Private Sub UpdateTrafficFS1()
+        If FS1 = NDT Then
+            If Block1 = OCC Then
+                picTraffic1West.Image = My.Resources.TrafficOccupiedEastEnd
+                picTraffic1East.Image = My.Resources.TrafficOccupiedWestEnd
+            Else
+                picTraffic1West.Image = My.Resources.TrafficNoneWest
+                picTraffic1East.Image = My.Resources.TrafficNoneEast
+            End If
+        Else
+            If FS1 = EAST Then
+                If Block1 = OCC Then
+                    picTraffic1West.Image = My.Resources.TrafficOccupiedEastEnd
+                    picTraffic1East.Image = My.Resources.TrafficOccupiedEast
+                Else
+                    picTraffic1West.Image = My.Resources.TrafficClearedEastEnd
+                    picTraffic1East.Image = My.Resources.TrafficClearedEast
+                End If
+            Else
+                If Block1 = OCC Then
+                    picTraffic1West.Image = My.Resources.TrafficOccupiedWest
+                    picTraffic1East.Image = My.Resources.TrafficOccupiedWestEnd
+                Else
+                    picTraffic1West.Image = My.Resources.TrafficClearedWest
+                    picTraffic1East.Image = My.Resources.TrafficClearedWestEnd
                 End If
             End If
         End If
