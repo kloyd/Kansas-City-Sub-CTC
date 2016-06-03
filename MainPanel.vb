@@ -631,7 +631,7 @@
                     picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownReverseGreen
                 End If
             Case OCC
-                If SWL25LTK = LNOR Then
+                If SWL25LTK = LNOR And SWL23LTK = LNOR Then
                     picLock25Down.Image = KCSubCTCV3.My.Resources.TurnoutRightDownNormalRed
                 End If
                 If SWL25LTK = LREV Then
@@ -1150,12 +1150,29 @@
                     If SWL25LTK = LNOR Then
                         picTraffic4West.Image = My.Resources.TrafficClearedEastEnd
                     End If
-                    picTraffic4East.Image = My.Resources.TrafficClearedEast
+                    If SWL23LTK = LNOR Then
+                        picTraffic4East.Image = My.Resources.TrafficClearedEast
+                    End If
                 End If
+
             Case WEST
                 If Block4 = OCC Then
-                    picTraffic4West.Image = My.Resources.TrafficOccupiedWest
-                    picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
+                    If SWL25LTK = LNOR And SWL23LTK = LNOR Then
+                        picTraffic4West.Image = My.Resources.TrafficOccupiedWest
+                        picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
+                    End If
+                    If SWL25LTK = LREV And SWL23LTK = LNOR Then
+                        picTraffic4West.Image = My.Resources.TrafficOccupiedWest
+                        picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
+                    End If
+                    If SWL25LTK = LNOR And SWL23LTK = LREV Then
+                        picTraffic4West.Image = My.Resources.TrafficOccupiedWest
+                        'picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
+                    End If
+                    If SWL25LTK = LREV And SWL23LTK = LREV Then
+                        picTraffic4West.Image = My.Resources.TrafficOccupiedWest
+                        picTraffic4East.Image = My.Resources.TrafficOccupiedWestEnd
+                    End If
                 Else
                     If SWL25LTK = LNOR And SWL23LTK = LNOR Then
                         picTraffic4West.Image = My.Resources.TrafficClearedWest
@@ -1188,7 +1205,9 @@
                     picTraffic3West.Image = My.Resources.TrafficOccupiedEastEnd
                     picTraffic3East.Image = My.Resources.TrafficOccupiedEast
                 Else
-                    picTraffic3West.Image = My.Resources.TrafficClearedEastEnd
+                    If SWL23LTK = LNOR Then
+                        picTraffic3West.Image = My.Resources.TrafficClearedEastEnd
+                    End If
                     picTraffic3East.Image = My.Resources.TrafficClearedEast
                 End If
             Else
