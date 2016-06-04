@@ -934,9 +934,14 @@
             Else
                 If Block8 = OCC Then
                     picTraffic8West.Image = My.Resources.TrafficOccupiedWest
-                    picTraffic8East.Image = My.Resources.TrafficOccupiedWestEnd
+                    If SWL11LTK = LNOR Then
+                        picTraffic8East.Image = My.Resources.TrafficOccupiedWestEnd
+                    End If
+
                 Else
-                    picTraffic8West.Image = My.Resources.TrafficClearedWest
+                    If SWL9LTK = LNOR Then
+                        picTraffic8West.Image = My.Resources.TrafficClearedWest
+                    End If
                     picTraffic8East.Image = My.Resources.TrafficClearedWestEnd
                 End If
             End If
@@ -1144,11 +1149,21 @@
                 End If
             Case EAST
                 If Block4 = OCC Then
+                    If SWL23LTK = LNOR Then
+                        picTraffic4East.Image = My.Resources.TrafficOccupiedEast
+                    End If
+                    If SWL23LTK = LREV And SWL25LTK = LREV Then
+                        picTraffic4East.Image = My.Resources.TrafficOccupiedEast
+                    End If
                     picTraffic4West.Image = My.Resources.TrafficOccupiedEastEnd
-                    picTraffic4East.Image = My.Resources.TrafficOccupiedEast
+
                 Else
-                    If SWL25LTK = LNOR Then
+                    If SWL25LTK = LNOR And BK3 = CLR Then
                         picTraffic4West.Image = My.Resources.TrafficClearedEastEnd
+                    End If
+                    If SWL23LTK = LREV And BK3 = OCC Then
+                        ' train is still routed, but cleared from block 4 and not block 3.
+                        picTraffic4West.Image = My.Resources.TrafficNoneWest
                     End If
                     If SWL23LTK = LNOR Then
                         picTraffic4East.Image = My.Resources.TrafficClearedEast
@@ -1193,16 +1208,23 @@
     Private Sub UpdateTrafficFS3()
         If FS3 = NDT Then
             If Block3 = OCC Then
-                picTraffic3West.Image = My.Resources.TrafficOccupiedEastEnd
-                picTraffic3East.Image = My.Resources.TrafficOccupiedWestEnd
+                If SWL23LTK = LNOR Then
+                    picTraffic3West.Image = My.Resources.TrafficOccupiedEastEnd
+                    picTraffic3East.Image = My.Resources.TrafficOccupiedWestEnd
+                Else
+                    picTraffic3East.Image = My.Resources.TrafficOccupiedWestEnd
+                End If
+
             Else
-                picTraffic3West.Image = My.Resources.TrafficNoneWest
+                    picTraffic3West.Image = My.Resources.TrafficNoneWest
                 picTraffic3East.Image = My.Resources.TrafficNoneEast
             End If
         Else
             If FS3 = EAST Then
                 If Block3 = OCC Then
-                    picTraffic3West.Image = My.Resources.TrafficOccupiedEastEnd
+                    If SWL23LTK = LNOR Then
+                        picTraffic3West.Image = My.Resources.TrafficOccupiedEastEnd
+                    End If
                     picTraffic3East.Image = My.Resources.TrafficOccupiedEast
                 Else
                     If SWL23LTK = LNOR Then
@@ -1366,7 +1388,7 @@
         If TLV26 = EAST And SWL23LTK = LREV Then
             If Block3 = CLR Then Block3 = RTD
         End If
-        If Block4 = OCC And SWL23LTK = LREV And FS1 = EAST Then
+        If Block4 = OCC And SWL23LTK = LREV And FS3 = EAST Then
             If Block3 = CLR Then Block3 = RTD
         End If
         Select Case Block3
