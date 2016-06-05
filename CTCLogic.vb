@@ -865,7 +865,7 @@
         If FS7 = NDT And TLV10 = WEST And SWL9LTK = LREV Then FS7 = WEST
 
         ' FS8 - Eastward
-        If FS8 = NDT And TLV10 = EAST And SWL11LTK = LNOR Then
+        If FS8 = NDT And TLV10 = EAST Then
             FS8 = EAST
         End If
         If FS8 = NDT And TLV8 = EAST And SWL9LTK = LREV Then
@@ -2261,8 +2261,15 @@ ICEND:
 
         Select Case FS4
             Case EAST
-                If BK4 = OCC And BK2 = OCC Then
-                    MoveTrain(4, 2)
+                If SWL25LTK = LNOR Then
+                    If BK4 = OCC And BK2 = OCC Then
+                        MoveTrain(4, 2)
+                    End If
+                End If
+                If SWL25LTK = LREV Then
+                    If BK4 = OCC And BK3 = OCC Then
+                        MoveTrain(4, 3)
+                    End If
                 End If
             Case WEST
                 If SWL25LTK = LNOR Then
