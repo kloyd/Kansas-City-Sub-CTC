@@ -2352,7 +2352,8 @@ ICEND:
                     If BK8 = OCC And BK2 = OCC Then
                         MoveTrain(8, 2)
                     End If
-                Else
+                End If
+                If SWL9LTK = LREV Then
                     If BK8 = OCC And BK7 = OCC Then
                         MoveTrain(8, 7)
                     End If

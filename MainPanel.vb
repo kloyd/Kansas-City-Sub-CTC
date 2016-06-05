@@ -1216,7 +1216,7 @@
                 End If
 
             Else
-                    picTraffic3West.Image = My.Resources.TrafficNoneWest
+                picTraffic3West.Image = My.Resources.TrafficNoneWest
                 picTraffic3East.Image = My.Resources.TrafficNoneEast
             End If
         Else
