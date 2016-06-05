@@ -926,10 +926,17 @@
             If FS8 = EAST Then
                 If Block8 = OCC Then
                     picTraffic8West.Image = My.Resources.TrafficOccupiedEastEnd
-                    picTraffic8East.Image = My.Resources.TrafficOccupiedEast
+                    If SWL11LTK = LNOR Then
+                        picTraffic8East.Image = My.Resources.TrafficOccupiedEast
+                    End If
                 Else
-                    picTraffic8West.Image = My.Resources.TrafficClearedEastEnd
-                    picTraffic8East.Image = My.Resources.TrafficClearedEast
+                    If SWL9LTK = LNOR Then
+                        picTraffic8West.Image = My.Resources.TrafficClearedEastEnd
+                    End If
+
+                    If SWL11LTK = LNOR Then
+                        picTraffic8East.Image = My.Resources.TrafficClearedEast
+                    End If
                 End If
             Else
                 If Block8 = OCC Then
@@ -942,7 +949,9 @@
                     If SWL9LTK = LNOR Then
                         picTraffic8West.Image = My.Resources.TrafficClearedWest
                     End If
-                    picTraffic8East.Image = My.Resources.TrafficClearedWestEnd
+                    If SWL11LTK = LNOR Then
+                        picTraffic8East.Image = My.Resources.TrafficClearedWestEnd
+                    End If
                 End If
             End If
         End If
