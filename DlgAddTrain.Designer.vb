@@ -30,6 +30,12 @@ Partial Class DlgAddTrain
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.OK_Button = New System.Windows.Forms.Button()
         Me.Cancel_Button = New System.Windows.Forms.Button()
+        Me.rbEast = New System.Windows.Forms.RadioButton()
+        Me.rbWest = New System.Windows.Forms.RadioButton()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -87,7 +93,7 @@ Partial Class DlgAddTrain
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.OK_Button, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Cancel_Button, 1, 0)
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(157, 117)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(157, 170)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
@@ -115,11 +121,77 @@ Partial Class DlgAddTrain
         Me.Cancel_Button.TabIndex = 3
         Me.Cancel_Button.Text = "Cancel"
         '
+        'rbEast
+        '
+        Me.rbEast.AutoSize = True
+        Me.rbEast.Location = New System.Drawing.Point(130, 115)
+        Me.rbEast.Name = "rbEast"
+        Me.rbEast.Size = New System.Drawing.Size(14, 13)
+        Me.rbEast.TabIndex = 16
+        Me.rbEast.TabStop = True
+        Me.rbEast.UseVisualStyleBackColor = True
+        '
+        'rbWest
+        '
+        Me.rbWest.AutoSize = True
+        Me.rbWest.Location = New System.Drawing.Point(157, 115)
+        Me.rbWest.Name = "rbWest"
+        Me.rbWest.Size = New System.Drawing.Size(14, 13)
+        Me.rbWest.TabIndex = 17
+        Me.rbWest.TabStop = True
+        Me.rbWest.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label3.Location = New System.Drawing.Point(115, 99)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(76, 13)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "Train Direction"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label4.Location = New System.Drawing.Point(115, 99)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(76, 13)
+        Me.Label4.TabIndex = 19
+        Me.Label4.Text = "Train Direction"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label5.Location = New System.Drawing.Point(89, 115)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(35, 13)
+        Me.Label5.TabIndex = 20
+        Me.Label5.Text = "<<< E"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Label6.Location = New System.Drawing.Point(177, 115)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(39, 13)
+        Me.Label6.TabIndex = 21
+        Me.Label6.Text = "W >>>"
+        '
         'DlgAddTrain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(315, 158)
+        Me.ClientSize = New System.Drawing.Size(315, 211)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.rbWest)
+        Me.Controls.Add(Me.rbEast)
         Me.Controls.Add(Me.lblExplain)
         Me.Controls.Add(Me.txtLoco)
         Me.Controls.Add(Me.Label2)
@@ -142,4 +214,10 @@ Partial Class DlgAddTrain
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents OK_Button As Button
     Friend WithEvents Cancel_Button As Button
+    Friend WithEvents rbEast As RadioButton
+    Friend WithEvents rbWest As RadioButton
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
 End Class

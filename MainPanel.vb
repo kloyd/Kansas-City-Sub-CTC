@@ -1701,12 +1701,70 @@
         End If
     End Sub
     Function InputTrainID(BlockNumber) As Boolean
+
         If DlgAddTrain.ShowDialog() = Windows.Forms.DialogResult.OK Then
             TrainID(BlockNumber) = DlgAddTrain.txtTrainID.Text
             LocoID(BlockNumber) = DlgAddTrain.txtLoco.Text
+
+            If DlgAddTrain.rbEast.Checked Then
+                ' Eastward train
+                Select Case BlockNumber
+                    Case 1
+                        FS1 = EAST
+                    Case 2
+                        FS2 = EAST
+                    Case 5
+                        FS5 = EAST
+                    Case 6
+                        FS6 = EAST
+                    Case Else
+                        ' don't set direction on interlocking blocks.
+                End Select
+            End If
+            If DlgAddTrain.rbWest.Checked Then
+                ' Westward train
+                Select Case BlockNumber
+                    Case 1
+                        FS1 = WEST
+                    Case 2
+                        FS2 = WEST
+                    Case 5
+                        FS5 = WEST
+                    Case 6
+                        FS6 = WEST
+                    Case Else
+                        'no direction on interlockings.
+                End Select
+            End If
+            lblClock.Focus()
             Return True
         Else
+            lblClock.Focus()
             Return False
         End If
     End Function
+
+    Private Sub lineBlock1A_Click(sender As Object, e As EventArgs) Handles lineBlock1A.Click
+        InputTrainID(1)
+    End Sub
+
+    Private Sub lineBlock2A_Click(sender As Object, e As EventArgs) Handles lineBlock2A.Click
+        InputTrainID(2)
+    End Sub
+
+    Private Sub lineBlock5A_Click(sender As Object, e As EventArgs) Handles lineBlock5A.Click
+        InputTrainID(5)
+    End Sub
+
+    Private Sub lineBlock5B_Click(sender As Object, e As EventArgs) Handles lineBlock5B.Click
+        InputTrainID(5)
+    End Sub
+
+    Private Sub lineBlock6A_Click(sender As Object, e As EventArgs) Handles lineBlock6A.Click
+        InputTrainID(6)
+    End Sub
+
+    Private Sub lineBlock6B_Click(sender As Object, e As EventArgs) Handles lineBlock6B.Click
+        InputTrainID(6)
+    End Sub
 End Class
