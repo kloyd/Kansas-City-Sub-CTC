@@ -1701,6 +1701,8 @@
         End If
     End Sub
     Function InputTrainID(BlockNumber) As Boolean
+        DlgAddTrain.txtTrainID.Text = ""
+        DlgAddTrain.txtLoco.Text = ""
 
         If DlgAddTrain.ShowDialog() = Windows.Forms.DialogResult.OK Then
             TrainID(BlockNumber) = DlgAddTrain.txtTrainID.Text

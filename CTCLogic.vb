@@ -2261,12 +2261,12 @@ ICEND:
 
         Select Case FS4
             Case EAST
-                If SWL25LTK = LNOR Then
+                If SWL23LTK = LNOR Then
                     If BK4 = OCC And BK2 = OCC Then
                         MoveTrain(4, 2)
                     End If
                 End If
-                If SWL25LTK = LREV Then
+                If SWL23LTK = LREV Then
                     If BK4 = OCC And BK3 = OCC Then
                         MoveTrain(4, 3)
                     End If
