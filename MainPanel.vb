@@ -984,12 +984,18 @@
             If FS7 = EAST Then
                 If Block7 = OCC Then
                     If SWL15LTK = LNOR Then
-                        picTraffic7WestA.Image = My.Resources.TrafficOccupiedWestEnd
+                        picTraffic7WestA.Image = My.Resources.TrafficOccupiedEastEnd
                     Else
-                        picTraffic7WestB.Image = My.Resources.TrafficOccupiedWestEnd
+                        picTraffic7WestB.Image = My.Resources.TrafficOccupiedEastEnd
                     End If
 
-                    picTraffic7EastA.Image = My.Resources.TrafficOccupiedEast
+                    If SWL7LTK = LNOR And SWL9LTK = LNOR Then
+                        picTraffic7EastA.Image = My.Resources.TrafficOccupiedEast
+                    Else
+                        If SWL9LTK = LNOR Then
+                            picTraffic7EastB.Image = My.Resources.TrafficOccupiedEast
+                        End If
+                    End If
                 Else
                     ' block routed and east
                     If SWL7LTK = LNOR Then
@@ -997,7 +1003,9 @@
                             picTraffic7EastA.Image = My.Resources.TrafficClearedEast
                         End If
                     Else
-                        picTraffic7EastB.Image = My.Resources.TrafficClearedEast
+                        If SWL9LTK = LNOR Then
+                            picTraffic7EastB.Image = My.Resources.TrafficClearedEast
+                        End If
                     End If
                     If SWL15LTK = LNOR Then
                         picTraffic7WestA.Image = My.Resources.TrafficClearedEastEnd
