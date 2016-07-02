@@ -2262,10 +2262,18 @@ ICEND:
         Select Case FS4
             Case EAST
                 If SWL23LTK = LNOR Then
-                    If BK4 = OCC And BK2 = OCC Then
-                        MoveTrain(4, 2)
+                    If SWL25LTK = LNOR Then
+                        If BK4 = OCC And BK2 = OCC Then
+                            MoveTrain(4, 2)
+                        End If
+                    Else
+                        If BK4 = OCC Then
+                            MoveTrain(12, 4)
+                        End If
+
                     End If
                 End If
+
                 If SWL23LTK = LREV Then
                     If BK4 = OCC And BK3 = OCC Then
                         MoveTrain(4, 3)
@@ -2752,11 +2760,19 @@ ICEND:
             End If
         End If
         ' FS6 Eastward
-        If FS6 = EAST And TLV10 <> LEFT And SWL9LT = LNOR And BK8 = CLR And BK6 = CLR Then FS6 = NDT
-        If FS6 = EAST And TLV8 <> LEFT And SWL9LT = LREV And BK8 = CLR And BK7 = CLR And BK6 = CLR Then FS6 = NDT
+        If FS6 = EAST And TLV10 <> LEFT And SWL9LTK = LNOR And BK8 = CLR And BK6 = CLR Then
+            FS6 = NDT
+        End If
+        If FS6 = EAST And TLV8 <> LEFT And SWL9LTK = LREV And BK8 = CLR And BK7 = CLR And BK6 = CLR Then
+            FS6 = NDT
+        End If
+        If FS6 = EAST And SWL11LTK = LREV And SWL9LTK = LNOR And BK6 = CLR And BK8 = CLR Then
+            FS6 = NDT
+        End If
+
         ' Westward
-        If FS6 = WEST And TLV26 <> RIGHT And SWL23LT = LNOR And BK4 = CLR And BK6 = CLR Then FS6 = NDT
-        If FS6 = WEST And TLV24 <> RIGHT And SWL23LT = LREV And BK3 = CLR And BK4 = CLR And BK6 = CLR Then FS6 = NDT
+        If FS6 = WEST And TLV26 <> RIGHT And SWL23LTK = LNOR And BK4 = CLR And BK6 = CLR Then FS6 = NDT
+        If FS6 = WEST And TLV24 <> RIGHT And SWL23LTK = LREV And BK3 = CLR And BK4 = CLR And BK6 = CLR Then FS6 = NDT
 
         ' FS7 - Eastward
         'If FS7 = NDT And TLV8 = EAST Then FS7 = EAST

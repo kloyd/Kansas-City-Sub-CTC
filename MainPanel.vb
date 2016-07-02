@@ -1166,7 +1166,7 @@
                 End If
             Case EAST
                 If Block4 = OCC Then
-                    If SWL23LTK = LNOR Then
+                    If SWL23LTK = LNOR And SWL25LTK = LNOR Then
                         picTraffic4East.Image = My.Resources.TrafficOccupiedEast
                     End If
                     If SWL23LTK = LREV And SWL25LTK = LREV Then
