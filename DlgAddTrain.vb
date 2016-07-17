@@ -9,5 +9,8 @@
         Me.Close()
     End Sub
 
+    Private Sub DlgAddTrain_Shown(sender As Object, e As EventArgs) Handles Me.Shown
+        Me.txtTrainID.Focus()
 
+    End Sub
 End Class

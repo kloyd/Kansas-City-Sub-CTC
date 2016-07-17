@@ -525,15 +525,6 @@
   <metadata name="lineCoburgEast.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>58, 0</value>
   </metadata>
-  <metadata name="lineBroadway.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>792, 131, 58, 0</value>
-  </metadata>
-  <metadata name="lineBroadway.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>792, 131</value>
-  </metadata>
-  <metadata name="lineBroadway.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>58, 0</value>
-  </metadata>
   <metadata name="lineCoburgWest.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>252, 290, 58, 0</value>
   </metadata>
@@ -544,13 +535,13 @@
     <value>58, 0</value>
   </metadata>
   <metadata name="lineBlock10.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>728, 131, 58, 0</value>
+    <value>728, 131, 109, 0</value>
   </metadata>
   <metadata name="lineBlock10.Location" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>728, 131</value>
   </metadata>
   <metadata name="lineBlock10.Size" type="System.Drawing.Size, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>58, 0</value>
+    <value>109, 0</value>
   </metadata>
   <metadata name="lineIndicate.Bounds" type="System.Drawing.Rectangle, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>494, 370, 30, 0</value>

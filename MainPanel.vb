@@ -195,9 +195,6 @@
         scratch = TrainID(14) + Chr(13) + LocoID(14)
         lblBlock14.Text = scratch
 
-        scratch = TrainID(15) + Chr(13) + LocoID(15)
-        lblBlock15.Text = scratch
-
         'Dim labelRef As Label
         'For n = 1 To 15
         'labelRef = Me.Controls("lblBlock" & n)
@@ -1166,13 +1163,16 @@
                 End If
             Case EAST
                 If Block4 = OCC Then
-                    If SWL23LTK = LNOR And SWL25LTK = LNOR Then
+                    If SWL23LTK = LNOR Then
                         picTraffic4East.Image = My.Resources.TrafficOccupiedEast
                     End If
                     If SWL23LTK = LREV And SWL25LTK = LREV Then
                         picTraffic4East.Image = My.Resources.TrafficOccupiedEast
                     End If
-                    picTraffic4West.Image = My.Resources.TrafficOccupiedEastEnd
+                    If SWL23LTK = LNOR And SWL25LTK = LNOR Then
+                        picTraffic4West.Image = My.Resources.TrafficOccupiedEastEnd
+                    End If
+
 
                 Else
                     If SWL25LTK = LNOR And BK3 = CLR Then
@@ -1487,6 +1487,14 @@
         End Select
 
     End Sub
+
+    Private Sub lineBlock10_Click(sender As Object, e As EventArgs) Handles lineBlock10.Click
+        SelectedBlock = 10
+        If InputTrainID(SelectedBlock) Then
+            LogTrain(TrainID(SelectedBlock) + " called, on duty.")
+        End If
+    End Sub
+
     Private Sub UpdateBlock5()
         If FS5 <> NV Then
             If Block5 = CLR Then Block5 = RTD
@@ -1701,12 +1709,6 @@
                 lineBlock10.BorderColor = Color.Red
         End Select
 
-    End Sub
-    Private Sub lineBroadway_Click(sender As Object, e As EventArgs) Handles lineBroadway.Click
-        SelectedBlock = 15
-        If InputTrainID(SelectedBlock) Then
-            LogTrain(TrainID(SelectedBlock) + " called, on duty.")
-        End If
     End Sub
     Function InputTrainID(BlockNumber) As Boolean
         DlgAddTrain.txtTrainID.Text = ""

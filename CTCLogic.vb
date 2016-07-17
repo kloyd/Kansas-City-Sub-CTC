@@ -893,7 +893,7 @@
         If FS10 = NDT And TLV8 = RIGHT And SWL15LTK = LREV Then
             FS10 = WEST
         End If
-        If FS10 = NDT And TLV8 <> RIGHT And TrainID(15) <> "" Then
+        If FS10 = NDT And TLV8 <> RIGHT And TrainID(10) <> "" Then
             FS10 = EAST
         End If
 
@@ -1370,8 +1370,10 @@ ESIG8LB:
         If SWL9LT = REVLT And FS6 = WEST Then GoTo ESIG10L
         If SWL7LT = REVLT And FS9 = WEST Then GoTo ESIG10L
         If SWL9LT = REVLT And BK8 = OCC Then GoTo ESIG10L
-        SIG8LD = GRN
-        ANBT = 0 : ADBT = 0
+        If TrainID(10) <> "" Then
+            SIG8LD = GRN
+            ANBT = 0 : ADBT = 0
+        End If
 
 ESIG10L:
         SIG10LAB = REDRED
@@ -1433,12 +1435,15 @@ ESIG26LC:
         If BK4 = OCC Then GoTo ESIGEND
         If TLV26 = RIGHT Then GoTo ESIGEND
         If SWL25LT <> REVLT Then GoTo ESIGEND
-        If BK2 = OCC Then
-            SIG26LC = YEL
-        Else
-            SIG26LC = GRN
+        If TrainID(12) <> "" Then
+            If BK2 = OCC Then
+                SIG26LC = YEL
+            Else
+                SIG26LC = GRN
+            End If
+            ANCE = 0 : ADCE = 0
         End If
-        ANCE = 0 : ADCE = 0
+
 ESIGEND:
 
     End Sub
@@ -1453,11 +1458,18 @@ WSIG4R:
         If TLV4 = LEFT Then GoTo WSIG8R ' not when running time.
         If TLV8 = LEFT And SWL7LT = REVLT And SWL9LT = NORLT Then GoTo WSIG8R ' not with 8Left cleared and running into this track.
         If SWL3LT <> REVLT Then
-            SIG4RA = GRN
-            ANBV = 0 : ADBV = 0
+            ' interlock - must have a train id on block 14
+            If TrainID(14) <> "" Then
+                SIG4RA = GRN
+                ANBV = 0 : ADBV = 0
+            End If
         Else
-            SIG4RB = GRN
-            ANCT = 0 : ADCT = 0
+            ' interlock - must have a train id on block 13
+            If TrainID(13) <> "" Then
+                SIG4RB = GRN
+                ANCT = 0 : ADCT = 0
+            End If
+
         End If
 
 WSIG8R:
@@ -1499,7 +1511,15 @@ WSIG12R:
         If FS2 = EAST Then GoTo WSIG24R
         ' check unlock #19
         If CLL19LT = REVLT Then GoTo WSIG24R
-        If SWL11LT = REVLT Then SIG12RA = GRN : ANCW = 0 : ADCW = 0
+        If SWL11LT = REVLT Then
+            ' interlock with train id (11)
+            If TrainID(11) <> "" Then
+                SIG12RA = GRN
+                ANCW = 0
+                ADCW = 0
+            End If
+
+        End If
 
 WSIG24R:
         SIG24RAB = REDRED
@@ -2262,16 +2282,14 @@ ICEND:
         Select Case FS4
             Case EAST
                 If SWL23LTK = LNOR Then
-                    If SWL25LTK = LNOR Then
-                        If BK4 = OCC And BK2 = OCC Then
-                            MoveTrain(4, 2)
-                        End If
-                    Else
-                        If BK4 = OCC Then
-                            MoveTrain(12, 4)
-                        End If
 
+                    If BK4 = OCC And BK2 = OCC Then
+                        MoveTrain(4, 2)
                     End If
+
+                End If
+                If BK4 = OCC And SWL25LTK = LREV Then
+                    MoveTrain(12, 4)
                 End If
 
                 If SWL23LTK = LREV Then
@@ -2308,7 +2326,7 @@ ICEND:
 
         Select Case FS6
             Case EAST
-                If BK6 = OCC And BK4 = OCC Then
+                If BK6 = OCC And BK4 = OCC And SWL25LTK = LNOR Then
                     MoveTrain(6, 4)
                 End If
             Case WEST
@@ -2399,13 +2417,11 @@ ICEND:
 
         Select Case FS10
             Case EAST
-                MoveTrain(15, 10)
                 If BK10 = OCC And BK7 = OCC Then
                     MoveTrain(10, 7)
                 End If
             Case WEST
-                MoveTrain(10, 15)
-                OkToClearTrain(15) = True
+
             Case Else
         End Select
 
@@ -2433,10 +2449,6 @@ ICEND:
             OkToClearTrain(14) = True
         End If
 
-        If FS7 = EAST And BK10 = OCC Then
-            MoveTrain(15, 10)
-            OkToClearTrain(15) = True
-        End If
         ' After updating all the IDs, check to see if any need clearing.
         CheckTrainClear()
 
@@ -2470,10 +2482,7 @@ ICEND:
             ClearTrain(14)
             OkToClearTrain(14) = False
         End If
-        If OkToClearTrain(15) And BK10 = CLR Then
-            ClearTrain(15)
-            OkToClearTrain(15) = False
-        End If
+
     End Sub
     Sub MoveTrain(fromBlock, toBlock)
         If TrainID(fromBlock) <> "" And TrainID(toBlock) = "" Then

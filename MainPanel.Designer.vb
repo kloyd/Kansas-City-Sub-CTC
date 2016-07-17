@@ -131,7 +131,6 @@ Partial Class MainPanel
         Me.lineCentropolis = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.lineOttumwa = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.lineCoburgEast = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.lineBroadway = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.lineCoburgWest = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.lineBlock10 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.lineIndicate = New Microsoft.VisualBasic.PowerPacks.LineShape()
@@ -143,7 +142,6 @@ Partial Class MainPanel
         Me.lblTrainMovementLog = New System.Windows.Forms.Label()
         Me.lblClock = New System.Windows.Forms.Label()
         Me.lblBlock11 = New System.Windows.Forms.Label()
-        Me.lblBlock15 = New System.Windows.Forms.Label()
         Me.lblBlock10 = New System.Windows.Forms.Label()
         Me.lblBlock5A = New System.Windows.Forms.Label()
         Me.lblBlock5 = New System.Windows.Forms.Label()
@@ -1154,7 +1152,7 @@ Partial Class MainPanel
         Me.ShapeContainer2.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer2.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer2.Name = "ShapeContainer2"
-        Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.lineCoburgYardLead, Me.lineCentropolis, Me.lineOttumwa, Me.lineCoburgEast, Me.lineBroadway, Me.lineCoburgWest, Me.lineBlock10, Me.lineIndicate, Me.lineControl, Me.lineBlock1A, Me.lineBlock2A, Me.lineBlock3A, Me.lineBlock3B, Me.lineBlock3R, Me.lineBlock4A, Me.lineBlock4B, Me.lineBlock4C, Me.lineBlock4D, Me.lineBlock4R, Me.lineBlock5A, Me.lineBlock5B, Me.lineBlock6A, Me.lineBlock6B, Me.lineBlock7A, Me.lineBlock7B, Me.lineBlock7C, Me.lineBlock7D, Me.lineBlock7E, Me.lineBlock7F, Me.lineBlock7G, Me.lineBlock7H, Me.lineBlock7R, Me.lineBlock8A, Me.lineBlock8B, Me.lineBlock8C, Me.lineBlock8D, Me.lineBlock8E, Me.lineBlock8R, Me.lineBlock9A, Me.lineBlock9B, Me.lineBlock9C, Me.lineBlock9D, Me.lineBlock9E, Me.lineBlock9F, Me.IndependenceA, Me.IndependenceB, Me.RockCreekA, Me.RockCreekB, Me.YardInterchange})
+        Me.ShapeContainer2.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.lineCoburgYardLead, Me.lineCentropolis, Me.lineOttumwa, Me.lineCoburgEast, Me.lineCoburgWest, Me.lineBlock10, Me.lineIndicate, Me.lineControl, Me.lineBlock1A, Me.lineBlock2A, Me.lineBlock3A, Me.lineBlock3B, Me.lineBlock3R, Me.lineBlock4A, Me.lineBlock4B, Me.lineBlock4C, Me.lineBlock4D, Me.lineBlock4R, Me.lineBlock5A, Me.lineBlock5B, Me.lineBlock6A, Me.lineBlock6B, Me.lineBlock7A, Me.lineBlock7B, Me.lineBlock7C, Me.lineBlock7D, Me.lineBlock7E, Me.lineBlock7F, Me.lineBlock7G, Me.lineBlock7H, Me.lineBlock7R, Me.lineBlock8A, Me.lineBlock8B, Me.lineBlock8C, Me.lineBlock8D, Me.lineBlock8E, Me.lineBlock8R, Me.lineBlock9A, Me.lineBlock9B, Me.lineBlock9C, Me.lineBlock9D, Me.lineBlock9E, Me.lineBlock9F, Me.IndependenceA, Me.IndependenceB, Me.RockCreekA, Me.RockCreekB, Me.YardInterchange})
         Me.ShapeContainer2.Size = New System.Drawing.Size(1008, 661)
         Me.ShapeContainer2.TabIndex = 46
         Me.ShapeContainer2.TabStop = False
@@ -1200,16 +1198,6 @@ Partial Class MainPanel
         Me.lineCoburgEast.Y1 = 298
         Me.lineCoburgEast.Y2 = 298
         '
-        'lineBroadway
-        '
-        Me.lineBroadway.BorderColor = System.Drawing.Color.White
-        Me.lineBroadway.BorderWidth = 7
-        Me.lineBroadway.Name = "lineBroadway"
-        Me.lineBroadway.X1 = 792
-        Me.lineBroadway.X2 = 850
-        Me.lineBroadway.Y1 = 131
-        Me.lineBroadway.Y2 = 131
-        '
         'lineCoburgWest
         '
         Me.lineCoburgWest.BorderColor = System.Drawing.Color.White
@@ -1226,7 +1214,7 @@ Partial Class MainPanel
         Me.lineBlock10.BorderWidth = 7
         Me.lineBlock10.Name = "lineBlock10"
         Me.lineBlock10.X1 = 728
-        Me.lineBlock10.X2 = 786
+        Me.lineBlock10.X2 = 837
         Me.lineBlock10.Y1 = 131
         Me.lineBlock10.Y2 = 131
         '
@@ -1324,23 +1312,12 @@ Partial Class MainPanel
         Me.lblBlock11.TabIndex = 53
         Me.lblBlock11.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
         '
-        'lblBlock15
-        '
-        Me.lblBlock15.AutoSize = True
-        Me.lblBlock15.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblBlock15.ForeColor = System.Drawing.Color.White
-        Me.lblBlock15.Location = New System.Drawing.Point(798, 90)
-        Me.lblBlock15.Name = "lblBlock15"
-        Me.lblBlock15.Size = New System.Drawing.Size(40, 32)
-        Me.lblBlock15.TabIndex = 54
-        Me.lblBlock15.Text = "XXXX" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "9999"
-        '
         'lblBlock10
         '
         Me.lblBlock10.AutoSize = True
         Me.lblBlock10.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblBlock10.ForeColor = System.Drawing.Color.White
-        Me.lblBlock10.Location = New System.Drawing.Point(740, 90)
+        Me.lblBlock10.Location = New System.Drawing.Point(756, 90)
         Me.lblBlock10.Name = "lblBlock10"
         Me.lblBlock10.Size = New System.Drawing.Size(40, 32)
         Me.lblBlock10.TabIndex = 55
@@ -1686,7 +1663,6 @@ Partial Class MainPanel
         Me.Controls.Add(Me.lblBlock5)
         Me.Controls.Add(Me.lblBlock5A)
         Me.Controls.Add(Me.lblBlock10)
-        Me.Controls.Add(Me.lblBlock15)
         Me.Controls.Add(Me.lblBlock11)
         Me.Controls.Add(Me.lblClock)
         Me.Controls.Add(Me.lblTrainMovementLog)
@@ -1916,9 +1892,7 @@ Partial Class MainPanel
     Friend WithEvents lineBlock10 As PowerPacks.LineShape
     Friend WithEvents lineCoburgWest As PowerPacks.LineShape
     Friend WithEvents lblBlock11 As Label
-    Friend WithEvents lblBlock15 As Label
     Friend WithEvents lblBlock10 As Label
-    Friend WithEvents lineBroadway As PowerPacks.LineShape
     Friend WithEvents lblBlock5A As Label
     Friend WithEvents lblBlock5 As Label
     Friend WithEvents lineCoburgEast As PowerPacks.LineShape
